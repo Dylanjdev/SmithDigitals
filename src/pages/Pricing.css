@@ -1,0 +1,117 @@
+/* Pricing Page Wrapper */
+.pricing-page {
+  max-width: 1200px;
+  margin: 6rem auto; /* center container horizontally */
+  padding: 0 2rem; /* more padding so cards don’t touch edges */
+  text-align: center;
+  color: var(--light-text);
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center the cards horizontally */
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pricing-card {
+  background: #111418;
+  border-radius: 1rem;
+  padding: 2rem;
+  min-width: 250px;
+  max-width: 300px; /* ensures no card is too wide */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.3);
+}
+
+/* Custom Plan Highlight */
+.pricing-card.custom-plan {
+  background: #1f2230;
+  border: 2px dashed var(--accent);
+  transform: scale(1.02);
+}
+
+.pricing-card.custom-plan:hover {
+  box-shadow: 0 12px 30px rgba(99,102,241,0.5);
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Card Content */
+.pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.pricing-card li {
+  margin-bottom: 0.5rem;
+  color: var(--gray);
+  transition: color 0.3s;
+}
+
+.pricing-card li:hover {
+  color: var(--accent);
+}
+
+.pricing-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.pricing-btn:hover {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .pricing-card .price {
+    font-size: 1.4rem;
+  }
+}
