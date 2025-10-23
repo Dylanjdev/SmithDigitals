@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Title, Meta, Link as MetaLink } from "react-head";
 import "./Pricing.css";
+import { Link } from "react-router-dom";
 
 export default function Pricing() {
   const plans = [
@@ -126,9 +127,9 @@ export default function Pricing() {
                   <li key={i}>{f}</li>
                 ))}
               </ul>
-              <a href="/contact" className="pricing-btn">
+              <Link to="/contact" className="pricing-btn">
                 Get Started
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
