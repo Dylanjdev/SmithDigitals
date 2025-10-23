@@ -100,7 +100,7 @@ export default function Contact() {
         {/* Contact Form */}
         <motion.form
           className="contact-form"
-          action="https://formspree.io/f/mjkoladb"
+          action="https://formspree.io/f/mrblnree"
           method="POST"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
