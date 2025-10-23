@@ -1,16 +1,37 @@
-# React + Vite
+# 🌐 Smith Digitals
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Modern Web Design & SEO Solutions for Small Businesses**
 
-Currently, two official plugins are available:
+Welcome to the official repository for **[Smith Digitals](https://smithdigitals.com)** — a freelance web agency specializing in building fast, responsive, and SEO-friendly websites powered by **React + Vite**.  
+We help small businesses establish a professional online presence that drives results.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 About Smith Digitals
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Smith Digitals is a front-end web design and SEO agency based in Southwest Virginia.  
+We build modern, responsive websites optimized for performance, search visibility, and user experience — all at affordable rates for local business owners.
 
-## Expanding the ESLint configuration
+**Core Focus Areas**
+- 🧠 Front-End Development (React + Vite)
+- ⚡ Website Speed & SEO Optimization
+- 🖼️ Custom UI/UX Design
+- 🧭 Google Business & Local SEO Setup
+- 🧰 Ongoing Maintenance & Support
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools / Frameworks |
+|-----------|--------------------|
+| Frontend | React, Vite |
+| Styling | CSS3 |
+| Deployment | GitHub Pages |
+| SEO Tools | Google Search Console, Sitemap.xml, Robots.txt |
+| Version Control | Git, GitHub |
+
+---
+
+## 📂 Project Structure
+
