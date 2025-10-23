@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-links">
         <a href="mailto:dylanjsmith.dev@gmail.com">📧 dylanjsmith.dev@gmail.com</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
-        <a href="/contact">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     </footer>
   );
