@@ -1,6 +1,7 @@
 {
   "name": "smithdigitals",
   "private": true,
+  "homepage": "https://github.com/Dylanjdev/SmithDigitals",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
