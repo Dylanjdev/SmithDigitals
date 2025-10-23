@@ -33,5 +33,4 @@ We build modern, responsive websites optimized for performance, search visibilit
 
 ---
 
-## 📂 Project Structure
 
