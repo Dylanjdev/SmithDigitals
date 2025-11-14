@@ -1,7 +1,7 @@
 .contact-page {
-  max-width: 900px;
-  margin: 6rem auto;
-  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
   text-align: center;
   color: var(--light-text);
   display: flex;
@@ -10,72 +10,103 @@
 }
 
 .contact-hero {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .contact-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .contact-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   color: var(--gray);
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
   max-width: 600px;
+  background: #111418;
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form label {
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
+  color: var(--light-text);
+  letter-spacing: -0.01em;
 }
 
 .contact-form input,
 .contact-form textarea {
-  margin-top: 0.5rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
   border: 1px solid #1f2937;
-  background-color: #111418;
+  background-color: #0b0f13;
   color: var(--light-text);
   font-size: 1rem;
+  font-family: inherit;
   outline: none;
-  transition: border 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #111418;
 }
 
 .contact-form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
+  font-family: inherit;
 }
 
 .contact-btn {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #5855eb 100%);
   color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  border: none;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  align-self: center;
+  max-width: 200px;
 }
 
 .contact-btn:hover {
-  background-color: #4f46e5;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #5855eb 0%, var(--accent) 100%);
+}
+
+.contact-btn:active {
+  transform: translateY(0);
 }
 
 /* Styled select wrapper */
@@ -135,26 +166,4 @@
   color: #4f46e5;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 2rem;
-  }
-  .contact-subtitle {
-    font-size: 1rem;
-  }
-  .select-wrapper {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    font-size: 0.9rem;
-  }
-  .contact-btn {
-    width: 100%;
-  }
-}
+/* Mobile Responsive */\n@media (max-width: 768px) {\n  .contact-page {\n    padding: 3rem 1rem;\n  }\n  \n  .contact-title {\n    font-size: 2rem;\n  }\n  \n  .contact-subtitle {\n    font-size: 1.125rem;\n  }\n  \n  .contact-hero {\n    margin-bottom: 3rem;\n  }\n  \n  .contact-form {\n    padding: 2rem 1.5rem;\n    gap: 1.5rem;\n  }\n  \n  .contact-form input,\n  .contact-form textarea {\n    padding: 0.875rem 1rem;\n  }\n  \n  .select-wrapper {\n    max-width: 100%;\n  }\n}\n\n@media (max-width: 480px) {\n  .contact-form input,\n  .contact-form select,\n  .contact-form textarea {\n    font-size: 0.9rem;\n  }\n  \n  .contact-btn {\n    width: 100%;\n    max-width: none;\n  }\n  \n  .contact-form {\n    padding: 1.5rem;\n  }\n}
