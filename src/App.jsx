@@ -1,4 +1,5 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -11,10 +12,26 @@ import AnimatedBackground from "./components/AnimatedBackground";
 import ScrollToTop from "./components/ScrollToTop";
 import { HeadProvider } from "react-head"; // if using react-head for SEO
 
+function RedirectHandler() {
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect');
+    if (redirect) {
+      sessionStorage.removeItem('redirect');
+      const url = new URL(redirect);
+      navigate(url.pathname + url.search + url.hash);
+    }
+  }, [navigate]);
+  
+  return null;
+}
+
 function App() {
   return (
     <HeadProvider>
       <Router>
+        <RedirectHandler />
         <AnimatedBackground />
         <div className="content">
           <Navbar />
