@@ -3,6 +3,7 @@ import projectImg from "../assets/project1.png";
 import React from "react";
 import projectImg2 from "../assets/church.png";
 import projectImg3 from "../assets/warehouse-bg.jpg";
+import bbsLogo from "../assets/bbslogo.jpg";
 import { Title, Meta, Link as MetaLink } from "react-head";
 import "./OurWork.css";
 
@@ -10,6 +11,14 @@ export default function OurWork() {
   const projects = [
     {
       id: 1,
+      title: "BBS Bakery",
+      description: "Elegant bakery website showcasing artisan baked goods with a beautiful, modern design. Features responsive layout, contact forms, and optimized user experience to drive customer engagement.",
+      url: "https://www.bbs-bakery.com/",
+      image: bbsLogo,
+      tags: ["Bakery", "Business", "Responsive Design"]
+    },
+    {
+      id: 2,
       title: "M&M Wholesale Store",
       description: "Full-stack e-commerce platform with custom admin dashboard for inventory management. Features real-time product updates, secure authentication, and streamlined wholesale operations.",
       url: "https://mmwholesale-46f85.web.app/",
@@ -17,7 +26,7 @@ export default function OurWork() {
       tags: ["Admin Dashboard", "Firebase"]
     },
     {
-      id: 2,
+      id: 3,
       title: "Freedom In Christ Church",
       description: "Modern, responsive church website featuring service times, ministries, and events. Built with a clean design to engage the community in Jonesville, VA.",
       url: "https://dylanjdev.github.io/Freedom-In-Christ/",
@@ -25,7 +34,7 @@ export default function OurWork() {
       tags: ["Church", "Community", "Responsive Design"]
     },
     {
-      id: 3,
+      id: 4,
       title: "McGuire's Lawn & Landscaping",
       description: "Custom responsive website with SEO optimization, Google Business setup, and a sleek design to boost visibility and attract new clients.",
       url: "https://mcguireslawnandlandscaping.com/",
@@ -40,7 +49,7 @@ export default function OurWork() {
       <Title>Our Work | Smith Digitals | Web Design Portfolio</Title>
       <Meta
         name="description"
-        content="See our portfolio at Smith Digitals — including M&M Wholesale Store with admin dashboard, Freedom In Christ Church, and McGuire's Lawn & Landscaping. We design responsive, SEO-optimized websites and e-commerce platforms."
+        content="See our portfolio at Smith Digitals — including BBS Bakery, M&M Wholesale Store with admin dashboard, Freedom In Christ Church, and McGuire's Lawn & Landscaping. We design responsive, SEO-optimized websites and e-commerce platforms."
       />
       <Meta
         name="keywords"
@@ -78,6 +87,13 @@ export default function OurWork() {
             logo: "https://smithdigitals.com/og-image.png"
           },
           hasPart: [
+            {
+              "@type": "CreativeWork",
+              name: "BBS Bakery Website",
+              url: "https://www.bbs-bakery.com/",
+              description:
+                "Elegant bakery website showcasing artisan baked goods with modern design and responsive layout."
+            },
             {
               "@type": "CreativeWork",
               name: "M&M Wholesale Store",

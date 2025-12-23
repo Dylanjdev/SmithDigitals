@@ -8,6 +8,9 @@ export default function Footer() {
         <a href="mailto:dylanjsmith.dev@gmail.com">📧 dylanjsmith.dev@gmail.com</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
         <a href="#contact">Contact</a>
+        <a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i className="fab fa-facebook"></i>
+        </a>
       </div>
     </footer>
   );

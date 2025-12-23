@@ -38,6 +38,10 @@
   transform: translateY(-1px);
 }
 
+.footer-links a i {
+  font-size: 1.5rem;
+}
+
 /* Mobile adjustments */
 @media (max-width: 734px) {
   .footer {
