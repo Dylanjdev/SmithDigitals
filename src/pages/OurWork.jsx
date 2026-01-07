@@ -62,7 +62,7 @@ export default function OurWork() {
       />
       <Meta property="og:image" content="/og-image.png" />
       <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://smithdigitals.com/our-work" />
+      <Meta property="og:url" content="https://smithdigitals.com/work" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Smith Digitals | Web Design Portfolio" />
       <Meta
@@ -70,7 +70,7 @@ export default function OurWork() {
         content="Showcasing our best web design and SEO projects for small businesses and organizations."
       />
       <Meta name="twitter:image" content="/og-image.png" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/our-work" />
+      <MetaLink rel="canonical" href="https://smithdigitals.com/work" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}
       <script type="application/ld+json">

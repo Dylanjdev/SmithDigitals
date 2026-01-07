@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Smith Digitals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Smith Digitals</title>
+    <meta name="robots" content="noindex, nofollow">
     <script>
-      // Store the path for redirect
-      sessionStorage.setItem('redirect', location.href);
+      // Single Page Application redirect - store the path and redirect via JS instead of meta refresh
+      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+      window.location.replace('/');
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
   <body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
   </body>
 </html>

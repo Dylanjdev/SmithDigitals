@@ -1,8 +1,19 @@
 import "./PrivacyPolicy.css";
+import { Title, Meta, Link as MetaLink } from "react-head";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="privacy-page">
+    <>
+      {/* SEO META TAGS */}
+      <Title>Privacy Policy | Smith Digitals</Title>
+      <Meta
+        name="description"
+        content="Read Smith Digitals' privacy policy. Learn how we collect, use, and protect your information."
+      />
+      <Meta name="robots" content="noindex, follow" />
+      <MetaLink rel="canonical" href="https://smithdigitals.com/privacy-policy" />
+
+      <div className="privacy-page">
       <h2>Privacy Policy</h2>
       <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
 
@@ -51,5 +62,6 @@ export default function PrivacyPolicy() {
         </p>
       </section>
     </div>
+    </>
   );
 }
