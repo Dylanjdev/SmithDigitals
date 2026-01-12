@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const services = [
-    { title: "Web Design & Development", desc: "Custom responsive websites crafted for your brand." },
-    { title: "SEO Optimization", desc: "Improve your search rankings and attract the right audience." },
-    { title: "Google Business Setup", desc: "Set up your profile to get found faster online." },
-    { title: "Monthly Maintenance", desc: "Keep your website fast, secure, and up-to-date." },
-    { title: "Branding & Logo Design", desc: "Create a strong visual identity that stands out." },
-    { title: "Performance Optimization", desc: "Speed up your website and improve user experience." },
-    { title: "Analytics & Reporting", desc: "Understand your visitors and make data-driven decisions." },
+    { title: "Web Design & Development", desc: "Turn visitors into customers with a stunning, mobile-first website." },
+    { title: "SEO Optimization", desc: "Rank higher on Google and get found by customers actively searching for you." },
+    { title: "Google Business Setup", desc: "Dominate local search results and show up on Google Maps." },
+    { title: "Monthly Maintenance", desc: "Never worry about downtime, security, or outdated plugins again." },
+    { title: "Branding & Logo Design", desc: "Build trust instantly with a memorable brand that reflects your values." },
+    { title: "Performance Optimization", desc: "Boost conversions with lightning-fast page loads that keep visitors engaged." },
+    { title: "Analytics & Reporting", desc: "Know exactly what's working and where to invest your marketing dollars." },
   ];
 
   return (

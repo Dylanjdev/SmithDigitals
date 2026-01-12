@@ -6,27 +6,27 @@ export default function Services() {
   const services = [
     { 
       title: "Web Design & Development", 
-      desc: "Custom responsive websites crafted for your brand.",
+      desc: "Fully responsive, modern websites built with clean code and optimized for all devices. Includes mobile-first design, fast loading times, and conversion-focused layouts.",
       icon: <FaLaptopCode size={40} />
     },
     { 
       title: "SEO Optimization", 
-      desc: "Boost your visibility and attract the right audience.",
+      desc: "Complete on-page and technical SEO implementation — keyword research, meta tags, schema markup, sitemap optimization, and performance tuning to rank higher in search results.",
       icon: <FaSearch size={40} />
     },
     { 
       title: "Google Business Setup", 
-      desc: "Get discovered faster with a professional profile.",
+      desc: "Professional Google Business Profile configuration with optimized descriptions, categories, photos, and posting strategy to increase local visibility and drive foot traffic.",
       icon: <FaGoogle size={40} />
     },
     { 
       title: "Monthly Maintenance", 
-      desc: "Keep your site fast, secure, and up-to-date.",
+      desc: "Ongoing updates, security monitoring, plugin management, backups, uptime tracking, and content changes to ensure your website stays secure, fast, and current.",
       icon: <FaTools size={40} />
     },
     { 
       title: "Branding & Logo Design", 
-      desc: "Create a strong identity that stands out online.",
+      desc: "Custom logo design, brand guidelines, color palettes, typography selection, and visual assets that create a cohesive and professional brand identity across all platforms.",
       icon: <FaPalette size={40} />
     },
   ];

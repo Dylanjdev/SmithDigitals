@@ -8,9 +8,14 @@ export default function Footer() {
         <a href="mailto:dylanjsmith.dev@gmail.com">📧 dylanjsmith.dev@gmail.com</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
         <a href="#contact">Contact</a>
-        <a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i className="fab fa-facebook"></i>
-        </a>
+        <div className="social-icons">
+          <a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/smithdigitals2025?igsh=MnZ1a3Y1aWN0bGJj&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </footer>
   );

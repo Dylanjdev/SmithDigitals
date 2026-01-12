@@ -26,6 +26,9 @@ export default function Navbar() {
 
         {/* Links */}
         <div className={`nav-links ${isOpen ? "active" : ""}`}>
+          <button className="close-menu" onClick={() => setIsOpen(false)} aria-label="Close menu">
+            <i className="fas fa-arrow-right"></i>
+          </button>
           <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
           <Link to="/work" onClick={() => setIsOpen(false)}>Our Work</Link>

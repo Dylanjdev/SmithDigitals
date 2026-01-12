@@ -528,6 +528,11 @@ p {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* Hide close button on desktop */
+.close-menu {
+  display: none;
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .hamburger {
@@ -548,6 +553,26 @@ p {
     gap: 2rem;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--light-text);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .close-menu:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
   }
 
   .nav-links.active {

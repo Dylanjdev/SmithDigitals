@@ -224,6 +224,14 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
+
+        {/* Additional Work Pricing */}
+        <div className="additional-pricing-note">
+          <p>
+            <strong>Need extra work beyond your monthly plan?</strong><br />
+            Additional requests are billed at $35/hour
+          </p>
+        </div>
       </div>
     </>
   );
