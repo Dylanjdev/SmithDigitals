@@ -7,7 +7,8 @@
   color: var(--light-text);
 }
 
-.pricing-page h1 {
+.pricing-page h1,
+.pricing-page h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 1rem;
@@ -17,6 +18,13 @@
   background-clip: text;
   letter-spacing: -0.02em;
   line-height: 1.1;
+}
+
+.pricing-subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--gray);
+  margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
 .pricing-page > p {
@@ -91,6 +99,20 @@
 .pricing-card.custom-plan:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 25px 30px -5px rgba(99, 102, 241, 0.2), 0 12px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Monthly Plan Accent */
+.pricing-card.monthly-plan {
+  border: 1px solid #34d399;
+}
+
+.pricing-card.monthly-plan .price {
+  color: #34d399;
+}
+
+.pricing-card.monthly-plan:hover {
+  border-color: #10b981;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(52, 211, 153, 0.1);
 }
 
 /* Card Content */
