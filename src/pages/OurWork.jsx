@@ -4,6 +4,7 @@ import React from "react";
 import projectImg2 from "../assets/church.png";
 import projectImg3 from "../assets/warehouse-bg.jpg";
 import bbsLogo from "../assets/bbslogo.jpg";
+import rileeImg from "../assets/R.avif";
 import { Title, Meta, Link as MetaLink } from "react-head";
 import "./OurWork.css";
 
@@ -40,6 +41,14 @@ export default function OurWork() {
       url: "https://mcguireslawnandlandscaping.com/",
       image: projectImg,
       tags: ["Business", "SEO", "Google Business"]
+    },
+    {
+      id: 5,
+      title: "Hair By Rilee",
+      description: "SEO-optimized landing page for a Virginia-based hair stylist featuring local business schema markup, geo-targeting, and social media integration. Built with responsive HTML/CSS/JavaScript and optimized for local search visibility in Lee County, VA.",
+      url: "https://www.hairbyrilee.com/",
+      image: rileeImg,
+      tags: ["Business", "SEO", "Local Search"]
     }
   ];
 
@@ -115,6 +124,13 @@ export default function OurWork() {
               image: "https://smithdigitals.com/assets/project1.png",
               description:
                 "Custom responsive website with SEO optimization, Google Business setup, and branding."
+            },
+            {
+              "@type": "CreativeWork",
+              name: "Hair By Rilee",
+              url: "https://www.hairbyrilee.com/",
+              description:
+                "SEO-optimized landing page for a Virginia-based hair stylist featuring local business schema markup, geo-targeting, and social media integration."
             }
           ]
         })}
