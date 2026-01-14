@@ -40,16 +40,6 @@ export default function Pricing() {
       ],
       checkoutLink: "https://buy.stripe.com/eVqcN71sn8fS81Zd1g1VK02",
     },
-    {
-      name: "Custom & Budget-Friendly",
-      price: "Flexible",
-      features: [
-        "Tailored to your needs",
-        "Custom features & design",
-        "Flexible pricing based on budget",
-        "Personalized consultation",
-      ],
-    },
   ];
 
   const monthlyPlans = [

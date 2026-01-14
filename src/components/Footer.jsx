@@ -7,6 +7,7 @@ export default function Footer() {
       <div className="footer-links">
         <a href="mailto:dylanjsmith.dev@gmail.com">📧 dylanjsmith.dev@gmail.com</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link to="/terms-of-service">Terms of Service</Link>
         <a href="#contact">Contact</a>
         <div className="social-icons">
           <a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

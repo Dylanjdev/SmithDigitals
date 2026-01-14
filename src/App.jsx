@@ -14,6 +14,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const OurWork = lazy(() => import("./pages/OurWork"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
 function RedirectHandler() {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
             </Routes>
           </Suspense>
 
