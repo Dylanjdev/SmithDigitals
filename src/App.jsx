@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import { useEffect, lazy, Suspense } from "react";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
-import AnimatedBackground from "./components/AnimatedBackground";
 import ScrollToTop from "./components/ScrollToTop";
 import PageLoader from "./components/PageLoader";
 import { HeadProvider } from "react-head"; // if using react-head for SEO
@@ -36,7 +35,6 @@ function App() {
     <HeadProvider>
       <Router>
         <RedirectHandler />
-        <AnimatedBackground />
         <div className="content">
           <Navbar />
           <ScrollToTop />
