@@ -22,7 +22,7 @@ export default function OurWork() {
       id: 2,
       title: "M&M Wholesale Store",
       description: "Full-stack e-commerce platform with custom admin dashboard for inventory management. Features real-time product updates, secure authentication, and streamlined wholesale operations.",
-      url: "https://mmwholesale-46f85.web.app/",
+      url: "https://mm-wholesales.com/",
       image: projectImg3,
       tags: ["Admin Dashboard", "Firebase"]
     },
@@ -55,16 +55,16 @@ export default function OurWork() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Our Work | Smith Digitals | Web Design Portfolio</Title>
+      <Title>Our Work | Smith Digitals LLC | Web Design Portfolio</Title>
       <Meta
         name="description"
-        content="See our portfolio at Smith Digitals — including BBS Bakery, M&M Wholesale Store with admin dashboard, Freedom In Christ Church, and McGuire's Lawn & Landscaping. We design responsive, SEO-optimized websites and e-commerce platforms."
+        content="See our portfolio at Smith Digitals LLC — including BBS Bakery, M&M Wholesale Store with admin dashboard, Freedom In Christ Church, and McGuire's Lawn & Landscaping. We design responsive, SEO-optimized websites and e-commerce platforms."
       />
       <Meta
         name="keywords"
         content="web design portfolio, SEO projects, Smith Digitals work, church websites, business websites, website examples"
       />
-      <Meta property="og:title" content="Smith Digitals | Web Design Portfolio" />
+      <Meta property="og:title" content="Smith Digitals LLC | Web Design Portfolio" />
       <Meta
         property="og:description"
         content="Explore Smith Digitals' recent projects — built with SEO optimization and modern responsive design."
@@ -91,7 +91,7 @@ export default function OurWork() {
             "Smith Digitals showcases completed web design and SEO projects for churches, businesses, and organizations.",
           creator: {
             "@type": "Organization",
-            name: "Smith Digitals",
+            name: "Smith Digitals LLC",
             url: "https://smithdigitals.com",
             logo: "https://smithdigitals.com/og-image.png"
           },
@@ -139,6 +139,7 @@ export default function OurWork() {
       {/* ✅ PAGE CONTENT */}
       <div className="work-page">
         <h2>Our Work</h2>
+        <p className="llc-notice"><strong>Smith Digitals LLC is a registered Limited Liability Company.</strong></p>
         <p className="work-subtitle">Recent projects we've built for businesses and organizations</p>
         <div className="projects-grid">
           {projects.map((project, index) => (

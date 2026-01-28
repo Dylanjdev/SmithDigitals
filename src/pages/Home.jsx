@@ -17,16 +17,16 @@ export default function Home() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Smith Digitals | Web Design, SEO & Branding Experts</Title>
+      <Title>Smith Digitals LLC | Web Design, SEO & Branding Experts</Title>
       <Meta
         name="description"
-        content="Smith Digitals builds modern, responsive websites optimized for SEO, speed, and conversions. Affordable web design, Google Business setup, and monthly maintenance plans available."
+        content="Smith Digitals LLC builds modern, responsive websites optimized for SEO, speed, and conversions. Affordable web design, Google Business setup, and monthly maintenance plans available."
       />
       <Meta
         name="keywords"
         content="web design, SEO, website builder, web developer, Google Business, small business websites, branding, Smith Digitals"
       />
-      <Meta property="og:title" content="Smith Digitals | Web Design & SEO Experts" />
+      <Meta property="og:title" content="Smith Digitals LLC | Web Design & SEO Experts" />
       <Meta
         property="og:description"
         content="Modern websites built to grow your business. Affordable, custom, and SEO-ready by Smith Digitals."
@@ -48,7 +48,7 @@ export default function Home() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Smith Digitals",
+          name: "Smith Digitals LLC",
           url: "https://smithdigitals.com",
           logo: "https://smithdigitals.com/og-image.png",
           sameAs: [
@@ -56,12 +56,13 @@ export default function Home() {
             "https://www.instagram.com/smithdigitals",
           ],
           description:
-            "Smith Digitals builds custom, SEO-optimized websites for small businesses. Web design, branding, and Google Business services.",
+            "Smith Digitals LLC builds custom, SEO-optimized websites for small businesses. Web design, branding, and Google Business services.",
         })}
       </script>
 
       {/* ✅ PAGE CONTENT */}
       <div className="home-page">
+        <p className="llc-notice" style={{textAlign: 'center', fontWeight: 'bold', marginTop: 8}}>Smith Digitals LLC is a registered Limited Liability Company.</p>
         {/* Hero Section */}
         <div className="hero">
           <motion.img

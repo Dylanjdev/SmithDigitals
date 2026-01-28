@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Smith Digitals. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Smith Digitals LLC. All rights reserved.</p>
+      <p className="llc-notice">Smith Digitals LLC is a registered Limited Liability Company.</p>
       <div className="footer-links">
         <a href="mailto:dylanjsmith.dev@gmail.com">📧 dylanjsmith.dev@gmail.com</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
