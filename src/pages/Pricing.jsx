@@ -14,7 +14,6 @@ export default function Pricing() {
         "Responsive Design",
         "Email Support",
       ],
-      checkoutLink: "https://buy.stripe.com/9B614p7QLfIk1DBaT81VK00",
     },
     {
       name: "Pro",
@@ -26,19 +25,16 @@ export default function Pricing() {
         "Google Business Setup",
         "Priority Support",
       ],
-      checkoutLink: "https://buy.stripe.com/4gMfZjc711Rueqne5k1VK01",
     },
     {
       name: "Premium",
       price: "$999",
       features: [
-        "Unlimited Pages",
-        "Full SEO Optimization",
-        "Branding & Logo Design",
-        "Monthly Maintenance",
-        "Priority Support",
+        "Unlimited website pages",
+        "Full SEO optimization",
+        "Branding & logo design",
+        "Priority support",
       ],
-      checkoutLink: "https://buy.stripe.com/eVqcN71sn8fS81Zd1g1VK02",
     },
   ];
 
@@ -53,7 +49,6 @@ export default function Pricing() {
         "Monthly Backups",
         "Email Support",
       ],
-      checkoutLink: "https://buy.stripe.com/aFadRb5ID53G6XV6CS1VK03",
     },
     {
       name: "Professional",
@@ -65,7 +60,6 @@ export default function Pricing() {
         "Performance Optimization",
         "Priority Support",
       ],
-      checkoutLink: "https://buy.stripe.com/aFa9AV9YT3ZCfurbXc1VK04",
     },
     {
       name: "Premium Care",
@@ -77,7 +71,6 @@ export default function Pricing() {
         "24/7 Monitoring",
         "Dedicated Account Manager",
       ],
-      checkoutLink: "https://buy.stripe.com/4gM28t9YTbs481Zf9o1VK05",
     },
   ];
 
@@ -160,20 +153,9 @@ export default function Pricing() {
                   <li key={i}>{f}</li>
                 ))}
               </ul>
-              {plan.checkoutLink ? (
-                <a 
-                  href={plan.checkoutLink} 
-                  className="pricing-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Started
-                </a>
-              ) : (
-                <Link to="/contact" className="pricing-btn">
-                  Get Started
-                </Link>
-              )}
+              <Link to="/contact" className="pricing-btn">
+                Get Started
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -197,20 +179,9 @@ export default function Pricing() {
                   <li key={i}>{f}</li>
                 ))}
               </ul>
-              {plan.checkoutLink ? (
-                <a 
-                  href={plan.checkoutLink} 
-                  className="pricing-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Subscribe
-                </a>
-              ) : (
-                <Link to="/contact" className="pricing-btn">
-                  Subscribe
-                </Link>
-              )}
+              <Link to="/contact" className="pricing-btn">
+                Subscribe
+              </Link>
             </motion.div>
           ))}
         </div>

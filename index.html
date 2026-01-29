@@ -76,10 +76,17 @@
         }
       }
     </script>
-    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous" defer></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
   </body>
 </html>
