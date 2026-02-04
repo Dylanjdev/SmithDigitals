@@ -5,6 +5,7 @@ import projectImg2 from "../assets/church.png";
 import projectImg3 from "../assets/warehouse-bg.jpg";
 import bbsLogo from "../assets/bbslogo.jpg";
 import rileeImg from "../assets/R.avif";
+import paintingStudioImg from "../assets/PaintingInsideTheStudio.webp";
 import { Title, Meta, Link as MetaLink } from "react-head";
 import "./OurWork.css";
 
@@ -12,6 +13,14 @@ export default function OurWork() {
   const projects = [
     {
       id: 1,
+      title: "Painting Outside The Lines Studios",
+      description: "Creative art studio website showcasing painting classes, workshops, and artistic services with an engaging visual design.",
+      url: "https://paintingoutsidethelinesstudios.com/",
+      image: paintingStudioImg,
+      tags: ["Art Studio", "Creative", "Business"]
+    },
+    {
+      id: 2,
       title: "BBS Bakery",
       description: "Elegant bakery website showcasing artisan baked goods with a beautiful, modern design. Features responsive layout, contact forms, and optimized user experience to drive customer engagement.",
       url: "https://www.bbs-bakery.com/",
@@ -19,7 +28,7 @@ export default function OurWork() {
       tags: ["Bakery", "Business", "Responsive Design"]
     },
     {
-      id: 2,
+      id: 3,
       title: "M&M Wholesale Store",
       description: "Full-stack e-commerce platform with custom admin dashboard for inventory management. Features real-time product updates, secure authentication, and streamlined wholesale operations.",
       url: "https://mm-wholesales.com/",
@@ -27,7 +36,7 @@ export default function OurWork() {
       tags: ["Admin Dashboard", "Firebase"]
     },
     {
-      id: 3,
+      id: 4,
       title: "Freedom In Christ Church",
       description: "Modern, responsive church website featuring service times, ministries, and events. Built with a clean design to engage the community in Jonesville, VA.",
       url: "https://dylanjdev.github.io/Freedom-In-Christ/",
@@ -35,7 +44,7 @@ export default function OurWork() {
       tags: ["Church", "Community", "Responsive Design"]
     },
     {
-      id: 4,
+      id: 5,
       title: "McGuire's Lawn & Landscaping",
       description: "Custom responsive website with SEO optimization, Google Business setup, and a sleek design to boost visibility and attract new clients.",
       url: "https://mcguireslawnandlandscaping.com/",
@@ -43,7 +52,7 @@ export default function OurWork() {
       tags: ["Business", "SEO", "Google Business"]
     },
     {
-      id: 5,
+      id: 6,
       title: "Hair By Rilee",
       description: "SEO-optimized landing page for a Virginia-based hair stylist featuring local business schema markup, geo-targeting, and social media integration. Built with responsive HTML/CSS/JavaScript and optimized for local search visibility in Lee County, VA.",
       url: "https://www.hairbyrilee.com/",
