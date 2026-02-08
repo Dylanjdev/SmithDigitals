@@ -3,16 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Smith Digitals</title>
+    <title>Smith Digitals - Redirecting...</title>
     <meta name="robots" content="noindex, nofollow">
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+      }
+      .container { max-width: 500px; padding: 2rem; }
+      h1 { font-size: 2rem; margin-bottom: 1rem; }
+      a { color: #fff; text-decoration: underline; }
+    </style>
     <script>
-      // Single Page Application redirect - store the path and redirect via JS instead of meta refresh
-      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
-      window.location.replace('/');
+      // SPA redirect for GitHub Pages
+      // Only redirect if it's a valid route from our app
+      const validRoutes = ['/', '/services', '/work', '/pricing', '/contact', '/privacy-policy', '/terms-of-service'];
+      const currentPath = location.pathname;
+
+      // Check if the current path is a known route
+      if (validRoutes.includes(currentPath)) {
+        sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+        window.location.replace('/');
+      }
+      // Otherwise, let it stay on 404 (actual broken link)
     </script>
   </head>
   <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+    <div class="container">
+      <h1>Redirecting...</h1>
+      <p>If you are not redirected automatically, <a href="/">go to homepage</a>.</p>
+    </div>
   </body>
 </html>
