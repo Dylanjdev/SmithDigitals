@@ -62,6 +62,12 @@ const routes = [
     robots: 'index, follow'
   },
   {
+    path: '/case-studies/the-unicorn-techs',
+    title: 'The Unicorn Techs | Case Study | Smith Digitals',
+    description: 'Case study for The Unicorn Techs: executive fiduciary advisory positioning for AI readiness and delivery alignment.',
+    robots: 'index, follow'
+  },
+  {
     path: '/pricing',
     title: 'Web Design Pricing in Southwest Virginia | Smith Digitals',
     description: 'Transparent pricing for web design, SEO, and maintenance services in Southwest Virginia. Custom packages available to fit your budget and goals.',

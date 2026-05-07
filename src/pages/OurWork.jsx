@@ -10,6 +10,7 @@ import paintingStudioImg from "../assets/PaintingInsideTheStudio.webp";
 import jumpImg from "../assets/Jump.png";
 import fitImg from "../assets/fit.png";
 import stoneYogurtImg from "../assets/StoneYogurt.webp";
+import uniImg from "../assets/Uni.png";
 import { Title, Meta, Link as MetaLink } from "react-head";
 import "./OurWork.css";
 
@@ -26,6 +27,15 @@ export default function OurWork() {
     },
     {
       id: 2,
+      title: "The Unicorn Techs",
+      description: "High-intensity executive advisory site for AI readiness and technical delivery alignment, positioned around fiduciary guidance, trust-gap elimination, and physics-over-hype execution.",
+      url: "https://theunicorntechs.com/",
+      image: uniImg,
+      tags: ["AI Readiness", "Executive Advisory", "Fiduciary Strategy"],
+      caseStudy: "/case-studies/the-unicorn-techs"
+    },
+    {
+      id: 3,
       title: "Fit & Fierce Studio",
       description: "Inclusive dance fitness studio focused on helping every client feel strong, confident, supported, and sexy through high-energy, body-positive training for all levels.",
       url: "https://fitandfierce.studio/",
@@ -34,7 +44,7 @@ export default function OurWork() {
       caseStudy: "/case-studies/fit-and-fierce"
     },
     {
-      id: 3,
+      id: 4,
       title: "Jump Sporting Goods LLC",
       description: "Custom e-commerce website for custom apparel serving schools, faith organizations, municipalities, rescue departments, and more with streamlined online ordering.",
       url: "https://www.jumpsportinggoods.com/",
@@ -43,7 +53,7 @@ export default function OurWork() {
       caseStudy: "/case-studies/jump-sporting-goods"
     },
     {
-      id: 4,
+      id: 5,
       title: "Painting Outside The Lines Studios",
       description: "Creative art studio website showcasing painting classes, workshops, and artistic services with an engaging visual design.",
       url: "https://paintingoutsidethelinesstudios.com/",
@@ -52,7 +62,7 @@ export default function OurWork() {
       caseStudy: "/case-studies/painting-outside-the-lines"
     },
     {
-      id: 5,
+      id: 6,
       title: "BBS Bakery",
       description: "Bakery website featuring online ordering through Square Checkout API, responsive design, and SEO strategy that helped rank above Blackbird Bakery in Bristol, VA within 3 months.",
       url: "https://www.bbs-bakery.com/",
@@ -61,7 +71,7 @@ export default function OurWork() {
       caseStudy: "/case-studies/bbs-bakery"
     },
     {
-      id: 6,
+      id: 7,
       title: "M&M Wholesale Store",
       description: "Full-stack e-commerce platform with custom admin dashboard for inventory management. Features real-time product updates, secure authentication, and streamlined wholesale operations.",
       url: "https://mm-wholesales.com/",
@@ -69,7 +79,7 @@ export default function OurWork() {
       tags: ["Admin Dashboard", "Firebase"]
     },
     {
-      id: 7,
+      id: 8,
       title: "Freedom In Christ Church",
       description: "Modern, responsive church website featuring service times, ministries, and events. Built with a clean design to engage the community in Jonesville, VA.",
       url: "https://dylanjdev.github.io/Freedom-In-Christ/",
@@ -77,7 +87,7 @@ export default function OurWork() {
       tags: ["Church", "Community", "Responsive Design"]
     },
     {
-      id: 8,
+      id: 9,
       title: "McGuire's Lawn & Landscaping",
       description: "Lead-generation landscaping website with SEO optimization and quote funnel strategy that produced 6 free quote form submissions in one week, all turning into customers.",
       url: "https://mcguireslawnandlandscaping.com/",
@@ -86,7 +96,7 @@ export default function OurWork() {
       caseStudy: "/case-studies/mcguires-landscaping"
     },
     {
-      id: 9,
+      id: 10,
       title: "Hair By Rilee",
       description: "SEO-optimized landing page for a Virginia-based hair stylist featuring local business schema markup, geo-targeting, and social media integration. Built with responsive HTML/CSS/JavaScript and optimized for local search visibility in Lee County, VA.",
       url: "https://www.hairbyrilee.com/",
@@ -139,6 +149,13 @@ export default function OurWork() {
             logo: "https://smithdigitals.com/og-image.jpg"
           },
           hasPart: [
+            {
+              "@type": "CreativeWork",
+              name: "The Unicorn Techs",
+              url: "https://theunicorntechs.com/",
+              description:
+                "Executive fiduciary advisory website focused on AI readiness, trust-gap elimination between GTM strategy and engineering delivery, and physics-over-hype decision support."
+            },
             {
               "@type": "CreativeWork",
               name: "Fit & Fierce Studio",

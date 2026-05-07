@@ -17,6 +17,7 @@ const PaintingOutsideTheLines = lazy(() => import("./pages/PaintingOutsideTheLin
 const BBSBakery = lazy(() => import("./pages/BBSBakery"));
 const McGuiresLandscaping = lazy(() => import("./pages/McGuiresLandscaping"));
 const StoneMountainYogurt = lazy(() => import("./pages/StoneMountainYogurt"));
+const UnicornTechs = lazy(() => import("./pages/UnicornTechs"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -40,6 +41,7 @@ function App() {
               <Route path="/case-studies/bbs-bakery" element={<BBSBakery />} />
               <Route path="/case-studies/mcguires-landscaping" element={<McGuiresLandscaping />} />
               <Route path="/case-studies/stone-mountain-yogurt" element={<StoneMountainYogurt />} />
+              <Route path="/case-studies/the-unicorn-techs" element={<UnicornTechs />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
