@@ -34,30 +34,30 @@ export default function Services() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Our Services | Smith Digitals | Web Design & SEO Experts</Title>
+      <Title>Web Design Services in Southwest Virginia | Smith Digitals</Title>
       <Meta
         name="description"
-        content="Explore Smith Digitals services — custom web design, SEO optimization, Google Business setup, and branding. Affordable, high-quality solutions for small businesses."
+        content="Explore Smith Digitals services in Southwest Virginia — custom web design, SEO optimization, Google Business setup, and branding for local businesses."
       />
       <Meta
         name="keywords"
         content="web design services, SEO optimization, Google Business setup, website maintenance, logo design, branding, Smith Digitals"
       />
-      <Meta property="og:title" content="Smith Digitals | Professional Web Design & SEO Services" />
+      <Meta property="og:title" content="Smith Digitals | Web Design Services in Southwest Virginia" />
       <Meta
         property="og:description"
-        content="We build responsive websites, optimize SEO, and manage your online presence — affordable and effective digital solutions by Smith Digitals."
+        content="We build responsive websites, optimize SEO, and manage online presence for local businesses across Southwest Virginia."
       />
-      <Meta property="og:image" content="/og-image.png" />
+      <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/services" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Smith Digitals | Professional Web Design & SEO Services" />
+      <Meta name="twitter:title" content="Smith Digitals | Web Design Services in Southwest Virginia" />
       <Meta
         name="twitter:description"
-        content="Web design, SEO, branding, and Google Business setup tailored to your goals."
+        content="Web design, SEO, branding, and Google Business setup for local businesses in Southwest Virginia."
       />
-      <Meta name="twitter:image" content="/og-image.png" />
+      <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/services" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}
@@ -70,7 +70,8 @@ export default function Services() {
             "@type": "Organization",
             name: "Smith Digitals",
             url: "https://smithdigitals.com",
-            logo: "https://smithdigitals.com/og-image.png",
+            logo: "https://smithdigitals.com/og-image.jpg",
+            areaServed: ["Southwest Virginia", "Lee County, VA", "Wise County, VA", "Scott County, VA"],
             sameAs: [
               "https://www.facebook.com/smithdigitals",
               "https://www.instagram.com/smithdigitals"
@@ -98,8 +99,8 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2 }}
             >
-              <div className="service-icon">{s.icon}</div>
-              <h3>{s.title}</h3>
+              <div className="service-icon" aria-hidden="true">{s.icon}</div>
+              <h2>{s.title}</h2>
               <p>{s.desc}</p>
             </motion.div>
           ))}

@@ -1,0 +1,492 @@
+/* ── Jump Sporting Goods Case Study Page ── */
+
+.jsg-page {
+  --jsg-accent: #f59e0b;
+  --jsg-accent-hover: #d97706;
+  --jsg-accent-light: rgba(245, 158, 11, 0.12);
+  --jsg-accent-glow: rgba(245, 158, 11, 0.25);
+
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  min-height: 100vh;
+}
+
+/* ── Breadcrumb ── */
+.jsg-breadcrumb {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.jsg-breadcrumb a {
+  color: var(--gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.jsg-breadcrumb a:hover {
+  color: var(--jsg-accent);
+}
+
+/* ── Hero ── */
+.jsg-hero {
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.jsg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.jsg-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.jsg-logo-block {
+  margin-bottom: var(--spacing-md);
+}
+
+.jsg-logo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 3px solid var(--jsg-accent);
+  box-shadow: 0 0 30px var(--jsg-accent-glow);
+}
+
+.jsg-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--jsg-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.jsg-headline {
+  font-size: clamp(2rem, 5.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--light-text);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.jsg-hero-desc {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.jsg-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.jsg-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--jsg-accent-light);
+  color: var(--jsg-accent);
+  border: 1px solid var(--jsg-accent);
+}
+
+.jsg-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Shared Buttons ── */
+.jsg-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.jsg-btn-primary {
+  background: var(--jsg-accent);
+  color: #111;
+  box-shadow: 0 4px 16px var(--jsg-accent-glow);
+}
+
+.jsg-btn-primary:hover {
+  background: var(--jsg-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--jsg-accent-glow);
+  color: #111;
+}
+
+.jsg-btn-secondary {
+  background: transparent;
+  color: var(--jsg-accent);
+  border: 2px solid var(--jsg-accent);
+}
+
+.jsg-btn-secondary:hover {
+  background: var(--jsg-accent-light);
+  transform: translateY(-2px);
+  color: var(--jsg-accent);
+}
+
+/* ── Section Labels ── */
+.jsg-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--jsg-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Category Grid ── */
+.jsg-categories {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.jsg-categories-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jsg-section-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.jsg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.jsg-category-card {
+  background: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.jsg-category-card:hover {
+  border-color: var(--jsg-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--jsg-accent-glow);
+}
+
+.jsg-cat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.jsg-category-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 0.3rem;
+}
+
+.jsg-category-card p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* ── About ── */
+.jsg-about {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.jsg-about-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jsg-about-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray);
+  text-align: left;
+}
+
+/* ── What We Built ── */
+.jsg-built {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.jsg-built-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jsg-built-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  text-align: left;
+}
+
+.jsg-built-card {
+  background: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.jsg-built-card:hover {
+  border-color: var(--jsg-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--jsg-accent-glow);
+}
+
+.jsg-built-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.jsg-built-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 0.4rem;
+}
+
+.jsg-built-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Schools ── */
+.jsg-schools {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.jsg-schools-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jsg-schools-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.jsg-school-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.jsg-school-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--gray);
+  transition: all 0.2s;
+}
+
+.jsg-school-tag:hover {
+  border-color: var(--jsg-accent);
+  color: var(--jsg-accent);
+  background: var(--jsg-accent-light);
+}
+
+/* ── Contact ── */
+.jsg-contact {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+  border-top: 1px solid var(--border-color);
+}
+
+.jsg-contact-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jsg-contact-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.jsg-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+}
+
+.jsg-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: var(--light-text);
+}
+
+.jsg-contact-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.jsg-contact-link {
+  color: var(--jsg-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.jsg-contact-link:hover {
+  color: var(--jsg-accent-hover);
+}
+
+.jsg-contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Footer / Credit ── */
+.jsg-credit {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.jsg-credit-logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.jsg-credit-logo-link:hover {
+  opacity: 0.8;
+}
+
+.jsg-credit-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 2px solid var(--jsg-accent);
+  box-shadow: 0 0 20px var(--jsg-accent-glow);
+}
+
+.jsg-credit-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.jsg-credit-built {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+.jsg-credit-smith {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.jsg-credit-smith:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .jsg-hero {
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl);
+  }
+
+  .jsg-hero-ctas,
+  .jsg-contact-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jsg-grid,
+  .jsg-built-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jsg-contact-details {
+    padding: var(--spacing-md);
+  }
+
+  .jsg-contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

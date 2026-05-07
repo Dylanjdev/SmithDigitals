@@ -91,7 +91,7 @@ export default function Pricing() {
         property="og:description"
         content="Affordable website design, SEO, and branding plans tailored for your business."
       />
-      <Meta property="og:image" content="/og-image.png" />
+      <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/pricing" />
       <Meta name="twitter:card" content="summary_large_image" />
@@ -100,7 +100,7 @@ export default function Pricing() {
         name="twitter:description"
         content="Explore flexible and affordable web design packages from Smith Digitals."
       />
-      <Meta name="twitter:image" content="/og-image.png" />
+      <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/pricing" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}
@@ -116,7 +116,7 @@ export default function Pricing() {
             "@type": "Organization",
             name: "Smith Digitals",
             url: "https://smithdigitals.com",
-            logo: "https://smithdigitals.com/og-image.png",
+            logo: "https://smithdigitals.com/og-image.jpg",
           },
           itemListElement: plans.map((plan, i) => ({
             "@type": "Offer",
@@ -132,7 +132,7 @@ export default function Pricing() {
 
       {/* ✅ PAGE CONTENT */}
       <div className="pricing-page">
-        <h2>Website Design Plans</h2>
+        <h1>Website Design Plans</h1>
         <p className="pricing-subtitle">One-time investment to build your online presence</p>
         <div className="pricing-cards">
           {plans.map((plan, idx) => (
@@ -146,7 +146,7 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.3 }}
             >
-              <h3>{plan.name}</h3>
+              <h2>{plan.name}</h2>
               <p className="price">{plan.price}</p>
               <ul>
                 {plan.features.map((f, i) => (
@@ -158,6 +158,23 @@ export default function Pricing() {
               </Link>
             </motion.div>
           ))}
+        </div>
+
+        <div className="client-portal-callout">
+          <p className="client-portal-eyebrow">Existing clients</p>
+          <h2>Manage your subscription in the Stripe Client Portal</h2>
+          <p>
+            Review your active subscription, update billing details, upgrade your plan,
+            or cancel from one secure place.
+          </p>
+          <a
+            href="https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400"
+            className="client-portal-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Client Billing Portal
+          </a>
         </div>
 
         <h2 style={{ marginTop: '6rem' }}>Monthly Management Plans</h2>
@@ -172,7 +189,7 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.3 }}
             >
-              <h3>{plan.name}</h3>
+              <h2>{plan.name}</h2>
               <p className="price">{plan.price}</p>
               <ul>
                 {plan.features.map((f, i) => (

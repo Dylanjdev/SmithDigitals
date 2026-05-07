@@ -7,10 +7,10 @@
 }
 
 .terms-page h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--light-text);
-  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .terms-page > p {
@@ -24,12 +24,6 @@
   margin-bottom: 2.5rem;
 }
 
-.terms-page h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
-  font-weight: 600;
-}
 
 .terms-page p {
   color: var(--gray-light);
@@ -66,10 +60,6 @@
   }
 
   .terms-page h2 {
-    font-size: 2rem;
-  }
-
-  .terms-page h3 {
     font-size: 1.25rem;
   }
 

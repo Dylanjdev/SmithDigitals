@@ -8,13 +8,6 @@
 }
 
 .privacy-page h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  color: var(--accent);
-}
-
-.privacy-page h3 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
@@ -37,10 +30,6 @@
   }
 
   .privacy-page h2 {
-    font-size: 1.8rem;
-  }
-
-  .privacy-page h3 {
     font-size: 1.1rem;
   }
 }

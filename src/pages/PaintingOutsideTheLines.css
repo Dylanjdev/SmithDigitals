@@ -1,0 +1,486 @@
+/* ── Painting Outside The Lines Studio — Case Study Page ── */
+
+.potl-page {
+  --potl-accent: #a855f7;
+  --potl-accent-hover: #9333ea;
+  --potl-accent-light: rgba(168, 85, 247, 0.12);
+  --potl-accent-glow: rgba(168, 85, 247, 0.25);
+
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  min-height: 100vh;
+}
+
+/* ── Breadcrumb ── */
+.potl-breadcrumb {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.potl-breadcrumb a {
+  color: var(--gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.potl-breadcrumb a:hover {
+  color: var(--potl-accent);
+}
+
+/* ── Hero ── */
+.potl-hero {
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.potl-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.potl-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.potl-logo-block {
+  margin-bottom: var(--spacing-md);
+}
+
+.potl-hero-img {
+  width: 160px;
+  height: 120px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 3px solid var(--potl-accent);
+  box-shadow: 0 0 30px var(--potl-accent-glow);
+}
+
+.potl-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--potl-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.potl-headline {
+  font-size: clamp(2rem, 5.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--light-text);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.potl-hero-desc {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.potl-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.potl-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--potl-accent-light);
+  color: var(--potl-accent);
+  border: 1px solid var(--potl-accent);
+}
+
+.potl-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Shared Buttons ── */
+.potl-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.potl-btn-primary {
+  background: var(--potl-accent);
+  color: #fff;
+  box-shadow: 0 4px 16px var(--potl-accent-glow);
+}
+
+.potl-btn-primary:hover {
+  background: var(--potl-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--potl-accent-glow);
+  color: #fff;
+}
+
+.potl-btn-secondary {
+  background: transparent;
+  color: var(--potl-accent);
+  border: 2px solid var(--potl-accent);
+}
+
+.potl-btn-secondary:hover {
+  background: var(--potl-accent-light);
+  transform: translateY(-2px);
+  color: var(--potl-accent);
+}
+
+/* ── Section Label ── */
+.potl-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--potl-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Offerings ── */
+.potl-offerings {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.potl-offerings-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.potl-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  text-align: left;
+}
+
+.potl-offer-card {
+  background: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.potl-offer-card:hover {
+  border-color: var(--potl-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--potl-accent-glow);
+}
+
+.potl-offer-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.potl-offer-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 0.4rem;
+}
+
+.potl-offer-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── About ── */
+.potl-about {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.potl-about-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.potl-about-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray);
+  text-align: left;
+}
+
+/* ── Occasions ── */
+.potl-occasions {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.potl-occasions-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.potl-occasions-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  max-width: 580px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.potl-occasion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.potl-occasion-tag {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  color: var(--gray);
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.potl-occasion-tag:hover {
+  border-color: var(--potl-accent);
+  color: var(--potl-accent);
+  background: var(--potl-accent-light);
+}
+
+/* ── What We Built ── */
+.potl-built {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.potl-built-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.potl-built-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  text-align: left;
+}
+
+.potl-built-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.potl-built-card:hover {
+  border-color: var(--potl-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--potl-accent-glow);
+}
+
+.potl-built-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.potl-built-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 0.4rem;
+}
+
+.potl-built-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Contact ── */
+.potl-contact {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
+  border-top: 1px solid var(--border-color);
+}
+
+.potl-contact-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.potl-contact-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.potl-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+}
+
+.potl-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: var(--light-text);
+}
+
+.potl-contact-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.potl-contact-link {
+  color: var(--potl-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.potl-contact-link:hover {
+  color: var(--potl-accent-hover);
+}
+
+.potl-contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Footer / Credit ── */
+.potl-credit {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.potl-credit-logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.potl-credit-logo-link:hover {
+  opacity: 0.8;
+}
+
+.potl-credit-logo {
+  width: 100px;
+  height: 72px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 2px solid var(--potl-accent);
+  box-shadow: 0 0 20px var(--potl-accent-glow);
+}
+
+.potl-credit-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.potl-credit-built {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+.potl-credit-smith {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.potl-credit-smith:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .potl-hero {
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl);
+  }
+
+  .potl-hero-ctas,
+  .potl-contact-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .potl-offer-grid,
+  .potl-built-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .potl-contact-details {
+    padding: var(--spacing-md);
+  }
+
+  .potl-contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

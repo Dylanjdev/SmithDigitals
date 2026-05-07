@@ -9,33 +9,81 @@ const __dirname = path.dirname(__filename);
 const routes = [
   {
     path: '/services',
-    title: 'Our Services | Smith Digitals | Web Design & SEO Experts',
-    description: 'Explore Smith Digitals services — custom web design, SEO optimization, Google Business setup, and branding. Affordable, high-quality solutions for small businesses.'
+    title: 'Web Design Services in Southwest Virginia | Smith Digitals',
+    description: 'Explore Smith Digitals services in Southwest Virginia — custom web design, SEO optimization, Google Business setup, and branding for local businesses.',
+    robots: 'index, follow'
   },
   {
     path: '/work',
     title: 'Our Work | Smith Digitals Portfolio',
-    description: 'View our portfolio of custom websites and digital solutions. See how we\'ve helped businesses grow with professional web design and SEO.'
+    description: 'View our portfolio of custom websites and digital solutions. See how we\'ve helped businesses grow with professional web design and SEO.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies',
+    title: 'Case Studies | Smith Digitals Portfolio',
+    description: 'Explore real client case studies from Smith Digitals, including e-commerce builds, local SEO wins, and high-converting websites.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/fit-and-fierce',
+    title: 'Fit & Fierce Studio | Case Study | Smith Digitals',
+    description: 'Case study for Fit & Fierce Studio: inclusive fitness web presence built by Smith Digitals.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/jump-sporting-goods',
+    title: 'Jump Sporting Goods | Case Study | Smith Digitals',
+    description: 'Case study for Jump Sporting Goods: custom apparel e-commerce platform built by Smith Digitals.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/painting-outside-the-lines',
+    title: 'Painting Outside The Lines | Case Study | Smith Digitals',
+    description: 'Case study for Painting Outside The Lines Studio: creative class-based website experience by Smith Digitals.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/bbs-bakery',
+    title: 'BBS Bakery | Case Study | Smith Digitals',
+    description: 'Case study for BBS Bakery: Square Checkout API integration and local SEO gains in Bristol, VA.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/mcguires-landscaping',
+    title: 'McGuire\'s Lawn & Landscaping | Case Study | Smith Digitals',
+    description: 'Case study for McGuire\'s Lawn & Landscaping: 6 free quote submissions in one week, all converted to customers.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/stone-mountain-yogurt',
+    title: 'Stone Mountain Yogurt | Case Study | Smith Digitals',
+    description: 'Case study for Stone Mountain Yogurt: SEO redesign and customized Twilio API text automation.',
+    robots: 'index, follow'
   },
   {
     path: '/pricing',
-    title: 'Pricing | Affordable Web Design & SEO | Smith Digitals',
-    description: 'Transparent pricing for web design, SEO, and maintenance services. Custom packages available to fit your budget and goals.'
+    title: 'Web Design Pricing in Southwest Virginia | Smith Digitals',
+    description: 'Transparent pricing for web design, SEO, and maintenance services in Southwest Virginia. Custom packages available to fit your budget and goals.',
+    robots: 'index, follow'
   },
   {
     path: '/contact',
-    title: 'Contact Us | Get Your Free Quote | Smith Digitals',
-    description: 'Ready to grow your business online? Contact Smith Digitals for a free consultation and quote on web design, SEO, and branding services.'
+    title: 'Contact Smith Digitals | Southwest Virginia Website Developer',
+    description: 'Ready to grow your business online? Contact Smith Digitals for a free consultation on web design, SEO, and branding in Southwest Virginia.',
+    robots: 'index, follow'
   },
   {
     path: '/privacy-policy',
     title: 'Privacy Policy | Smith Digitals',
-    description: 'Smith Digitals privacy policy - learn how we collect, use, and protect your information.'
+    description: 'Smith Digitals privacy policy - learn how we collect, use, and protect your information.',
+    robots: 'noindex, follow'
   },
   {
     path: '/terms-of-service',
     title: 'Terms of Service | Smith Digitals',
-    description: 'Terms of service for Smith Digitals LLC. Read our terms and conditions for using our website and services.'
+    description: 'Terms of service for Smith Digitals LLC. Read our terms and conditions for using our website and services.',
+    robots: 'noindex, follow'
   }
 ];
 
@@ -58,7 +106,7 @@ routes.forEach(route => {
     )
     .replace(
       /<link\s+rel="canonical"\s+href="[\s\S]*?"\s*\/>/,
-      `<link rel="canonical" href="https://smithdigitals.com${route.path}" />`
+      `<link rel="canonical" href="https://smithdigitals.com${route.path}/" />`
     )
     .replace(
       /<meta\s+property="og:title"\s+content="[\s\S]*?"\s*\/>/,
@@ -70,7 +118,7 @@ routes.forEach(route => {
     )
     .replace(
       /<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta property="og:url" content="https://smithdigitals.com${route.path}" />`
+      `<meta property="og:url" content="https://smithdigitals.com${route.path}/" />`
     )
     .replace(
       /<meta\s+name="twitter:title"\s+content="[\s\S]*?"\s*\/>/,
@@ -79,6 +127,10 @@ routes.forEach(route => {
     .replace(
       /<meta\s+name="twitter:description"\s+content="[\s\S]*?"\s*\/>/,
       `<meta name="twitter:description" content="${route.description}" />`
+    )
+    .replace(
+      /<meta\s+name="robots"\s+content="[\s\S]*?"\s*\/>/,
+      `<meta name="robots" content="${route.robots}" />`
     );
 
   // Create directory if needed

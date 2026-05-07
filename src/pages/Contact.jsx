@@ -6,30 +6,30 @@ export default function Contact() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Contact | Smith Digitals | Web Design & SEO Experts</Title>
+      <Title>Contact Smith Digitals | Southwest Virginia Website Developer</Title>
       <Meta
         name="description"
-        content="Contact Smith Digitals for custom web design, SEO, branding, or Google Business setup. Let's build something great together — reach out today."
+        content="Contact Smith Digitals, a Southwest Virginia website developer, for custom web design, SEO, branding, or Google Business setup."
       />
       <Meta
         name="keywords"
         content="contact Smith Digitals, web design quote, SEO services, small business website help, web developer contact"
       />
-      <Meta property="og:title" content="Contact Smith Digitals | Web Design & SEO" />
+      <Meta property="og:title" content="Contact Smith Digitals | Southwest Virginia Website Developer" />
       <Meta
         property="og:description"
-        content="Let's talk about your project goals — Smith Digitals creates modern, affordable websites and SEO strategies that grow your business."
+        content="Let's talk about your project goals. Smith Digitals builds modern, affordable websites and SEO strategies for businesses across Southwest Virginia."
       />
       <Meta property="og:type" content="website" />
-      <Meta property="og:image" content="/og-image.png" />
+      <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:url" content="https://smithdigitals.com/contact" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Contact Smith Digitals" />
       <Meta
         name="twitter:description"
-        content="Reach out to Smith Digitals for affordable web design, SEO, and branding services."
+        content="Reach out to Smith Digitals for affordable web design, SEO, and branding services in Southwest Virginia."
       />
-      <Meta name="twitter:image" content="/og-image.png" />
+      <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/contact" />
 
       {/* ✅ STRUCTURED DATA (LOCAL BUSINESS) */}
@@ -38,25 +38,20 @@ export default function Contact() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Smith Digitals",
-          image: "https://smithdigitals.com/og-image.png",
+          image: "https://smithdigitals.com/og-image.jpg",
           url: "https://smithdigitals.com",
-          email: "dylanjsmith.dev@gmail.com",
+          email: "dylan@smithdigitals.com",
           description:
-            "Web design, SEO, and digital branding for small businesses — affordable, modern, and results-driven.",
+            "Web design, SEO, and digital branding for small businesses in Southwest Virginia — affordable, modern, and results-driven.",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Virginia",
-            addressCountry: "USA",
+            addressRegion: "VA",
+            addressCountry: "US",
           },
-          areaServed: "United States",
-          sameAs: [
-            "https://www.linkedin.com",
-            "https://github.com",
-            "https://facebook.com",
-          ],
+          areaServed: ["Southwest Virginia", "Lee County, VA", "Wise County, VA", "Scott County, VA"],
           contactPoint: {
             "@type": "ContactPoint",
-            email: "dylanjsmith.dev@gmail.com",
+            email: "dylan@smithdigitals.com",
             contactType: "Customer Support",
           },
         })}
@@ -93,7 +88,7 @@ export default function Contact() {
             transition={{ delay: 0.8, duration: 1 }}
           >
             Or email directly:{" "}
-            <a href="mailto:dylanjsmith.dev@gmail.com">dylanjsmith.dev@gmail.com</a>
+            <a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com</a>
           </motion.p>
         </div>
 
@@ -106,30 +101,30 @@ export default function Contact() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <label>
+          <label htmlFor="contact-name">
             Name *
-            <input type="text" name="name" placeholder="Your Name" required />
+            <input id="contact-name" type="text" name="name" placeholder="Your Name" autoComplete="name" required />
           </label>
 
-          <label>
+          <label htmlFor="contact-email">
             Email *
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input id="contact-email" type="email" name="email" placeholder="Your Email" autoComplete="email" required />
           </label>
 
-          <label>
+          <label htmlFor="contact-phone">
             Phone
-            <input type="tel" name="phone" placeholder="Optional" />
+            <input id="contact-phone" type="tel" name="phone" placeholder="Optional" autoComplete="tel" />
           </label>
 
-          <label>
+          <label htmlFor="contact-website">
             Website (if any)
-            <input type="url" name="website" placeholder="https://example.com" />
+            <input id="contact-website" type="url" name="website" placeholder="https://example.com" autoComplete="url" />
           </label>
 
-          <label>
+          <label htmlFor="contact-project-type">
             What kind of project are you interested in? *
             <div className="select-wrapper">
-              <select name="projectType" required>
+              <select id="contact-project-type" name="projectType" required>
                 <option value="">Select one</option>
                 <option value="new-website">New Website</option>
                 <option value="website-tweak">Small Tweak</option>
@@ -141,14 +136,15 @@ export default function Contact() {
             </div>
           </label>
 
-          <label>
+          <label htmlFor="contact-budget">
             Budget (optional)
-            <input type="text" name="budget" placeholder="Approximate budget" />
+            <input id="contact-budget" type="text" name="budget" placeholder="Approximate budget" />
           </label>
 
-          <label>
+          <label htmlFor="contact-message">
             Additional Details
             <textarea
+              id="contact-message"
               name="message"
               placeholder="Tell us more about your project, ideas, or questions..."
             />

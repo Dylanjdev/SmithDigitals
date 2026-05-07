@@ -1,0 +1,521 @@
+/* ── Fit & Fierce Case Study Page ── */
+
+/* Accent palette — hot pink / magenta for brand alignment */
+.ff-page {
+  --ff-accent: #e83e8c;
+  --ff-accent-hover: #d4237a;
+  --ff-accent-light: rgba(232, 62, 140, 0.12);
+  --ff-accent-glow: rgba(232, 62, 140, 0.25);
+
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  min-height: 100vh;
+}
+
+/* ── Breadcrumb ── */
+.ff-breadcrumb {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.ff-breadcrumb a {
+  color: var(--gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ff-breadcrumb a:hover {
+  color: var(--ff-accent);
+}
+
+/* ── Hero ── */
+.ff-hero {
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ff-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232, 62, 140, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ff-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ff-logo-block {
+  margin-bottom: var(--spacing-md);
+}
+
+.ff-logo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ff-accent);
+  box-shadow: 0 0 30px var(--ff-accent-glow);
+}
+
+.ff-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ff-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ff-headline {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--light-text);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.ff-hero-desc {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.75;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ff-hero-desc strong {
+  color: var(--light-text);
+  font-weight: 700;
+}
+
+.ff-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ff-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--ff-accent-light);
+  color: var(--ff-accent);
+  border: 1px solid var(--ff-accent);
+}
+
+.ff-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Shared Buttons ── */
+.ff-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.ff-btn-primary {
+  background: var(--ff-accent);
+  color: #fff;
+  box-shadow: 0 4px 16px var(--ff-accent-glow);
+}
+
+.ff-btn-primary:hover {
+  background: var(--ff-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--ff-accent-glow);
+  color: #fff;
+}
+
+.ff-btn-secondary {
+  background: transparent;
+  color: var(--ff-accent);
+  border: 2px solid var(--ff-accent);
+}
+
+.ff-btn-secondary:hover {
+  background: var(--ff-accent-light);
+  transform: translateY(-2px);
+  color: var(--ff-accent);
+}
+
+/* ── Section Label ── */
+.ff-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ff-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Feature Cards ── */
+.ff-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.ff-feature-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ff-feature-card:hover {
+  border-color: var(--ff-accent);
+  background: var(--card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--ff-accent-glow);
+}
+
+.ff-feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ff-feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 0.4rem;
+}
+
+.ff-feature-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* ── The Vibe ── */
+.ff-vibe {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ff-vibe-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ff-vibe-desc {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-xl);
+}
+
+.ff-vibe-image-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 640px;
+}
+
+.ff-vibe-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.ff-play-btn {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.25s;
+  white-space: nowrap;
+}
+
+.ff-play-btn:hover {
+  background: var(--ff-accent);
+  color: #fff;
+}
+
+/* ── Quote ── */
+.ff-quote-section {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ff-quote {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.8;
+  color: var(--light-text);
+  font-style: italic;
+  margin: 0;
+  padding: var(--spacing-xl);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--ff-accent);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.ff-quote-mark {
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.6rem;
+  color: var(--ff-accent);
+  font-style: normal;
+  margin: 0 0.15rem;
+}
+
+.ff-quote cite {
+  display: block;
+  margin-top: var(--spacing-md);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+/* ── Instructor ── */
+.ff-instructor {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ff-instructor-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ff-instructor-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray);
+}
+
+/* ── Facebook ── */
+.ff-facebook {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.ff-facebook-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ff-fb-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  text-align: left;
+  margin-top: var(--spacing-md);
+}
+
+.ff-fb-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.ff-fb-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ff-accent);
+  flex-shrink: 0;
+}
+
+.ff-fb-header div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ff-fb-header strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.ff-fb-header span {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+.ff-fb-bio {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ff-fb-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+}
+
+/* ── Location CTA ── */
+.ff-location {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(232, 62, 140, 0.08) 0%, transparent 60%);
+  border-top: 1px solid var(--border-color);
+}
+
+.ff-location-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ff-address {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--light-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ff-location-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ff-location-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* ── Footer / Credit ── */
+.ff-credit {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.ff-credit-logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.ff-credit-logo-link:hover {
+  opacity: 0.8;
+}
+
+.ff-credit-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ff-accent);
+  box-shadow: 0 0 20px var(--ff-accent-glow);
+}
+
+.ff-credit-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.ff-credit-built {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+.ff-credit-smith {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ff-credit-smith:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .ff-hero {
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl);
+  }
+
+  .ff-hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ff-features {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .ff-quote {
+    padding: var(--spacing-lg);
+  }
+
+  .ff-instructor-inner,
+  .ff-location-inner,
+  .ff-facebook-inner {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .ff-fb-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}

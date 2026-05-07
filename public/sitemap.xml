@@ -2,44 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://smithdigitals.com/</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/services</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://smithdigitals.com/services/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/work</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://smithdigitals.com/case-studies/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/pricing</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://smithdigitals.com/case-studies/stone-mountain-yogurt/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/contact</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://smithdigitals.com/case-studies/mcguires-landscaping/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/privacy-policy</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://smithdigitals.com/case-studies/bbs-bakery/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smithdigitals.com/terms-of-service</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://smithdigitals.com/case-studies/fit-and-fierce/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithdigitals.com/case-studies/jump-sporting-goods/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithdigitals.com/case-studies/painting-outside-the-lines/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithdigitals.com/pricing/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithdigitals.com/contact/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

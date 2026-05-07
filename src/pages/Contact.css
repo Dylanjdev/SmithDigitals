@@ -84,7 +84,7 @@
 .contact-btn {
   background: var(--accent);
   color: white;
-  padding: 0.875rem 1.75rem;
+  padding: 1rem 1.75rem;
   border-radius: 12px;
   border: none;
   font-weight: 600;
@@ -92,6 +92,8 @@
   cursor: pointer;
   align-self: center;
   max-width: 200px;
+  min-height: 48px;
+  transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -100,6 +102,7 @@
 
 .contact-btn:active {
   background: var(--accent);
+  transform: translateY(1px);
 }
 
 /* Styled select wrapper */
@@ -196,12 +199,14 @@
   .contact-form input,
   .contact-form select,
   .contact-form textarea {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .contact-btn {
     width: 100%;
     max-width: none;
+    padding: 1rem 1.75rem;
+    min-height: 48px;
   }
 
   .contact-form {

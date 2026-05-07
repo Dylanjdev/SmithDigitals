@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smith Digitals - Redirecting...</title>
+    <title>404 - Page Not Found | Smith Digitals</title>
     <meta name="robots" content="noindex, nofollow">
     <style>
       body {
@@ -21,24 +21,11 @@
       h1 { font-size: 2rem; margin-bottom: 1rem; }
       a { color: #fff; text-decoration: underline; }
     </style>
-    <script>
-      // SPA redirect for GitHub Pages
-      // Only redirect if it's a valid route from our app
-      const validRoutes = ['/', '/services', '/work', '/pricing', '/contact', '/privacy-policy', '/terms-of-service'];
-      const currentPath = location.pathname;
-
-      // Check if the current path is a known route
-      if (validRoutes.includes(currentPath)) {
-        sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
-        window.location.replace('/');
-      }
-      // Otherwise, let it stay on 404 (actual broken link)
-    </script>
   </head>
   <body>
     <div class="container">
-      <h1>Redirecting...</h1>
-      <p>If you are not redirected automatically, <a href="/">go to homepage</a>.</p>
+      <h1>Page Not Found</h1>
+      <p>This page does not exist. <a href="/">Go to homepage</a>.</p>
     </div>
   </body>
 </html>

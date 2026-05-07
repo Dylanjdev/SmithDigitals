@@ -14,25 +14,25 @@ export default function PrivacyPolicy() {
       <MetaLink rel="canonical" href="https://smithdigitals.com/privacy-policy" />
 
       <div className="privacy-page">
-      <h2>Privacy Policy</h2>
+      <h1>Privacy Policy</h1>
       <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
 
       <section>
-        <h3>1. Introduction</h3>
+        <h2>1. Introduction</h2>
         <p>
           At Smith Digitals, we respect your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or contact us.
         </p>
       </section>
 
       <section>
-        <h3>2. Information We Collect</h3>
+        <h2>2. Information We Collect</h2>
         <p>
           We may collect basic contact details you provide (like your name, email, and message) through forms or email. We do not sell or share your information with third parties.
         </p>
       </section>
 
       <section>
-        <h3>3. How We Use Your Information</h3>
+        <h2>3. How We Use Your Information</h2>
         <ul>
           <li>To respond to your inquiries or requests.</li>
           <li>To improve our website and services.</li>
@@ -41,24 +41,24 @@ export default function PrivacyPolicy() {
       </section>
 
       <section>
-        <h3>4. Data Security</h3>
+        <h2>4. Data Security</h2>
         <p>
           We take reasonable steps to protect your information from unauthorized access, alteration, or disclosure.
         </p>
       </section>
 
       <section>
-        <h3>5. Third-Party Services</h3>
+        <h2>5. Third-Party Services</h2>
         <p>
           Our site may include links to third-party websites. We are not responsible for their privacy practices or content.
         </p>
       </section>
 
       <section>
-        <h3>6. Contact Us</h3>
+        <h2>6. Contact Us</h2>
         <p>
           If you have any questions about this Privacy Policy, please reach out at{" "}
-          <a href="mailto:dylanjsmith.dev@gmail.com">dylanjsmith.dev@gmail.com</a>.
+          <a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com</a>.
         </p>
       </section>
     </div>
