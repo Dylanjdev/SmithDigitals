@@ -28,8 +28,18 @@
 }
 
 /* Global Styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: var(--dark-bg);
   color: var(--light-text);
@@ -39,8 +49,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
+img,
+svg,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,6 +122,14 @@ a:hover {
   position: relative;
   width: 100%;
   min-height: 72px;
+  gap: var(--spacing-sm);
+}
+
+.home-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-width: 0;
 }
 
 .nav-logo {
@@ -145,6 +168,8 @@ a:hover {
   align-items: center;
   gap: var(--spacing-lg);
   margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -343,19 +368,42 @@ a:hover {
 
 /* Services */
 .services-container {
-  display: flex;
-  justify-content: center;
+  display: block !important;
   width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
   padding: var(--spacing-3xl) var(--spacing-lg);
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(99, 102, 241, 0) 100%);
+  text-align: center;
+}
+
+.services-container > h2,
+.services-container > p {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto var(--spacing-lg);
 }
 
 .services-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
-  max-width: var(--container-width);
   width: 100%;
+  margin: 0 auto;
+  padding-top: var(--spacing-xl);
+}
+
+.services-container .service-card {
+  min-height: 180px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.services-container .service-card h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .service-card {
@@ -899,8 +947,20 @@ a:hover {
     z-index: 1001;
   }
 
+  .hero {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .services-container,
+  .stats-section,
+  .tech-stack-section,
+  .why-choose-section {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
@@ -909,11 +969,11 @@ a:hover {
   }
 
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
 

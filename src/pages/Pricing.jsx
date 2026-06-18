@@ -74,17 +74,55 @@ export default function Pricing() {
     },
   ];
 
+  const marketingPlans = [
+    {
+      name: "Starter",
+      price: "$299/mo",
+      features: [
+        "Social Media Management (1 platform)",
+        "8 Posts per Month",
+        "Monthly Analytics Report",
+        "Google Business Posting",
+        "Email Support",
+      ],
+    },
+    {
+      name: "Growth",
+      price: "$599/mo",
+      features: [
+        "Social Media Management (2 platforms)",
+        "16 Posts per Month",
+        "Google or Meta Ads Management",
+        "Monthly Strategy Call",
+        "Analytics & Reporting Dashboard",
+        "Priority Support",
+      ],
+    },
+    {
+      name: "Authority",
+      price: "$999/mo",
+      features: [
+        "Everything in Growth",
+        "Full Google & Meta Ads Management",
+        "Content Strategy & Blog Posts",
+        "Bi-Weekly Strategy Calls",
+        "Competitor & Market Analysis",
+        "Dedicated Account Manager",
+      ],
+    },
+  ];
+
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Pricing Plans | Smith Digitals | Affordable Web Design Packages</Title>
+      <Title>Pricing Plans | Smith Digitals | Web Design & Digital Marketing Packages</Title>
       <Meta
         name="description"
-        content="Explore affordable web design and SEO packages from Smith Digitals. Choose from Basic, Pro, or Premium plans — or get a custom budget-friendly solution for your business."
+        content="Explore Smith Digitals pricing plans — affordable web design packages, website maintenance plans, and digital marketing retainers including social media management and Google & Meta Ads."
       />
       <Meta
         name="keywords"
-        content="web design pricing, website packages, SEO plans, affordable web development, Smith Digitals pricing"
+        content="web design pricing, digital marketing packages, social media marketing plans, Google Ads management, Meta Ads, website maintenance, Smith Digitals pricing"
       />
       <Meta property="og:title" content="Smith Digitals | Web Design Pricing Plans" />
       <Meta
@@ -208,6 +246,40 @@ export default function Pricing() {
           <p>
             <strong>Need extra work beyond your monthly plan?</strong><br />
             Additional requests are billed at $35/hour
+          </p>
+        </div>
+
+        {/* Digital Marketing Plans */}
+        <h2 style={{ marginTop: '6rem' }}>Digital Marketing Retainers</h2>
+        <p className="pricing-subtitle">Grow your audience, drive leads, and stay top-of-mind every month</p>
+        <div className="pricing-cards">
+          {marketingPlans.map((plan, idx) => (
+            <motion.div
+              key={idx}
+              className="pricing-card monthly-plan"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.3 }}
+            >
+              <h2>{plan.name}</h2>
+              <p className="price">{plan.price}</p>
+              <ul>
+                {plan.features.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
+              </ul>
+              <Link to="/contact" className="pricing-btn">
+                Get Started
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="additional-pricing-note">
+          <p>
+            <strong>Not sure which plan fits?</strong><br />
+            Contact us for a free strategy consultation and custom quote.
           </p>
         </div>
       </div>

@@ -7,19 +7,19 @@ export default function Home() {
   const clientPortalUrl = "https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400";
   const services = [
     { title: "Web Design & Development", desc: "Turn visitors into customers with a stunning, mobile-first website." },
+    { title: "Digital Marketing Strategy", desc: "Data-driven campaigns that attract your ideal audience and convert them into loyal customers." },
+    { title: "Social Media Marketing", desc: "Build a following and drive engagement across Facebook, Instagram, and more." },
     { title: "SEO Optimization", desc: "Rank higher on Google and get found by customers actively searching for you." },
+    { title: "Google & Meta Ads", desc: "Targeted paid advertising that puts your business in front of ready-to-buy customers." },
     { title: "Google Business Setup", desc: "Dominate local search results and show up on Google Maps." },
-    { title: "Monthly Maintenance", desc: "Never worry about downtime, security, or outdated plugins again." },
     { title: "Branding & Logo Design", desc: "Build trust instantly with a memorable brand that reflects your values." },
-    { title: "Performance Optimization", desc: "Boost conversions with lightning-fast page loads that keep visitors engaged." },
     { title: "Analytics & Reporting", desc: "Know exactly what's working and where to invest your marketing dollars." },
   ];
 
   const stats = [
-    { number: "8", label: "Projects Delivered" },
+    { number: "15", label: "Projects Delivered" },
     { number: "100%", label: "Client Satisfaction" },
-    { number: "2x", label: "Average Traffic Increase" },
-    { number: "24/7", label: "Support Available" },
+    { number: "Growth", label: "Focused Digital Strategy" },
   ];
 
   const features = [
@@ -40,61 +40,61 @@ export default function Home() {
     },
     {
       icon: "🎯",
-      title: "SEO Optimized",
-      desc: "Built with search engines in mind to help your business get discovered."
+      title: "Targeted Marketing",
+      desc: "Reach the right audience at the right time with targeted paid ads and social media campaigns."
     },
     {
       icon: "📊",
       title: "Data Driven",
-      desc: "Detailed analytics and reporting to track your success and optimize campaigns."
+      desc: "Detailed analytics and reporting to track your success and optimize every campaign."
     },
     {
       icon: "🚀",
       title: "Built to Scale",
-      desc: "Architecture designed to grow with your business, not hold you back."
+      desc: "Strategies designed to grow with your business — from launch to market leader."
     },
   ];
 
   const techStack = [
     {
-      category: "Frontend",
-      technologies: ["React", "Vite", "Responsive Design", "Modern CSS"]
+      category: "Web Development",
+      technologies: ["React", "Vite", "Responsive Design", "Modern CSS", "Node.js", "RESTful APIs"]
     },
     {
-      category: "Backend",
-      technologies: ["Node.js", "Express.js", "RESTful APIs", "Database Design"]
+      category: "Digital Marketing",
+      technologies: ["Google Ads", "Meta Ads", "Social Media Management", "Content Strategy", "Paid Ad Optimization"]
     },
     {
-      category: "DevOps",
-      technologies: ["Deployment", "Performance Optimization", "Security Hardening", "Monitoring"]
+      category: "Growth & Analytics",
+      technologies: ["SEO", "Google Analytics", "Conversion Tracking", "Performance Audits", "Reporting"]
     }
   ];
 
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Smith Digitals LLC | Southwest Virginia Website Developer</Title>
+      <Title>Smith Digitals LLC | Digital Marketing & Web Design Agency | Southwest Virginia</Title>
       <Meta
         name="description"
-        content="Smith Digitals LLC is a Southwest Virginia website developer building modern, responsive sites optimized for SEO, speed, and conversions for local businesses."
+        content="Smith Digitals LLC is a Southwest Virginia digital marketing and web design agency. We build modern websites and run data-driven marketing campaigns — SEO, Google Ads, social media, and more — to grow local businesses."
       />
       <Meta
         name="keywords"
-        content="web design, SEO, website builder, web developer, Google Business, small business websites, branding, Smith Digitals"
+        content="digital marketing agency, web design, SEO, Google Ads, Meta Ads, social media marketing, website developer, Southwest Virginia, small business marketing, Smith Digitals"
       />
-      <Meta property="og:title" content="Smith Digitals LLC | Southwest Virginia Website Developer" />
+      <Meta property="og:title" content="Smith Digitals LLC | Digital Marketing & Web Design Agency" />
       <Meta
         property="og:description"
-        content="Modern websites built to grow local businesses across Southwest Virginia. Affordable, custom, and SEO-ready."
+        content="Full-service digital marketing and web design agency serving Southwest Virginia. Custom websites, paid ads, SEO, social media, and more."
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Smith Digitals | Southwest Virginia Website Developer" />
+      <Meta name="twitter:title" content="Smith Digitals | Digital Marketing & Web Design Agency" />
       <Meta
         name="twitter:description"
-        content="Modern, responsive, and SEO-optimized websites for local businesses in Southwest Virginia."
+        content="Full-service digital marketing and web design for local businesses in Southwest Virginia. SEO, ads, social media, and custom websites."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/" />
@@ -109,7 +109,7 @@ export default function Home() {
           logo: "https://smithdigitals.com/og-image.jpg",
           areaServed: ["Southwest Virginia", "Lee County, VA", "Wise County, VA", "Scott County, VA"],
           description:
-            "Smith Digitals LLC builds custom, SEO-optimized websites for small businesses in Southwest Virginia. Web design, branding, and Google Business services.",
+            "Smith Digitals LLC is a full-service digital marketing and web design agency in Southwest Virginia. We build custom websites and run data-driven marketing campaigns including SEO, Google Ads, Meta Ads, and social media management.",
         })}
       </script>
 
@@ -133,7 +133,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Modern Digital Solutions Built for Growth
+            Your Digital Marketing & Web Design Partner
           </motion.h1>
           <motion.p
             className="hero-subtitle"
@@ -141,7 +141,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Full-stack web design, SEO optimization, and digital strategy crafted for small businesses that want to stand out online.
+            Full-service digital marketing and web design for small businesses. From custom websites and SEO to Google Ads and social media — we grow your business online.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -202,6 +202,7 @@ export default function Home() {
         {/* Services Preview */}
         <div className="services-container">
           <h2 style={{ textAlign: "center", marginBottom: "var(--spacing-lg)" }}>What We Offer</h2>
+          <p style={{ textAlign: "center", color: "var(--gray)", marginBottom: "var(--spacing-lg)", maxWidth: "600px", margin: "0 auto var(--spacing-lg)" }}>From building your online presence to marketing it — we handle every piece of your digital growth.</p>
           <div className="services-preview">
             {services.map((s, idx) => (
               <motion.div
@@ -237,7 +238,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 style={{ color: "var(--gray)", fontSize: "1.1rem" }}
               >
-                Built with modern, scalable technologies that ensure performance and reliability
+                Modern technology and proven marketing strategies working together to deliver real results
               </motion.p>
             </div>
             <div className="tech-categories">
@@ -280,7 +281,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 style={{ color: "var(--gray)", fontSize: "1.1rem" }}
               >
-                We combine technical expertise with business strategy to deliver real results
+                We combine web development expertise with proven marketing strategies to deliver real, measurable results
               </motion.p>
             </div>
             <div className="features-grid">
@@ -315,9 +316,9 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 style={{ marginBottom: "var(--spacing-md)" }}>Ready to Transform Your Online Presence?</h2>
+          <h2 style={{ marginBottom: "var(--spacing-md)" }}>Ready to Grow Your Business Online?</h2>
           <p style={{ fontSize: "1.1rem", marginBottom: "var(--spacing-lg)", maxWidth: "600px", margin: "0 auto var(--spacing-lg)" }}>
-            Let's discuss your project and create a strategy that drives real business growth.
+            Let's build your website, launch your campaigns, and create a full digital strategy that drives real, measurable growth.
           </p>
           <Link to="/contact" className="hero-btn">
             Get Started Today
@@ -364,4 +365,3 @@ export default function Home() {
     </>
   );
 }
-

@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaSearch, FaGoogle, FaTools, FaPalette } from "react-icons/fa";
+import { FaLaptopCode, FaSearch, FaGoogle, FaTools, FaPalette, FaBullhorn, FaChartLine } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Title, Meta, Link as MetaLink } from "react-head";
 
@@ -8,6 +8,21 @@ export default function Services() {
       title: "Web Design & Development", 
       desc: "Fully responsive, modern websites built with clean code and optimized for all devices. Includes mobile-first design, fast loading times, and conversion-focused layouts.",
       icon: <FaLaptopCode size={40} />
+    },
+    { 
+      title: "Digital Marketing Strategy", 
+      desc: "A complete, data-driven marketing plan built around your business goals — covering channels, messaging, audience targeting, and a roadmap from launch through long-term growth.",
+      icon: <FaBullhorn size={40} />
+    },
+    { 
+      title: "Social Media Marketing", 
+      desc: "Strategic social media management across Facebook, Instagram, and more — content creation, scheduling, community engagement, and paid social campaigns to grow your audience.",
+      icon: <FaChartLine size={40} />
+    },
+    { 
+      title: "Google & Meta Ads", 
+      desc: "Targeted paid advertising campaigns on Google Search, Display, and Meta platforms. We handle strategy, copy, creative, and optimization to maximize return on every dollar spent.",
+      icon: <FaGoogle size={40} />
     },
     { 
       title: "SEO Optimization", 
@@ -20,8 +35,8 @@ export default function Services() {
       icon: <FaGoogle size={40} />
     },
     { 
-      title: "Monthly Maintenance", 
-      desc: "Ongoing updates, security monitoring, plugin management, backups, uptime tracking, and content changes to ensure your website stays secure, fast, and current.",
+      title: "Monthly Maintenance & Management", 
+      desc: "Ongoing website updates, security monitoring, plugin management, backups, uptime tracking, and content changes to ensure your website stays secure, fast, and current.",
       icon: <FaTools size={40} />
     },
     { 
@@ -34,28 +49,28 @@ export default function Services() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Title>Web Design Services in Southwest Virginia | Smith Digitals</Title>
+      <Title>Digital Marketing & Web Design Services | Smith Digitals | Southwest Virginia</Title>
       <Meta
         name="description"
-        content="Explore Smith Digitals services in Southwest Virginia — custom web design, SEO optimization, Google Business setup, and branding for local businesses."
+        content="Smith Digitals offers full-service digital marketing and web design in Southwest Virginia — Google Ads, Meta Ads, social media marketing, SEO, branding, and custom websites for local businesses."
       />
       <Meta
         name="keywords"
-        content="web design services, SEO optimization, Google Business setup, website maintenance, logo design, branding, Smith Digitals"
+        content="digital marketing services, web design, Google Ads, Meta Ads, social media marketing, SEO optimization, branding, Southwest Virginia, Smith Digitals"
       />
-      <Meta property="og:title" content="Smith Digitals | Web Design Services in Southwest Virginia" />
+      <Meta property="og:title" content="Smith Digitals | Digital Marketing & Web Design Services" />
       <Meta
         property="og:description"
-        content="We build responsive websites, optimize SEO, and manage online presence for local businesses across Southwest Virginia."
+        content="Full-service digital marketing and web design for local businesses in Southwest Virginia — from websites to paid ads, social media, and SEO."
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/services" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Smith Digitals | Web Design Services in Southwest Virginia" />
+      <Meta name="twitter:title" content="Smith Digitals | Digital Marketing & Web Design Services" />
       <Meta
         name="twitter:description"
-        content="Web design, SEO, branding, and Google Business setup for local businesses in Southwest Virginia."
+        content="Web design, SEO, Google Ads, Meta Ads, and social media marketing for local businesses in Southwest Virginia."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/services" />
@@ -65,7 +80,7 @@ export default function Services() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          serviceType: "Web Design, SEO Optimization, Branding",
+          serviceType: "Web Design, Digital Marketing, SEO, Google Ads, Meta Ads, Social Media Marketing",
           provider: {
             "@type": "Organization",
             name: "Smith Digitals",
@@ -78,13 +93,14 @@ export default function Services() {
             ]
           },
           description:
-            "Smith Digitals offers professional web design, SEO, and branding services tailored to small businesses. We help you grow online with fast, responsive, and optimized websites."
+            "Smith Digitals is a full-service digital marketing and web design agency in Southwest Virginia. We help local businesses grow online with custom websites, SEO, Google Ads, Meta Ads, social media marketing, and branding."
         })}
       </script>
 
       {/* ✅ PAGE CONTENT */}
       <div className="services-page">
         <h1 className="services-title">Our Services</h1>
+        <p style={{ textAlign: "center", color: "var(--gray)", maxWidth: "640px", margin: "0 auto 3rem", fontSize: "1.1rem" }}>We're a full-service digital marketing and web design agency — everything you need to build your brand and grow your business online, in one place.</p>
         <div className="services-grid">
           {services.map((s, idx) => (
             <motion.div

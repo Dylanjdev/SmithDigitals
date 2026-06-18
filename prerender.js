@@ -14,12 +14,6 @@ const routes = [
     robots: 'index, follow'
   },
   {
-    path: '/work',
-    title: 'Our Work | Smith Digitals Portfolio',
-    description: 'View our portfolio of custom websites and digital solutions. See how we\'ve helped businesses grow with professional web design and SEO.',
-    robots: 'index, follow'
-  },
-  {
     path: '/case-studies',
     title: 'Case Studies | Smith Digitals Portfolio',
     description: 'Explore real client case studies from Smith Digitals, including e-commerce builds, local SEO wins, and high-converting websites.',
