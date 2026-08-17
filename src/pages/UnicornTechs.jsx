@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import uniImg from "../assets/Uni.png";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./UnicornTechs.css";
 
 const fadeUp = {
@@ -127,7 +128,7 @@ export default function UnicornTechs() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.12 } } }}
           >
-            <motion.p className="uni-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="uni-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>A positioning-first site for executive decision confidence.</motion.h2>
             <div className="uni-list">
               {[
@@ -162,6 +163,7 @@ export default function UnicornTechs() {
           </motion.div>
         </section>
 
+        <CaseStudyExpansion client="the-unicorn-techs" />
         <footer className="uni-credit">
           <p>
             Built by <Link to="/">Smith Digitals</Link>

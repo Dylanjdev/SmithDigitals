@@ -1,0 +1,113 @@
+.case-expansion-section {
+  margin-top: 3rem;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.case-expansion-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+}
+
+.case-expansion-label {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-expansion-inner h2 {
+  max-width: 780px;
+  margin: 0 0 1.25rem;
+  color: var(--light-text);
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.case-expansion-intro,
+.case-expansion-columns p,
+.case-expansion-grid p {
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.case-expansion-intro {
+  max-width: 760px;
+  margin: 0;
+}
+
+.case-expansion-dark {
+  background: #111820;
+  border-block: 1px solid var(--border-color);
+}
+
+.case-expansion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 2.25rem;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.case-expansion-grid article {
+  min-height: 230px;
+  padding: 1.5rem;
+  background: var(--dark-bg);
+}
+
+.case-expansion-grid article > span {
+  display: block;
+  margin-bottom: 2.5rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.case-expansion-grid h3 {
+  margin: 0 0 0.5rem;
+  color: var(--light-text);
+  font-size: 1.15rem;
+}
+
+.case-expansion-grid p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.case-expansion-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+}
+
+.case-expansion-columns p {
+  margin: 0 0 1.2rem;
+}
+
+.case-expansion-columns p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 680px) {
+  .case-expansion-section {
+    margin-top: 2rem;
+  }
+
+  .case-expansion-grid,
+  .case-expansion-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .case-expansion-grid article {
+    min-height: 0;
+  }
+
+  .case-expansion-grid article > span {
+    margin-bottom: 1.5rem;
+  }
+}

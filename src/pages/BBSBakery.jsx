@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import bbsLogo from "../assets/bbslogo.jpg";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./BBSBakery.css";
 
 const fadeUp = {
@@ -126,7 +127,7 @@ export default function BBSBakery() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.12 } } }}
           >
-            <motion.p className="bbs-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="bbs-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>Square-powered checkout plus local SEO fundamentals.</motion.h2>
             <div className="bbs-list">
               {[
@@ -161,6 +162,7 @@ export default function BBSBakery() {
           </motion.div>
         </section>
 
+        <CaseStudyExpansion client="bbs-bakery" />
         <footer className="bbs-credit">
           <p>
             Built by <Link to="/">Smith Digitals</Link>

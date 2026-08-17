@@ -76,7 +76,8 @@ export default function OurWork() {
       description: "Full-stack e-commerce platform with custom admin dashboard for inventory management. Features real-time product updates, secure authentication, and streamlined wholesale operations.",
       url: "https://mm-wholesales.com/",
       image: projectImg3,
-      tags: ["Admin Dashboard", "Firebase"]
+      tags: ["Admin Dashboard", "Firebase"],
+      caseStudy: "/case-studies/m-and-m-wholesale"
     },
     {
       id: 8,
@@ -84,7 +85,8 @@ export default function OurWork() {
       description: "Modern, responsive church website featuring service times, ministries, and events. Built with a clean design to engage the community in Jonesville, VA.",
       url: "https://dylanjdev.github.io/Freedom-In-Christ/",
       image: projectImg2,
-      tags: ["Church", "Community", "Responsive Design"]
+      tags: ["Church", "Community", "Responsive Design"],
+      caseStudy: "/case-studies/freedom-in-christ"
     },
     {
       id: 9,
@@ -101,7 +103,8 @@ export default function OurWork() {
       description: "SEO-optimized landing page for a Virginia-based hair stylist featuring local business schema markup, geo-targeting, and social media integration. Built with responsive HTML/CSS/JavaScript and optimized for local search visibility in Lee County, VA.",
       url: "https://www.hairbyrilee.com/",
       image: rileeImg,
-      tags: ["Business", "SEO", "Local Search"]
+      tags: ["Business", "SEO", "Local Search"],
+      caseStudy: "/case-studies/hair-by-rilee"
     },
   ];
 
@@ -111,7 +114,7 @@ export default function OurWork() {
       <Title>Case Studies | Smith Digitals LLC | Web Design Portfolio</Title>
       <Meta
         name="description"
-        content="See our portfolio at Smith Digitals LLC — including Fit & Fierce Studio, Jump Sporting Goods LLC, BBS Bakery, M&M Wholesale Store with admin dashboard, Freedom In Christ Church, and McGuire's Lawn & Landscaping. We design responsive, SEO-optimized websites and e-commerce platforms."
+        content="Explore selected work by Smith Digitals across web design, ecommerce, SEO, automation, executive positioning, and digital growth."
       />
       <Meta
         name="keywords"
@@ -129,7 +132,7 @@ export default function OurWork() {
       <Meta name="twitter:title" content="Smith Digitals | Case Studies" />
       <Meta
         name="twitter:description"
-        content="Showcasing our best web design and SEO projects for small businesses and organizations."
+        content="Selected digital platforms, ecommerce experiences, search programs, and brand work by Smith Digitals."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies" />
@@ -218,10 +221,15 @@ export default function OurWork() {
       </script>
 
       {/* ✅ PAGE CONTENT */}
-      <div className="work-page">
-        <h1>Case Studies</h1>
-        <p className="llc-notice"><strong>Smith Digitals LLC is a registered Limited Liability Company.</strong></p>
-        <p className="work-subtitle">Real results we've delivered for businesses and organizations</p>
+      <div className="work-page inner-page">
+        <div className="work-hero">
+          <p className="inner-page-eyebrow">Selected work · Across industries</p>
+          <h1>Proof lives in the work.</h1>
+          <p className="work-subtitle">
+            A selection of digital platforms, brands, and growth systems I’ve built
+            for businesses ready to move forward.
+          </p>
+        </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div
@@ -265,4 +273,3 @@ export default function OurWork() {
     </>
   );
 }
-

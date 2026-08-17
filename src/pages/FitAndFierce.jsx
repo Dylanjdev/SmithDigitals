@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import fitImg from "../assets/fit.png";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./FitAndFierce.css";
 
 const fadeUp = {
@@ -219,6 +220,7 @@ export default function FitAndFierce() {
           </motion.div>
         </section>
 
+        <CaseStudyExpansion client="fit-and-fierce" />
         {/* ── SITE FOOTER / CREDIT ── */}
         <footer className="ff-credit">
           <a href="https://fitandfierce.studio/" target="_blank" rel="noopener noreferrer" className="ff-credit-logo-link">

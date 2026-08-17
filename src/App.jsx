@@ -11,13 +11,17 @@ const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const OurWork = lazy(() => import("./pages/OurWork"));
+const BBSBakery = lazy(() => import("./pages/BBSBakery"));
 const FitAndFierce = lazy(() => import("./pages/FitAndFierce"));
 const JumpSportingGoods = lazy(() => import("./pages/JumpSportingGoods"));
-const PaintingOutsideTheLines = lazy(() => import("./pages/PaintingOutsideTheLines"));
-const BBSBakery = lazy(() => import("./pages/BBSBakery"));
 const McGuiresLandscaping = lazy(() => import("./pages/McGuiresLandscaping"));
+const PaintingOutsideTheLines = lazy(() => import("./pages/PaintingOutsideTheLines"));
 const StoneMountainYogurt = lazy(() => import("./pages/StoneMountainYogurt"));
 const UnicornTechs = lazy(() => import("./pages/UnicornTechs"));
+const AdditionalCaseStudy = lazy(() => import("./pages/AdditionalCaseStudy"));
+const GoogleRankingGuide = lazy(() => import("./pages/GoogleRankingGuide"));
+const LocalVsTraditionalSeoGuide = lazy(() => import("./pages/LocalVsTraditionalSeoGuide"));
+const LeeCountyEconomicOutlook = lazy(() => import("./pages/LeeCountyEconomicOutlook"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -35,13 +39,19 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
               <Route path="/case-studies" element={<OurWork />} />
+              <Route path="/case-studies/bbs-bakery" element={<BBSBakery />} />
               <Route path="/case-studies/fit-and-fierce" element={<FitAndFierce />} />
               <Route path="/case-studies/jump-sporting-goods" element={<JumpSportingGoods />} />
-              <Route path="/case-studies/painting-outside-the-lines" element={<PaintingOutsideTheLines />} />
-              <Route path="/case-studies/bbs-bakery" element={<BBSBakery />} />
               <Route path="/case-studies/mcguires-landscaping" element={<McGuiresLandscaping />} />
+              <Route path="/case-studies/painting-outside-the-lines" element={<PaintingOutsideTheLines />} />
               <Route path="/case-studies/stone-mountain-yogurt" element={<StoneMountainYogurt />} />
               <Route path="/case-studies/the-unicorn-techs" element={<UnicornTechs />} />
+              <Route path="/case-studies/m-and-m-wholesale" element={<AdditionalCaseStudy />} />
+              <Route path="/case-studies/freedom-in-christ" element={<AdditionalCaseStudy />} />
+              <Route path="/case-studies/hair-by-rilee" element={<AdditionalCaseStudy />} />
+              <Route path="/guides/how-to-rank-on-google-for-free" element={<GoogleRankingGuide />} />
+              <Route path="/guides/local-seo-vs-regular-seo" element={<LocalVsTraditionalSeoGuide />} />
+              <Route path="/blog/lee-county-economic-outlook" element={<LeeCountyEconomicOutlook />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />

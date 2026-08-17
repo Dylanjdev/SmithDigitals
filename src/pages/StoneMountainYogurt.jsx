@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import stoneYogurtImg from "../assets/StoneYogurt.webp";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./StoneMountainYogurt.css";
 
 const fadeUp = {
@@ -127,7 +128,7 @@ export default function StoneMountainYogurt() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.12 } } }}
           >
-            <motion.p className="smy-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="smy-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>A new SEO foundation with direct SMS automation.</motion.h2>
             <div className="smy-list">
               {[
@@ -162,6 +163,7 @@ export default function StoneMountainYogurt() {
           </motion.div>
         </section>
 
+        <CaseStudyExpansion client="stone-mountain-yogurt" />
         <footer className="smy-credit">
           <p>
             Built by <Link to="/">Smith Digitals</Link>

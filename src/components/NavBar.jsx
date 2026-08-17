@@ -1,21 +1,45 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/smithlogo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const clientPortalUrl = "https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    const closeOnDesktop = () => {
+      if (window.innerWidth > 768) setIsOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    window.addEventListener("resize", closeOnDesktop);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+      window.removeEventListener("resize", closeOnDesktop);
+    };
+  }, [isOpen]);
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <img src={logo} alt="Smith Digitals Logo" className="nav-logo-img" />
-         <span className="nav-logo-text">Smith Digitals</span>
+          <span className="nav-brand">
+            <span className="nav-logo-text">Smith Digitals</span>
+            <span className="nav-logo-meta">Independent digital studio</span>
+          </span>
         </Link>
 
         <button
@@ -32,20 +56,56 @@ export default function Navbar() {
         </button>
 
         <div id="primary-navigation" className={`nav-links ${isOpen ? "active" : ""}`}>
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link to="/case-studies" onClick={() => setIsOpen(false)}>Case Studies</Link>
-          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          <a
-            href={clientPortalUrl}
-            className="nav-portal-link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p className="nav-menu-label">Explore Smith Digitals</p>
+          <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? "nav-active" : undefined)}
             onClick={() => setIsOpen(false)}
           >
-            Client Portal
-          </a>
+            Capabilities
+          </NavLink>
+          <NavLink
+            to="/case-studies"
+            className={({ isActive }) => (isActive ? "nav-active" : undefined)}
+            onClick={() => setIsOpen(false)}
+          >
+            Case Studies
+          </NavLink>
+          <div className="nav-guide-menu">
+            <NavLink
+              to="/guides/how-to-rank-on-google-for-free"
+              className={({ isActive }) => (isActive ? "nav-active" : undefined)}
+              onClick={() => setIsOpen(false)}
+              aria-haspopup="true"
+            >
+              Guides <span className="nav-guide-chevron" aria-hidden="true">⌄</span>
+            </NavLink>
+            <div className="nav-guide-dropdown" role="menu">
+              <Link to="/guides/how-to-rank-on-google-for-free" role="menuitem" onClick={() => setIsOpen(false)}>
+                How to rank on Google for free
+              </Link>
+              <Link to="/guides/local-seo-vs-regular-seo" role="menuitem" onClick={() => setIsOpen(false)}>
+                Local SEO vs. regular SEO
+              </Link>
+              <Link to="/blog/lee-county-economic-outlook" role="menuitem" onClick={() => setIsOpen(false)}>
+                Lee County economic outlook
+              </Link>
+            </div>
+          </div>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) => (isActive ? "nav-active" : undefined)}
+            onClick={() => setIsOpen(false)}
+          >
+            Engagements
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="nav-portal-link"
+            onClick={() => setIsOpen(false)}
+          >
+            Start a project ↗
+          </NavLink>
         </div>
 
         {isOpen && <button type="button" className="nav-backdrop" onClick={() => setIsOpen(false)} aria-label="Close navigation menu" />}

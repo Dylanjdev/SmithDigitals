@@ -8,58 +8,94 @@ const __dirname = path.dirname(__filename);
 // Define all routes and their metadata
 const routes = [
   {
+    path: '/case-studies',
+    title: 'Case Studies | Smith Digitals LLC | Web Design Portfolio',
+    description: 'Explore selected work by Smith Digitals across web design, ecommerce, SEO, automation, executive positioning, and digital growth.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/bbs-bakery',
+    title: 'BBS Bakery Case Study | Smith Digitals',
+    description: 'See how Smith Digitals built BBS Bakery an online ordering experience with Square Checkout and a local SEO strategy.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/fit-and-fierce',
+    title: 'Fit & Fierce Studio Case Study | Smith Digitals',
+    description: 'Explore the inclusive dance fitness studio website built by Smith Digitals for Fit & Fierce Studio.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/jump-sporting-goods',
+    title: 'Jump Sporting Goods Case Study | Smith Digitals',
+    description: 'See how Smith Digitals built a custom apparel ecommerce experience for Jump Sporting Goods.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/mcguires-landscaping',
+    title: "McGuire's Landscaping Case Study | Smith Digitals",
+    description: "Explore the lead-generation website and quote funnel Smith Digitals built for McGuire's Lawn & Landscaping.",
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/painting-outside-the-lines',
+    title: 'Painting Outside The Lines Studios Case Study | Smith Digitals',
+    description: 'Explore the creative studio website built by Smith Digitals for Painting Outside The Lines Studios.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/stone-mountain-yogurt',
+    title: 'Stone Mountain Yogurt Case Study | Smith Digitals',
+    description: 'See how Smith Digitals rebuilt Stone Mountain Yogurt with SEO improvements and Twilio messaging automation.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/the-unicorn-techs',
+    title: 'The Unicorn Techs Case Study | Smith Digitals',
+    description: 'Explore the executive advisory website Smith Digitals built for The Unicorn Techs.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/m-and-m-wholesale',
+    title: 'M&M Wholesale Store Case Study | Smith Digitals',
+    description: 'Explore the full-stack ecommerce platform and custom inventory dashboard Smith Digitals built for M&M Wholesale Store.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/freedom-in-christ',
+    title: 'Freedom In Christ Church Case Study | Smith Digitals',
+    description: 'Explore the responsive community website Smith Digitals built for Freedom In Christ Church.',
+    robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/hair-by-rilee',
+    title: 'Hair By Rilee Case Study | Smith Digitals',
+    description: 'Explore the local SEO landing page and service positioning Smith Digitals built for Hair By Rilee.',
+    robots: 'index, follow'
+  },
+  {
     path: '/services',
     title: 'Web Design Services in Southwest Virginia | Smith Digitals',
     description: 'Explore Smith Digitals services in Southwest Virginia — custom web design, SEO optimization, Google Business setup, and branding for local businesses.',
     robots: 'index, follow'
   },
   {
-    path: '/case-studies',
-    title: 'Case Studies | Smith Digitals Portfolio',
-    description: 'Explore real client case studies from Smith Digitals, including e-commerce builds, local SEO wins, and high-converting websites.',
-    robots: 'index, follow'
+    path: '/guides/how-to-rank-on-google-for-free',
+    title: 'How to Rank on Google for Free | Smith Digitals',
+    description: 'Learn how small businesses can improve local Google visibility for free with a complete Business Profile, genuine reviews, useful content, and local SEO.',
+    robots: 'index, follow, max-image-preview:large'
   },
   {
-    path: '/case-studies/fit-and-fierce',
-    title: 'Fit & Fierce Studio | Case Study | Smith Digitals',
-    description: 'Case study for Fit & Fierce Studio: inclusive fitness web presence built by Smith Digitals.',
-    robots: 'index, follow'
+    path: '/guides/local-seo-vs-regular-seo',
+    title: 'Local SEO vs. Regular SEO: What Is the Difference? | Smith Digitals',
+    description: 'A practical, in-depth guide to the difference between local SEO and regular SEO, including ranking signals, content strategy, links, measurement, and which approach your business needs.',
+    robots: 'index, follow, max-image-preview:large'
   },
   {
-    path: '/case-studies/jump-sporting-goods',
-    title: 'Jump Sporting Goods | Case Study | Smith Digitals',
-    description: 'Case study for Jump Sporting Goods: custom apparel e-commerce platform built by Smith Digitals.',
-    robots: 'index, follow'
-  },
-  {
-    path: '/case-studies/painting-outside-the-lines',
-    title: 'Painting Outside The Lines | Case Study | Smith Digitals',
-    description: 'Case study for Painting Outside The Lines Studio: creative class-based website experience by Smith Digitals.',
-    robots: 'index, follow'
-  },
-  {
-    path: '/case-studies/bbs-bakery',
-    title: 'BBS Bakery | Case Study | Smith Digitals',
-    description: 'Case study for BBS Bakery: Square Checkout API integration and local SEO gains in Bristol, VA.',
-    robots: 'index, follow'
-  },
-  {
-    path: '/case-studies/mcguires-landscaping',
-    title: 'McGuire\'s Lawn & Landscaping | Case Study | Smith Digitals',
-    description: 'Case study for McGuire\'s Lawn & Landscaping: 6 free quote submissions in one week, all converted to customers.',
-    robots: 'index, follow'
-  },
-  {
-    path: '/case-studies/stone-mountain-yogurt',
-    title: 'Stone Mountain Yogurt | Case Study | Smith Digitals',
-    description: 'Case study for Stone Mountain Yogurt: SEO redesign and customized Twilio API text automation.',
-    robots: 'index, follow'
-  },
-  {
-    path: '/case-studies/the-unicorn-techs',
-    title: 'The Unicorn Techs | Case Study | Smith Digitals',
-    description: 'Case study for The Unicorn Techs: executive fiduciary advisory positioning for AI readiness and delivery alignment.',
-    robots: 'index, follow'
+    path: '/blog/lee-county-economic-outlook',
+    title: 'Lee County, Virginia Economic Outlook | Smith Digitals',
+    description: 'Can Lee County, Virginia turn its economy around? A data-led look at population, migration, tourism, local business, infrastructure, and the path to sustainable growth.',
+    robots: 'index, follow, max-image-preview:large'
   },
   {
     path: '/pricing',

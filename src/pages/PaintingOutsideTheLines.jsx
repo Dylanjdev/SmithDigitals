@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import potlImg from "../assets/PaintingInsideTheStudio.webp";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./PaintingOutsideTheLines.css";
 
 const fadeUp = {
@@ -231,7 +232,7 @@ export default function PaintingOutsideTheLines() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.15 } } }}
           >
-            <motion.p className="potl-section-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="potl-section-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>A website as creative as the studio.</motion.h2>
             <div className="potl-built-grid">
               {[
@@ -313,6 +314,7 @@ export default function PaintingOutsideTheLines() {
         </section>
 
         {/* ── FOOTER / CREDIT ── */}
+        <CaseStudyExpansion client="painting-outside-the-lines" />
         <footer className="potl-credit">
           <a
             href="https://paintingoutsidethelinesstudios.com/"

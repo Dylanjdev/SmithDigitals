@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import jumpImg from "../assets/Jump.png";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./JumpSportingGoods.css";
 
 const fadeUp = {
@@ -184,7 +185,7 @@ export default function JumpSportingGoods() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.15 } } }}
           >
-            <motion.p className="jsg-section-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="jsg-section-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>A custom e-commerce experience.</motion.h2>
             <div className="jsg-built-grid">
               {[
@@ -291,6 +292,7 @@ export default function JumpSportingGoods() {
         </section>
 
         {/* ── FOOTER / CREDIT ── */}
+        <CaseStudyExpansion client="jump-sporting-goods" />
         <footer className="jsg-credit">
           <a
             href="https://www.jumpsportinggoods.com/"

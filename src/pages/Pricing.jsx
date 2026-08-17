@@ -1,288 +1,177 @@
 import { motion } from "framer-motion";
 import { Title, Meta, Link as MetaLink } from "react-head";
-import "./Pricing.css";
 import { Link } from "react-router-dom";
+import "./Pricing.css";
 
 export default function Pricing() {
-  const plans = [
+  const engagements = [
     {
-      name: "Basic",
-      price: "$299",
+      number: "01",
+      name: "Flagship Build",
+      type: "Project engagement",
+      description:
+        "For businesses ready to reposition, relaunch, or build a serious digital foundation from the ground up.",
       features: [
-        "1 Page Website",
-        "Basic SEO",
-        "Responsive Design",
-        "Email Support",
+        "Discovery and strategic direction",
+        "Positioning and content architecture",
+        "Custom visual design and development",
+        "SEO, analytics, and launch infrastructure",
       ],
     },
     {
-      name: "Pro",
-      price: "$599",
+      number: "02",
+      name: "Growth Sprint",
+      type: "Focused engagement",
+      description:
+        "For a clear, high-leverage problem that needs senior attention, fast decisions, and a defined finish line.",
       features: [
-        "3 Page Website",
-        "Advanced SEO",
-        "Responsive Design",
-        "Google Business Setup",
-        "Priority Support",
+        "Conversion and performance audits",
+        "Landing pages and campaign systems",
+        "SEO or paid media foundations",
+        "Automation and integration builds",
       ],
     },
     {
-      name: "Premium",
-      price: "$999",
+      number: "03",
+      name: "Digital Partner",
+      type: "Ongoing engagement",
+      description:
+        "For businesses that need an experienced digital operator embedded in the work as priorities evolve.",
       features: [
-        "Unlimited website pages",
-        "Full SEO optimization",
-        "Branding & logo design",
-        "Priority support",
-      ],
-    },
-  ];
-
-  const monthlyPlans = [
-    {
-      name: "Essential",
-      price: "$50/mo",
-      features: [
-        "Website Updates",
-        "Security Monitoring",
-        "Plugin Updates",
-        "Monthly Backups",
-        "Email Support",
-      ],
-    },
-    {
-      name: "Professional",
-      price: "$199/mo",
-      features: [
-        "Everything in Essential",
-        "Content Updates (2-4/mo)",
-        "SEO Monitoring",
-        "Performance Optimization",
-        "Priority Support",
-      ],
-    },
-    {
-      name: "Premium Care",
-      price: "$399/mo",
-      features: [
-        "Everything in Professional",
-        "Unlimited Content Updates",
-        "Advanced SEO Management",
-        "24/7 Monitoring",
-        "Dedicated Account Manager",
+        "Monthly strategic priorities",
+        "Website and conversion optimization",
+        "Campaign, content, and search support",
+        "Reporting, testing, and iteration",
       ],
     },
   ];
 
-  const marketingPlans = [
+  const principles = [
     {
-      name: "Starter",
-      price: "$299/mo",
-      features: [
-        "Social Media Management (1 platform)",
-        "8 Posts per Month",
-        "Monthly Analytics Report",
-        "Google Business Posting",
-        "Email Support",
-      ],
+      title: "Scoped around outcomes",
+      desc: "The shape of the engagement follows the business goal, not a padded deliverables list.",
     },
     {
-      name: "Growth",
-      price: "$599/mo",
-      features: [
-        "Social Media Management (2 platforms)",
-        "16 Posts per Month",
-        "Google or Meta Ads Management",
-        "Monthly Strategy Call",
-        "Analytics & Reporting Dashboard",
-        "Priority Support",
-      ],
+      title: "Direct senior access",
+      desc: "You work with me—the person setting the direction and building the work—at every step.",
     },
     {
-      name: "Authority",
-      price: "$999/mo",
-      features: [
-        "Everything in Growth",
-        "Full Google & Meta Ads Management",
-        "Content Strategy & Blog Posts",
-        "Bi-Weekly Strategy Calls",
-        "Competitor & Market Analysis",
-        "Dedicated Account Manager",
-      ],
+      title: "Clear milestones",
+      desc: "Every engagement has a defined path, decision points, and visibility into what is moving.",
+    },
+    {
+      title: "Built for momentum",
+      desc: "The work is designed to launch cleanly, measure what matters, and improve after release.",
     },
   ];
 
   return (
     <>
-      {/* ✅ SEO META TAGS */}
-      <Title>Pricing Plans | Smith Digitals | Web Design & Digital Marketing Packages</Title>
+      <Title>Ways to Work Together | Smith Digitals</Title>
       <Meta
         name="description"
-        content="Explore Smith Digitals pricing plans — affordable web design packages, website maintenance plans, and digital marketing retainers including social media management and Google & Meta Ads."
+        content="Explore project, sprint, and ongoing digital engagements with Smith Digitals—a founder-led studio for strategy, brand, web, growth, and automation."
       />
       <Meta
         name="keywords"
-        content="web design pricing, digital marketing packages, social media marketing plans, Google Ads management, Meta Ads, website maintenance, Smith Digitals pricing"
+        content="digital studio engagement, custom web design project, growth sprint, digital strategy retainer, Smith Digitals"
       />
-      <Meta property="og:title" content="Smith Digitals | Web Design Pricing Plans" />
+      <Meta property="og:title" content="Ways to Work Together | Smith Digitals" />
       <Meta
         property="og:description"
-        content="Affordable website design, SEO, and branding plans tailored for your business."
+        content="Flexible project, sprint, and ongoing engagements shaped around the business outcome."
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/pricing" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:title" content="Smith Digitals | Web Design Pricing Plans" />
+      <Meta name="twitter:title" content="Ways to Work Together | Smith Digitals" />
       <Meta
         name="twitter:description"
-        content="Explore flexible and affordable web design packages from Smith Digitals."
+        content="Three flexible ways to bring founder-led strategy, design, technology, and growth into your business."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
       <MetaLink rel="canonical" href="https://smithdigitals.com/pricing" />
 
-      {/* ✅ JSON-LD STRUCTURED DATA */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "OfferCatalog",
-          name: "Smith Digitals Pricing Plans",
-          url: "https://smithdigitals.com/pricing",
-          description:
-            "Explore affordable web design and SEO packages for small businesses.",
-          provider: {
-            "@type": "Organization",
-            name: "Smith Digitals",
-            url: "https://smithdigitals.com",
-            logo: "https://smithdigitals.com/og-image.jpg",
-          },
-          itemListElement: plans.map((plan, i) => ({
-            "@type": "Offer",
-            position: i + 1,
-            name: plan.name,
-            price: plan.price !== "Flexible" ? plan.price.replace("$", "") : "Varies",
-            priceCurrency: plan.price !== "Flexible" ? "USD" : undefined,
-            description: plan.features.join(", "),
-            url: "https://smithdigitals.com/contact",
-          })),
-        })}
-      </script>
+      <main className="pricing-page engagement-page">
+        <section className="engagement-hero">
+          <p className="inner-page-eyebrow">Ways to work together</p>
+          <h1>The right engagement for the problem in front of you.</h1>
+          <p>
+            No bloated retainers. No mystery handoffs. I scope every engagement
+            around the outcome, the complexity, and the pace the business actually
+            needs.
+          </p>
+        </section>
 
-      {/* ✅ PAGE CONTENT */}
-      <div className="pricing-page">
-        <h1>Website Design Plans</h1>
-        <p className="pricing-subtitle">One-time investment to build your online presence</p>
-        <div className="pricing-cards">
-          {plans.map((plan, idx) => (
-            <motion.div
-              key={idx}
-              className={`pricing-card ${
-                plan.name === "Custom & Budget-Friendly" ? "custom-plan" : ""
-              }`}
-              initial={{ opacity: 0, y: 20 }}
+        <section className="engagement-list">
+          {engagements.map((engagement, index) => (
+            <motion.article
+              key={engagement.name}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.3 }}
+              transition={{ delay: index * 0.08 }}
             >
-              <h2>{plan.name}</h2>
-              <p className="price">{plan.price}</p>
+              <div className="engagement-heading">
+                <span>{engagement.number}</span>
+                <div>
+                  <p>{engagement.type}</p>
+                  <h2>{engagement.name}</h2>
+                </div>
+              </div>
+              <p className="engagement-description">{engagement.description}</p>
               <ul>
-                {plan.features.map((f, i) => (
-                  <li key={i}>{f}</li>
+                {engagement.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
                 ))}
               </ul>
-              <Link to="/contact" className="pricing-btn">
-                Get Started
-              </Link>
-            </motion.div>
+              <Link to="/contact">Discuss this engagement ↗</Link>
+            </motion.article>
           ))}
-        </div>
+        </section>
 
-        <div className="client-portal-callout">
-          <p className="client-portal-eyebrow">Existing clients</p>
-          <h2>Manage your subscription in the Stripe Client Portal</h2>
-          <p>
-            Review your active subscription, update billing details, upgrade your plan,
-            or cancel from one secure place.
-          </p>
+        <section className="engagement-principles">
+          <div className="engagement-principles-heading">
+            <p className="inner-page-eyebrow">Every engagement</p>
+            <h2>Senior attention is the baseline.</h2>
+          </div>
+          <div>
+            {principles.map((principle, index) => (
+              <article key={principle.title}>
+                <span>0{index + 1}</span>
+                <h3>{principle.title}</h3>
+                <p>{principle.desc}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="client-portal-callout">
+          <div>
+            <p className="client-portal-eyebrow">Existing client?</p>
+            <h2>Your billing, in one secure place.</h2>
+            <p>
+              Review your active subscription, update payment details, or manage
+              your plan through the Stripe Client Portal.
+            </p>
+          </div>
           <a
             href="https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400"
             className="client-portal-btn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open Client Billing Portal
+            Open client portal ↗
           </a>
-        </div>
+        </section>
 
-        <h2 style={{ marginTop: '6rem' }}>Monthly Management Plans</h2>
-        <p className="pricing-subtitle">Keep your website running smoothly with ongoing support</p>
-        <div className="pricing-cards">
-          {monthlyPlans.map((plan, idx) => (
-            <motion.div
-              key={idx}
-              className="pricing-card monthly-plan"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.3 }}
-            >
-              <h2>{plan.name}</h2>
-              <p className="price">{plan.price}</p>
-              <ul>
-                {plan.features.map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
-              </ul>
-              <Link to="/contact" className="pricing-btn">
-                Subscribe
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Additional Work Pricing */}
-        <div className="additional-pricing-note">
-          <p>
-            <strong>Need extra work beyond your monthly plan?</strong><br />
-            Additional requests are billed at $35/hour
-          </p>
-        </div>
-
-        {/* Digital Marketing Plans */}
-        <h2 style={{ marginTop: '6rem' }}>Digital Marketing Retainers</h2>
-        <p className="pricing-subtitle">Grow your audience, drive leads, and stay top-of-mind every month</p>
-        <div className="pricing-cards">
-          {marketingPlans.map((plan, idx) => (
-            <motion.div
-              key={idx}
-              className="pricing-card monthly-plan"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.3 }}
-            >
-              <h2>{plan.name}</h2>
-              <p className="price">{plan.price}</p>
-              <ul>
-                {plan.features.map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
-              </ul>
-              <Link to="/contact" className="pricing-btn">
-                Get Started
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="additional-pricing-note">
-          <p>
-            <strong>Not sure which plan fits?</strong><br />
-            Contact us for a free strategy consultation and custom quote.
-          </p>
-        </div>
-      </div>
+        <section className="inner-page-cta">
+          <p>Have a challenge that does not fit a neat box?</p>
+          <h2>Good. Start there.</h2>
+          <Link to="/contact">Tell me what needs to change ↗</Link>
+        </section>
+      </main>
     </>
   );
 }

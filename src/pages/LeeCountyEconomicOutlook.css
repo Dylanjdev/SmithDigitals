@@ -1,0 +1,334 @@
+.economic-outlook-page {
+  --guide-paper: #f3f0e7;
+  --guide-blue: #236655;
+  --economic-green: #236655;
+  --economic-gold: #f1b84b;
+  --economic-mist: #dbe5db;
+}
+
+.economic-hero {
+  min-height: min(820px, calc(100vh - 72px));
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(180deg, transparent 50%, rgba(3, 14, 13, 0.62)),
+    radial-gradient(circle at 78% 18%, rgba(241, 184, 75, 0.2), transparent 24%),
+    linear-gradient(135deg, #071311 0%, #0d2822 56%, #173f35 100%);
+}
+
+.economic-hero::before,
+.economic-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  pointer-events: none;
+}
+
+.economic-hero::before {
+  height: 30%;
+  background: #102e27;
+  clip-path: polygon(0 77%, 11% 50%, 20% 68%, 34% 24%, 45% 66%, 58% 38%, 68% 65%, 81% 17%, 89% 55%, 100% 35%, 100% 100%, 0 100%);
+  opacity: 0.68;
+}
+
+.economic-hero::after {
+  height: 18%;
+  background: #081a16;
+  clip-path: polygon(0 61%, 13% 29%, 27% 72%, 40% 35%, 54% 76%, 69% 22%, 82% 64%, 92% 39%, 100% 66%, 100% 100%, 0 100%);
+  opacity: 0.92;
+}
+
+.economic-hero .guide-shell {
+  padding-block: 5rem;
+}
+
+.economic-hero h1 {
+  max-width: 1120px;
+  font-size: clamp(4rem, 9.4vw, 9rem);
+}
+
+.economic-hero-question {
+  margin: 1.5rem 0 0;
+  color: var(--economic-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 3vw, 3rem);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.economic-hero .guide-deck {
+  max-width: 830px;
+}
+
+.economic-hero .guide-author-mark {
+  background: var(--economic-gold);
+}
+
+.economic-stat-band {
+  background: #071311;
+}
+
+.economic-stat-band .guide-shell {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.economic-stat-band article {
+  min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.4rem, 3vw, 2.3rem);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.economic-stat-band strong {
+  color: var(--economic-gold);
+  font-size: clamp(2rem, 3.8vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.economic-stat-band span {
+  max-width: 190px;
+  margin-top: 0.8rem;
+  color: #aebdb8;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.economic-stat-band article > a {
+  width: fit-content;
+  margin-top: 0.75rem;
+  color: #d7e3de;
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: rgba(215, 227, 222, 0.4);
+  text-underline-offset: 0.2em;
+}
+
+.economic-stat-band article > a span {
+  display: inline;
+  margin: 0;
+  color: var(--economic-gold);
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+.economic-stat-band article > a:hover {
+  color: var(--economic-gold);
+}
+
+.economic-layout {
+  align-items: start;
+}
+
+.economic-editor-note {
+  margin-bottom: clamp(5rem, 9vw, 8rem);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background: var(--economic-mist);
+  border-top: 7px solid var(--economic-green);
+}
+
+.economic-editor-note > p:first-child {
+  margin: 0 0 1.2rem;
+  color: var(--economic-green);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.economic-editor-note h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+}
+
+.economic-editor-note > p:last-child {
+  margin-bottom: 0;
+}
+
+.economic-article > h2 {
+  scroll-margin-top: 110px;
+  margin: clamp(5rem, 9vw, 8rem) 0 1.5rem;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid #c7c5bd;
+}
+
+.economic-article > h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.economic-article > h3 {
+  scroll-margin-top: 110px;
+  margin: 2.8rem 0 0.8rem;
+  color: var(--economic-green);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.economic-article > p {
+  max-width: 760px;
+  margin: 1rem 0;
+}
+
+.economic-article > p + p {
+  margin-top: 1.15rem;
+}
+
+.economic-article a.economic-source-link {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.16rem 0.48rem;
+  color: #174d40;
+  background: #dce6dd;
+  border: 1px solid #c7d7ca;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-decoration: none;
+  vertical-align: 0.08em;
+  white-space: normal;
+}
+
+.economic-article a.economic-source-link:hover {
+  color: #fff;
+  background: var(--economic-green);
+}
+
+.economic-article > ul {
+  max-width: 730px;
+  margin: 1.5rem 0 2rem;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  background: #e8e4da;
+  border-left: 4px solid var(--economic-green);
+}
+
+.economic-article > ul li + li {
+  margin-top: 0.35rem;
+}
+
+.economic-article > blockquote {
+  max-width: 700px;
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.5rem;
+  color: #173f35;
+  background: #dfe8df;
+  border-left: 4px solid var(--economic-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.18rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.economic-emphasis {
+  color: #122c26 !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem) !important;
+  line-height: 1.55 !important;
+}
+
+.economic-article #a-renewed-chamber-could-help-connect-the-pieces {
+  position: relative;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  color: #fff;
+  background: var(--economic-green);
+  border: 0;
+}
+
+.economic-article #a-renewed-chamber-could-help-connect-the-pieces::before {
+  content: "LOCAL MOMENTUM";
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--economic-gold);
+  font-family: Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.economic-article #a-renewed-chamber-could-help-connect-the-pieces ~ p a {
+  font-weight: 800;
+}
+
+.economic-outlook-page .guide-sidebar > div {
+  background: #e1e7df;
+  border-color: var(--economic-green);
+}
+
+.economic-outlook-page .guide-sidebar > div > a {
+  background: var(--economic-green);
+}
+
+.economic-outlook-page .guide-sidebar > div > a + a {
+  margin-top: 0.65rem;
+  color: #071311;
+  background: var(--economic-gold);
+}
+
+.economic-cta {
+  background: var(--economic-green);
+}
+
+.economic-cta > div > p:first-child {
+  color: #c8ded6;
+}
+
+.economic-cta a:hover {
+  background: var(--economic-gold);
+}
+
+@media (max-width: 900px) {
+  .economic-stat-band .guide-shell {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-stat-band article:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 680px) {
+  .economic-hero {
+    min-height: auto;
+  }
+
+  .economic-hero .guide-shell {
+    padding-block: 1rem 5rem;
+  }
+
+  .economic-hero h1 {
+    font-size: clamp(3.3rem, 16vw, 5.5rem);
+  }
+
+  .economic-stat-band .guide-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .economic-stat-band article {
+    min-height: 145px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .economic-stat-band article:last-child {
+    border-bottom: 0;
+  }
+
+  .economic-article > h2 {
+    font-size: clamp(2.15rem, 11vw, 3.5rem);
+  }
+
+  .economic-article > ul {
+    padding-left: 2.5rem;
+  }
+}

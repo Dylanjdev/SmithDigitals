@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import projectImg from "../assets/project1.png";
 import { Title, Meta, Link as MetaLink } from "react-head";
+import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./McGuiresLandscaping.css";
 
 const fadeUp = {
@@ -125,7 +126,7 @@ export default function McGuiresLandscaping() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.12 } } }}
           >
-            <motion.p className="ml-label" variants={fadeUp}>What we built</motion.p>
+            <motion.p className="ml-label" variants={fadeUp}>What I built</motion.p>
             <motion.h2 variants={fadeUp}>A conversion-first quote funnel.</motion.h2>
             <div className="ml-list">
               {[
@@ -160,6 +161,7 @@ export default function McGuiresLandscaping() {
           </motion.div>
         </section>
 
+        <CaseStudyExpansion client="mcguires-landscaping" />
         <footer className="ml-credit">
           <p>
             Built by <Link to="/">Smith Digitals</Link>
