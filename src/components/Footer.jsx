@@ -13,6 +13,7 @@ export default function Footer() {
           <h4>Capabilities</h4>
           <Link to="/services">Strategy & positioning</Link>
           <Link to="/services">Web design & development</Link>
+          <Link to="/web-design/lee-county-va">Web design in Lee County</Link>
           <Link to="/services">Ecommerce & automation</Link>
           <Link to="/services">SEO & paid media</Link>
         </div>
@@ -24,6 +25,7 @@ export default function Footer() {
           <Link to="/case-studies">Case Studies</Link>
           <Link to="/guides/how-to-rank-on-google-for-free">Google ranking guide</Link>
           <Link to="/guides/local-seo-vs-regular-seo">Local SEO vs. regular SEO</Link>
+          <Link to="/guides/lee-county-cumberland-gap-tourism">Cumberland Gap tourism guide</Link>
           <Link to="/blog/lee-county-economic-outlook">Lee County economic outlook</Link>
           <Link to="/pricing">Ways to work together</Link>
           <Link to="/contact">Start a project</Link>

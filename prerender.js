@@ -1,6 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {
+  leeCountyWebDesignHub,
+  leeCountyWebDesignLocations,
+  getLeeCountyWebDesignPath
+} from './src/content/leeCountyWebDesignLocations.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -80,6 +85,18 @@ const routes = [
     robots: 'index, follow'
   },
   {
+    path: leeCountyWebDesignHub.path,
+    title: leeCountyWebDesignHub.title,
+    description: leeCountyWebDesignHub.description,
+    robots: 'index, follow, max-image-preview:large'
+  },
+  ...leeCountyWebDesignLocations.map(location => ({
+    path: getLeeCountyWebDesignPath(location.slug),
+    title: `Web Design in ${location.name}, VA | Smith Digitals`,
+    description: `Custom web design for ${location.name}, Virginia businesses. Smith Digitals builds fast, credible websites with local SEO foundations and clear paths to new leads.`,
+    robots: 'index, follow, max-image-preview:large'
+  })),
+  {
     path: '/guides/how-to-rank-on-google-for-free',
     title: 'How to Rank on Google for Free | Smith Digitals',
     description: 'Learn how small businesses can improve local Google visibility for free with a complete Business Profile, genuine reviews, useful content, and local SEO.',
@@ -89,6 +106,12 @@ const routes = [
     path: '/guides/local-seo-vs-regular-seo',
     title: 'Local SEO vs. Regular SEO: What Is the Difference? | Smith Digitals',
     description: 'A practical, in-depth guide to the difference between local SEO and regular SEO, including ranking signals, content strategy, links, measurement, and which approach your business needs.',
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
+    path: '/guides/lee-county-cumberland-gap-tourism',
+    title: 'Cumberland Gap Tourism Guide for Lee County, VA | Smith Digitals',
+    description: 'How Lee County, VA businesses can attract Cumberland Gap visitors using Google Maps, local SEO, regional content, and local tourism partnerships.',
     robots: 'index, follow, max-image-preview:large'
   },
   {
@@ -108,6 +131,18 @@ const routes = [
     title: 'Contact Smith Digitals | Southwest Virginia Website Developer',
     description: 'Ready to grow your business online? Contact Smith Digitals for a free consultation on web design, SEO, and branding in Southwest Virginia.',
     robots: 'index, follow'
+  },
+  {
+    path: '/facebook',
+    title: 'Outrank Competitors & Capture More Local Leads | Smith Digitals',
+    description: 'Claim a free five-minute Google and SEO audit from Smith Digitals and uncover opportunities to attract more high-intent local leads.',
+    robots: 'noindex, nofollow'
+  },
+  {
+    path: '/thank-you',
+    title: 'Audit Request Received | Smith Digitals',
+    description: 'Your Google and SEO audit request has been received by Smith Digitals.',
+    robots: 'noindex, nofollow'
   },
   {
     path: '/privacy-policy',

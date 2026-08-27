@@ -423,6 +423,7 @@ export default function GoogleRankingGuide() {
                 <a href="#faq">FAQs</a>
               </nav>
               <Link to="/guides/local-seo-vs-regular-seo">Local SEO vs. regular SEO <span aria-hidden="true">↗</span></Link>
+              <Link to="/guides/lee-county-cumberland-gap-tourism">Cumberland Gap tourism guide <span aria-hidden="true">↗</span></Link>
               <Link to="/services">Need help with SEO? <span aria-hidden="true">↗</span></Link>
             </div>
           </aside>

@@ -269,6 +269,7 @@ export default function LocalVsTraditionalSeoGuide() {
                 <a href="#faq">FAQs</a>
               </nav>
               <Link to="/guides/how-to-rank-on-google-for-free">Read the free ranking guide <span aria-hidden="true">↗</span></Link>
+              <Link to="/guides/lee-county-cumberland-gap-tourism">Cumberland Gap tourism guide <span aria-hidden="true">↗</span></Link>
             </div>
           </aside>
         </div>

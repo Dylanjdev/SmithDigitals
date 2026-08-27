@@ -87,6 +87,9 @@ export default function Navbar() {
               <Link to="/guides/local-seo-vs-regular-seo" role="menuitem" onClick={() => setIsOpen(false)}>
                 Local SEO vs. regular SEO
               </Link>
+              <Link to="/guides/lee-county-cumberland-gap-tourism" role="menuitem" onClick={() => setIsOpen(false)}>
+                Cumberland Gap tourism guide
+              </Link>
               <Link to="/blog/lee-county-economic-outlook" role="menuitem" onClick={() => setIsOpen(false)}>
                 Lee County economic outlook
               </Link>
