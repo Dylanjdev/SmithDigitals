@@ -1,43 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS"></script>
+    <!-- Queue analytics events immediately; load vendor scripts after the page load. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-C6X6PKCSZS');
-    </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      n.queue=[];}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1040000879017097');
       fbq('track', 'PageView');
+
+      function loadTrackingScripts() {
+        [
+          'https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS',
+          'https://connect.facebook.net/en_US/fbevents.js',
+        ].forEach((src) => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+        });
+      }
+
+      window.addEventListener('load', () => {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(loadTrackingScripts, { timeout: 2000 });
+        } else {
+          window.setTimeout(loadTrackingScripts, 0);
+        }
+      }, { once: true });
     </script>
     <!-- End Meta Pixel Code -->
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terms of service for Smith Digitals LLC. Read our terms and conditions for using our website and services." />
-    <meta
-      name="keywords"
-      content="digital studio, web design, web development, brand strategy, ecommerce, SEO, paid media, automation, Smith Digitals"
-    />
-    <meta name="author" content="Smith Digitals" />
+    
+    
+    
 
     <!-- Page Title -->
-    <title>Terms of Service | Smith Digitals</title>
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -46,59 +56,32 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://smithdigitals.com/terms-of-service/" />
-    <meta property="og:title" content="Terms of Service | Smith Digitals" />
-    <meta property="og:description" content="Terms of service for Smith Digitals LLC. Read our terms and conditions for using our website and services." />
-    <meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Smith Digitals - Custom Web Design & Development" />
-    <meta property="og:image:type" content="image/jpeg" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://smithdigitals.com/" />
-    <meta name="twitter:title" content="Terms of Service | Smith Digitals" />
-    <meta name="twitter:description" content="Terms of service for Smith Digitals LLC. Read our terms and conditions for using our website and services." />
-    <meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
+    
+    
+    
+    
+    
 
     <!-- Performance & SEO Enhancements -->
-    <link rel="preload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC5qc3gnCmltcG9ydCAnLi9BcHAuY3NzJwoKY29uc3QgcGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKQpjb25zdCByZWRpcmVjdFBhdGggPSBwYXJhbXMuZ2V0KCdyZWRpcmVjdCcpCmlmIChyZWRpcmVjdFBhdGgpIHsKICB3aW5kb3cuaGlzdG9yeS5yZXBsYWNlU3RhdGUoe30sICcnLCByZWRpcmVjdFBhdGgpCn0KClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSkucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4sCikK" as="script" />
-    <link rel="canonical" href="https://smithdigitals.com/terms-of-service/" />
-    <meta name="robots" content="noindex, follow" />
+    
+    
     <meta name="theme-color" content="#080b0f" />
 
     <!-- Schema.org JSON-LD for Google Rich Results -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Smith Digitals",
-        "url": "https://smithdigitals.com/",
-        "logo": "https://smithdigitals.com/favicon.svg",
-        "description": "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, ecommerce, SEO, paid media, and automation.",
-        "founder": {
-          "@type": "Person",
-          "name": "Dylan Smith"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "VA",
-          "addressCountry": "US"
-        },
-        "areaServed": ["United States", "Southwest Virginia"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "url": "https://smithdigitals.com/contact"
-        }
-      }
-    </script>
-    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous" defer></script>
-    <script type="module" crossorigin src="/assets/index-BD7kqsqm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B8toajqO.css">
-  </head>
+    <script type="module" crossorigin src="/assets/index-CDiL04pe.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CbgwEBD7.css">
+  <title data-rh="">Terms of Service | Smith Digitals</title><meta data-rh="" name="description" content="Read Smith Digitals&#x27; terms of service. Understand the terms and conditions for using our web design and SEO services."/><meta data-rh="" name="robots" content="noindex, follow"/><link data-rh="" rel="canonical" href="https://smithdigitals.com/terms-of-service/"/></head>
   <body>
     <noscript>
       <img
@@ -109,7 +92,7 @@
         alt=""
       />
     </noscript>
-    <div id="root"></div>
+    <div id="root"><link rel="preload" as="image" href="/src/assets/smithlogo-small.webp"/><div class="content"><nav class="navbar"><div class="nav-container"><a class="nav-logo" href="/" data-discover="true"><img src="/src/assets/smithlogo-small.webp" alt="Smith Digitals Logo" class="nav-logo-img" width="512" height="512"/><span class="nav-brand"><span class="nav-logo-text">Smith Digitals</span><span class="nav-logo-meta">Independent digital studio</span></span></a><button type="button" class="hamburger" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div id="primary-navigation" class="nav-links "><p class="nav-menu-label">Explore Smith Digitals</p><a href="/services" data-discover="true">Capabilities</a><a href="/case-studies" data-discover="true">Case Studies</a><div class="nav-guide-menu"><a aria-haspopup="true" href="/guides/how-to-rank-on-google-for-free" data-discover="true">Guides <span class="nav-guide-chevron" aria-hidden="true">⌄</span></a><div class="nav-guide-dropdown" role="menu"><a role="menuitem" href="/guides/how-to-rank-on-google-for-free" data-discover="true">How to rank on Google for free</a><a role="menuitem" href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a role="menuitem" href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a role="menuitem" href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a></div></div><a href="/pricing" data-discover="true">Engagements</a><a class="nav-portal-link" href="/contact" data-discover="true">Start a project ↗</a></div></div></nav><!--$--><div class="terms-page"><h1>Terms of Service</h1><p><strong>Last updated:</strong> <!-- -->10/29/2026</p><section><h2>1. Acceptance of Terms</h2><p>By accessing and using Smith Digitals&#x27; website and services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.</p></section><section><h2>2. Services Provided</h2><p>Smith Digitals provides web design, development, SEO optimization, branding, and related digital services. Specific deliverables, timelines, and pricing will be outlined in individual project agreements or invoices.</p></section><section><h2>3. Payment Terms</h2><ul><li>Payment is required before project commencement or as specified in the project agreement.</li><li>All prices are in USD unless otherwise stated.</li><li>Refunds are handled on a case-by-case basis and must be requested within 14 days of payment.</li><li>Monthly subscription services require 30 days notice for cancellation.</li></ul></section><section><h2>4. Client Responsibilities</h2><p>Clients are responsible for providing:</p><ul><li>Timely feedback and approvals</li><li>All necessary content, images, and materials</li><li>Domain registration and contributor access for DNS management</li><li>Clear communication regarding project requirements and changes</li></ul></section><section><h2>5. Intellectual Property</h2><p>Upon full payment, clients receive ownership of the final delivered website design and content. Smith Digitals retains the right to use completed work in our portfolio and marketing materials unless otherwise agreed in writing.</p><p>Third-party assets (stock photos, fonts, plugins) remain the property of their respective owners and may require separate licensing.</p></section><section><h2>6. Revisions and Changes</h2><p>Each project includes a specified number of revision rounds as outlined in the project agreement. Additional revisions or scope changes may incur extra fees at our standard hourly rate of $35/hour.</p></section><section><h2>7. Project Timelines</h2><p>We strive to meet all agreed-upon deadlines. However, timelines may be affected by client delays in providing feedback or materials. We are not liable for delays caused by circumstances beyond our control.</p></section><section><h2>8. Hosting and Maintenance</h2><p>Smith Digitals covers website hosting as part of our service packages. Domain registration remains the client&#x27;s responsibility. Clients will invite us as a contributor to manage DNS records and connect the domain to our hosting infrastructure. Monthly maintenance plans are available and billed separately. Failure to maintain your website may result in security vulnerabilities or downtime.</p></section><section><h2>9. Limitation of Liability</h2><p>Smith Digitals is not liable for any indirect, incidental, or consequential damages arising from the use of our services. Our total liability is limited to the amount paid for the specific service in question.</p></section><section><h2>10. Termination</h2><p>Either party may terminate services with written notice. Clients are responsible for payment of all work completed up to the termination date. Deposits are non-refundable unless otherwise agreed.</p></section><section><h2>11. Confidentiality</h2><p>We respect the confidentiality of all client information and will not disclose sensitive business information to third parties without permission.</p></section><section><h2>12. Governing Law</h2><p>These Terms of Service are governed by the laws of the State of Virginia, United States. Any disputes will be resolved in the appropriate courts of Virginia.</p></section><section><h2>13. Changes to Terms</h2><p>Smith Digitals reserves the right to update these Terms of Service at any time. Changes will be posted on this page with an updated &quot;Last updated&quot; date.</p></section><section><h3>14. Contact Information</h3><p>If you have any questions about these Terms of Service, please contact us at<!-- --> <a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com</a>.</p></section></div><!--/$--><footer class="footer"><div class="footer-statement"><p>Smith Digitals</p><h2>Independent by design.<br/>Built for ambitious work.</h2><a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com ↗</a></div><div class="footer-content"><div class="footer-section"><h4>Capabilities</h4><a href="/services" data-discover="true">Strategy &amp; positioning</a><a href="/services" data-discover="true">Web design &amp; development</a><a href="/web-design/lee-county-va" data-discover="true">Web design in Lee County</a><a href="/services" data-discover="true">Ecommerce &amp; automation</a><a href="/services" data-discover="true">SEO &amp; paid media</a></div><div class="footer-section"><h4>Explore</h4><a href="/" data-discover="true">Home</a><a href="/services" data-discover="true">Capabilities</a><a href="/case-studies" data-discover="true">Case Studies</a><a href="/guides/how-to-rank-on-google-for-free" data-discover="true">Google ranking guide</a><a href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a><a href="/pricing" data-discover="true">Ways to work together</a><a href="/contact" data-discover="true">Start a project</a></div><div class="footer-section"><h4>Client access</h4><a href="https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400" target="_blank" rel="noopener noreferrer">Client Billing Portal</a><a href="/privacy-policy" data-discover="true">Privacy Policy</a><a href="/terms-of-service" data-discover="true">Terms of Service</a></div><div class="footer-section"><h4>Connect</h4><a href="mailto:dylan@smithdigitals.com">Email Dylan</a><a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/smithdigitals2025?igsh=MnZ1a3Y1aWN0bGJj&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div><div class="footer-links"><p>© <!-- -->2026<!-- --> Smith Digitals LLC.</p><p>Founder-led by Dylan Smith · Virginia, working everywhere</p></div></footer></div></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {

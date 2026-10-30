@@ -1,43 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS"></script>
+    <!-- Queue analytics events immediately; load vendor scripts after the page load. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-C6X6PKCSZS');
-    </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      n.queue=[];}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1040000879017097');
       fbq('track', 'PageView');
+
+      function loadTrackingScripts() {
+        [
+          'https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS',
+          'https://connect.facebook.net/en_US/fbevents.js',
+        ].forEach((src) => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+        });
+      }
+
+      window.addEventListener('load', () => {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(loadTrackingScripts, { timeout: 2000 });
+        } else {
+          window.setTimeout(loadTrackingScripts, 0);
+        }
+      }, { once: true });
     </script>
     <!-- End Meta Pixel Code -->
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Claim a free five-minute Google and SEO audit from Smith Digitals and uncover opportunities to attract more high-intent local leads." />
-    <meta
-      name="keywords"
-      content="digital studio, web design, web development, brand strategy, ecommerce, SEO, paid media, automation, Smith Digitals"
-    />
-    <meta name="author" content="Smith Digitals" />
+    
+    
+    
 
     <!-- Page Title -->
-    <title>Outrank Competitors & Capture More Local Leads | Smith Digitals</title>
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -46,59 +56,32 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://smithdigitals.com/facebook/" />
-    <meta property="og:title" content="Outrank Competitors & Capture More Local Leads | Smith Digitals" />
-    <meta property="og:description" content="Claim a free five-minute Google and SEO audit from Smith Digitals and uncover opportunities to attract more high-intent local leads." />
-    <meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Smith Digitals - Custom Web Design & Development" />
-    <meta property="og:image:type" content="image/jpeg" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://smithdigitals.com/" />
-    <meta name="twitter:title" content="Outrank Competitors & Capture More Local Leads | Smith Digitals" />
-    <meta name="twitter:description" content="Claim a free five-minute Google and SEO audit from Smith Digitals and uncover opportunities to attract more high-intent local leads." />
-    <meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
+    
+    
+    
+    
+    
 
     <!-- Performance & SEO Enhancements -->
-    <link rel="preload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC5qc3gnCmltcG9ydCAnLi9BcHAuY3NzJwoKY29uc3QgcGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKQpjb25zdCByZWRpcmVjdFBhdGggPSBwYXJhbXMuZ2V0KCdyZWRpcmVjdCcpCmlmIChyZWRpcmVjdFBhdGgpIHsKICB3aW5kb3cuaGlzdG9yeS5yZXBsYWNlU3RhdGUoe30sICcnLCByZWRpcmVjdFBhdGgpCn0KClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSkucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4sCikK" as="script" />
-    <link rel="canonical" href="https://smithdigitals.com/facebook/" />
-    <meta name="robots" content="noindex, nofollow" />
+    
+    
     <meta name="theme-color" content="#080b0f" />
 
     <!-- Schema.org JSON-LD for Google Rich Results -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Smith Digitals",
-        "url": "https://smithdigitals.com/",
-        "logo": "https://smithdigitals.com/favicon.svg",
-        "description": "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, ecommerce, SEO, paid media, and automation.",
-        "founder": {
-          "@type": "Person",
-          "name": "Dylan Smith"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "VA",
-          "addressCountry": "US"
-        },
-        "areaServed": ["United States", "Southwest Virginia"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "url": "https://smithdigitals.com/contact"
-        }
-      }
-    </script>
-    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous" defer></script>
-    <script type="module" crossorigin src="/assets/index-BD7kqsqm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B8toajqO.css">
-  </head>
+    <script type="module" crossorigin src="/assets/index-CDiL04pe.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CbgwEBD7.css">
+  <title data-rh="">Outrank Competitors &amp; Capture More Local Leads | Smith Digitals</title><meta data-rh="" name="description" content="Claim a free five-minute Google and SEO audit from Smith Digitals and uncover opportunities to attract more high-intent local leads."/><meta data-rh="" name="robots" content="noindex, nofollow"/><meta data-rh="" property="og:title" content="Outrank Competitors &amp; Capture More Local Leads | Smith Digitals"/><meta data-rh="" property="og:description" content="Claim a free five-minute Google and SEO audit for your business."/><meta data-rh="" property="og:image" content="https://smithdigitals.com/og-image.jpg"/><meta data-rh="" property="og:type" content="website"/><meta data-rh="" property="og:url" content="https://smithdigitals.com/facebook"/><link data-rh="" rel="canonical" href="https://smithdigitals.com/facebook/"/></head>
   <body>
     <noscript>
       <img
@@ -109,7 +92,7 @@
         alt=""
       />
     </noscript>
-    <div id="root"></div>
+    <div id="root"><link rel="preload" as="image" href="/src/assets/smithlogo-small.webp"/><div class="content campaign-content"><!--$--><main class="fb-page"><header class="fb-header"><div class="fb-shell fb-header-inner"><div class="fb-brand" aria-label="Smith Digitals"><img src="/src/assets/smithlogo-small.webp" alt="" width="512" height="512"/><span><strong>Smith Digitals</strong><small>Independent digital studio</small></span></div><button type="button" class="fb-header-cta">Claim your free audit <span aria-hidden="true">↘</span></button></div></header><section class="fb-hero"><div class="fb-orb fb-orb-one" aria-hidden="true"></div><div class="fb-orb fb-orb-two" aria-hidden="true"></div><div class="fb-shell fb-hero-grid"><div class="fb-hero-copy" style="opacity:0;transform:translateY(24px)"><p class="fb-kicker"><span aria-hidden="true"></span> For ambitious businesses</p><h1>Outrank your competitors &amp; capture more<em>high-intent local leads.</em></h1><p class="fb-hero-lede">Find out what is holding your business back on Google—and where the clearest opportunities are to attract local customers ready to act.</p><div class="fb-inline-proof" aria-label="Local client result"><strong>36</strong><span><b>Local proof</b>McGuire’s Lawn &amp; Landscaping just received 36 leads in one month.</span></div><ul class="fb-hero-points" aria-label="What Smith Digitals improves"><li><span>01</span> See how your business currently appears on Google</li><li><span>02</span> Uncover missed local SEO opportunities</li><li><span>03</span> Get a practical recommendation you can act on</li></ul><button type="button" class="fb-primary-button">Claim my free 5-minute audit <span aria-hidden="true">↗</span></button><p class="fb-microcopy">Personally reviewed by Dylan. Free, focused, and no pressure.</p></div><aside class="fb-lead-card" id="facebook-lead-form" aria-labelledby="lead-form-title" style="opacity:0;transform:translateY(32px) rotate(1.5deg)"><p class="fb-card-label">Free local visibility review</p><h2 id="lead-form-title">Claim your free 5-minute Google &amp; SEO audit.</h2><p class="fb-card-intro">Share your website and best contact. I’ll personally review your local search presence and send back a focused recommendation.</p><form action="https://formspree.io/f/mrblnree" method="POST"><input type="hidden" name="source" value="Facebook landing page"/><input type="hidden" name="page" value="/facebook"/><input type="hidden" name="_subject" value="New Google &amp; SEO audit request from Facebook"/><input type="hidden" name="utm_source"/><input type="hidden" name="utm_medium"/><input type="hidden" name="utm_campaign"/><input type="hidden" name="utm_content"/><input type="hidden" name="utm_term"/><input type="hidden" name="fbclid"/><label for="fb-name">Your name<input id="fb-name" type="text" autoComplete="name" placeholder="Jane Smith" required="" name="name"/></label><label for="fb-contact">Email or phone<input id="fb-contact" type="text" autoComplete="email" inputMode="email" placeholder="you@business.com or (555) 555-5555" required="" name="contact"/></label><label for="fb-website">Website URL<input id="fb-website" type="text" autoComplete="url" inputMode="url" placeholder="yourbusiness.com" required="" name="website"/></label><button type="submit">Claim my free audit<span aria-hidden="true">↗</span></button><p class="fb-form-privacy">Your information stays private. By submitting, you agree to the<!-- --> <a href="/privacy-policy" data-discover="true">privacy policy</a>.</p></form></aside></div></section><section class="fb-proof-strip" aria-label="Smith Digitals at a glance"><div class="fb-shell"><div><strong>15</strong><span>projects delivered</span></div><div><strong>01</strong><span>senior point of contact</span></div><div><strong>360°</strong><span>strategy through launch</span></div><div><strong>VA → anywhere</strong><span>local attention, broad capability</span></div></div></section><section class="fb-case-study"><div class="fb-shell fb-case-grid"><div class="fb-case-result" style="opacity:0;transform:scale(0.94)"><span class="fb-case-number">36</span><p>leads generated in one month</p><small>McGuire’s Lawn &amp; Landscaping</small></div><div class="fb-case-copy" style="opacity:0;transform:translateY(24px)"><p class="fb-section-label">Proof over promises</p><h2>A better website should do more than look better.</h2><p>For McGuire’s, a focused lead-generation site and quote funnel generated 36 leads in one month. Clear positioning and a simple next step made it easier for the right people to act.</p><a href="/case-studies/mcguires-landscaping" target="_blank" data-discover="true">See the full case study <span aria-hidden="true">↗</span></a></div></div></section><section class="fb-difference"><div class="fb-shell"><div class="fb-section-heading"><p class="fb-section-label">Why Smith Digitals</p><h2>One partner. One clear goal: meaningful growth.</h2></div><div class="fb-difference-grid"><article style="opacity:0;transform:translateY(24px)"><span>01</span><h3>Strategy before screens</h3><p>We find the real constraint before deciding what to design, build, or promote.</p></article><article style="opacity:0;transform:translateY(24px)"><span>02</span><h3>Built around action</h3><p>Every message, page, and interaction helps the right customer take the next step.</p></article><article style="opacity:0;transform:translateY(24px)"><span>03</span><h3>Direct senior access</h3><p>You work directly with Dylan from the first conversation through launch and improvement.</p></article></div></div></section><section class="fb-fit"><div class="fb-shell fb-fit-grid"><div><p class="fb-section-label">A good fit if…</p><h2>You are ready for the website to pull its weight.</h2></div><ul><li><span aria-hidden="true">✓</span> Your business is solid, but the online experience undersells it.</li><li><span aria-hidden="true">✓</span> You get attention, but not enough calls, bookings, or sales.</li><li><span aria-hidden="true">✓</span> You want clear advice and execution—not another layer of vendors.</li><li><span aria-hidden="true">✓</span> You are ready to invest in a digital system built for growth.</li></ul></div></section><section class="fb-final-cta"><div class="fb-shell"><p class="fb-section-label">Your next move</p><h2>See what your competitors may be getting right.</h2><button type="button">Claim your free 5-minute audit <span aria-hidden="true">↗</span></button></div></section><footer class="fb-footer"><div class="fb-shell"><p>© <!-- -->2026<!-- --> Smith Digitals LLC</p><div><a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com</a><a href="/privacy-policy" data-discover="true">Privacy</a></div></div></footer><button type="button" class="fb-mobile-cta">Claim your free audit <span aria-hidden="true">↗</span></button></main><!--/$--></div></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {

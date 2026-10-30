@@ -1,43 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS"></script>
+    <!-- Queue analytics events immediately; load vendor scripts after the page load. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-C6X6PKCSZS');
-    </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      n.queue=[];}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1040000879017097');
       fbq('track', 'PageView');
+
+      function loadTrackingScripts() {
+        [
+          'https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS',
+          'https://connect.facebook.net/en_US/fbevents.js',
+        ].forEach((src) => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+        });
+      }
+
+      window.addEventListener('load', () => {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(loadTrackingScripts, { timeout: 2000 });
+        } else {
+          window.setTimeout(loadTrackingScripts, 0);
+        }
+      }, { once: true });
     </script>
     <!-- End Meta Pixel Code -->
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore the responsive community website Smith Digitals built for Freedom In Christ Church." />
-    <meta
-      name="keywords"
-      content="digital studio, web design, web development, brand strategy, ecommerce, SEO, paid media, automation, Smith Digitals"
-    />
-    <meta name="author" content="Smith Digitals" />
+    
+    
+    
 
     <!-- Page Title -->
-    <title>Freedom In Christ Church Case Study | Smith Digitals</title>
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -46,59 +56,32 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://smithdigitals.com/case-studies/freedom-in-christ/" />
-    <meta property="og:title" content="Freedom In Christ Church Case Study | Smith Digitals" />
-    <meta property="og:description" content="Explore the responsive community website Smith Digitals built for Freedom In Christ Church." />
-    <meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Smith Digitals - Custom Web Design & Development" />
-    <meta property="og:image:type" content="image/jpeg" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://smithdigitals.com/" />
-    <meta name="twitter:title" content="Freedom In Christ Church Case Study | Smith Digitals" />
-    <meta name="twitter:description" content="Explore the responsive community website Smith Digitals built for Freedom In Christ Church." />
-    <meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
+    
+    
+    
+    
+    
 
     <!-- Performance & SEO Enhancements -->
-    <link rel="preload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC5qc3gnCmltcG9ydCAnLi9BcHAuY3NzJwoKY29uc3QgcGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKQpjb25zdCByZWRpcmVjdFBhdGggPSBwYXJhbXMuZ2V0KCdyZWRpcmVjdCcpCmlmIChyZWRpcmVjdFBhdGgpIHsKICB3aW5kb3cuaGlzdG9yeS5yZXBsYWNlU3RhdGUoe30sICcnLCByZWRpcmVjdFBhdGgpCn0KClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSkucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4sCikK" as="script" />
-    <link rel="canonical" href="https://smithdigitals.com/case-studies/freedom-in-christ/" />
-    <meta name="robots" content="index, follow" />
+    
+    
     <meta name="theme-color" content="#080b0f" />
 
     <!-- Schema.org JSON-LD for Google Rich Results -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Smith Digitals",
-        "url": "https://smithdigitals.com/",
-        "logo": "https://smithdigitals.com/favicon.svg",
-        "description": "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, ecommerce, SEO, paid media, and automation.",
-        "founder": {
-          "@type": "Person",
-          "name": "Dylan Smith"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "VA",
-          "addressCountry": "US"
-        },
-        "areaServed": ["United States", "Southwest Virginia"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "url": "https://smithdigitals.com/contact"
-        }
-      }
-    </script>
-    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous" defer></script>
-    <script type="module" crossorigin src="/assets/index-BD7kqsqm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B8toajqO.css">
-  </head>
+    <script type="module" crossorigin src="/assets/index-CDiL04pe.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CbgwEBD7.css">
+  <title data-rh="">Freedom In Christ Church | Case Study | Smith Digitals LLC</title><meta data-rh="" name="description" content="Case study: Freedom In Christ Church. Freedom In Christ Church needed a clear digital home where the local community could quickly find service times, ministries, events, and a sense of what to expect when visiting."/><meta data-rh="" property="og:title" content="Freedom In Christ Church | Case Study | Smith Digitals LLC"/><meta data-rh="" property="og:description" content="Case study: Freedom In Christ Church. Freedom In Christ Church needed a clear digital home where the local community could quickly find service times, ministries, events, and a sense of what to expect when visiting."/><meta data-rh="" property="og:image" content="https://smithdigitals.com/og-image.jpg"/><meta data-rh="" property="og:type" content="article"/><meta data-rh="" property="og:url" content="https://smithdigitals.com/case-studies/freedom-in-christ"/><meta data-rh="" name="twitter:card" content="summary_large_image"/><link data-rh="" rel="canonical" href="https://smithdigitals.com/case-studies/freedom-in-christ/"/><meta name="robots" content="index, follow"/></head>
   <body>
     <noscript>
       <img
@@ -109,7 +92,7 @@
         alt=""
       />
     </noscript>
-    <div id="root"></div>
+    <div id="root"><link rel="preload" as="image" href="/src/assets/smithlogo-small.webp"/><link rel="preload" as="image" href="/src/assets/church.png"/><div class="content"><nav class="navbar"><div class="nav-container"><a class="nav-logo" href="/" data-discover="true"><img src="/src/assets/smithlogo-small.webp" alt="Smith Digitals Logo" class="nav-logo-img" width="512" height="512"/><span class="nav-brand"><span class="nav-logo-text">Smith Digitals</span><span class="nav-logo-meta">Independent digital studio</span></span></a><button type="button" class="hamburger" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div id="primary-navigation" class="nav-links "><p class="nav-menu-label">Explore Smith Digitals</p><a href="/services" data-discover="true">Capabilities</a><a aria-current="page" class="nav-active" href="/case-studies" data-discover="true">Case Studies</a><div class="nav-guide-menu"><a aria-haspopup="true" href="/guides/how-to-rank-on-google-for-free" data-discover="true">Guides <span class="nav-guide-chevron" aria-hidden="true">⌄</span></a><div class="nav-guide-dropdown" role="menu"><a role="menuitem" href="/guides/how-to-rank-on-google-for-free" data-discover="true">How to rank on Google for free</a><a role="menuitem" href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a role="menuitem" href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a role="menuitem" href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a></div></div><a href="/pricing" data-discover="true">Engagements</a><a class="nav-portal-link" href="/contact" data-discover="true">Start a project ↗</a></div></div></nav><!--$--><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Freedom In Christ Church | Case Study | Smith Digitals LLC","description":"Case study: Freedom In Christ Church. Freedom In Christ Church needed a clear digital home where the local community could quickly find service times, ministries, events, and a sense of what to expect when visiting.","mainEntityOfPage":"https://smithdigitals.com/case-studies/freedom-in-christ","author":{"@type":"Organization","name":"Smith Digitals LLC"},"image":"https://smithdigitals.com/og-image.jpg"}</script><main class="smy-page"><div class="smy-breadcrumb"><a href="/case-studies" data-discover="true">← Back to Case Studies</a></div><section class="smy-hero"><div class="smy-hero-inner"><div class="smy-logo-block" style="opacity:0;transform:translateY(24px)"><img src="/src/assets/church.png" alt="Freedom In Christ Church project preview" class="smy-logo"/></div><p class="smy-kicker" style="opacity:0;transform:translateY(24px)">Community Website + Information Design</p><h1 class="smy-title" style="opacity:0;transform:translateY(24px)">Freedom In Christ Church<!-- -->: a digital system built around the work.</h1><p class="smy-lead" style="opacity:0;transform:translateY(24px)">Freedom In Christ Church needed a clear digital home where the local community could quickly find service times, ministries, events, and a sense of what to expect when visiting.</p><div class="smy-ctas" style="opacity:0;transform:translateY(24px)"><a href="https://dylanjdev.github.io/Freedom-In-Christ/" target="_blank" rel="noopener noreferrer" class="smy-btn smy-btn-primary">Visit Website →</a></div></div></section><section class="smy-metrics"><div class="smy-metric-card" style="opacity:0;transform:translateY(24px)"><p>Audience</p><h3>Local community</h3></div><div class="smy-metric-card" style="opacity:0;transform:translateY(24px)"><p>Focus</p><h3>Services and ministries</h3></div><div class="smy-metric-card" style="opacity:0;transform:translateY(24px)"><p>Experience</p><h3>Responsive web design</h3></div></section><section class="smy-section"><div class="smy-section-inner"><p class="smy-label" style="opacity:0;transform:translateY(24px)">The challenge</p><h2 style="opacity:0;transform:translateY(24px)">Organize the information people need before visiting while giving the church a welcoming, modern presence across phones and larger screens.</h2></div></section><section class="smy-section smy-section-alt"><div class="smy-section-inner"><p class="smy-label" style="opacity:0;transform:translateY(24px)">What I built</p><h2 style="opacity:0;transform:translateY(24px)">A responsive church website with clear paths to service information, ministries, events, and community details, shaped around quick scanning and approachable communication.</h2><div class="smy-list"><p style="opacity:0;transform:translateY(24px)">Designed a clean responsive layout for visitors browsing on mobile and desktop.</p><p style="opacity:0;transform:translateY(24px)">Established clear content paths for service times, ministries, and events.</p><p style="opacity:0;transform:translateY(24px)">Created a visual system that feels welcoming without overwhelming the information.</p><p style="opacity:0;transform:translateY(24px)">Made the most important visitor questions easy to find from the first screen.</p></div></div></section><section class="smy-section"><div class="smy-section-inner"><p class="smy-label" style="opacity:0;transform:translateY(24px)">Result</p><h2 style="opacity:0;transform:translateY(24px)">Freedom In Christ Church has a focused online home that helps people understand the community, find the next event, and take the next step.</h2></div></section><section class="case-expansion-section"><div class="case-expansion-inner"><p class="case-expansion-label" style="opacity:0;transform:translateY(24px)">Behind the build</p><h2 style="opacity:0;transform:translateY(24px)">The decisions were shaped by the business, not by a template.</h2><p class="case-expansion-intro" style="opacity:0;transform:translateY(24px)">Freedom In Christ Church needed a digital home that served both regular members and first-time visitors. The site had to make practical information easy to locate while communicating the warmth of a local community in Jonesville, Virginia.</p></div></section><section class="case-expansion-section case-expansion-dark"><div class="case-expansion-inner"><p class="case-expansion-label" style="opacity:0;transform:translateY(24px)">Design and strategy decisions</p><h2 style="opacity:0;transform:translateY(24px)">What made this project specific to the client.</h2><div class="case-expansion-grid"><article style="opacity:0;transform:translateY(24px)"><span>0<!-- -->1</span><h3>Prioritize visitor questions</h3><p>Service times, ministries, and events receive clear pathways because those are the details a new visitor needs before deciding to attend.</p></article><article style="opacity:0;transform:translateY(24px)"><span>0<!-- -->2</span><h3>Keep the tone welcoming</h3><p>The visual and content direction avoids institutional distance in favor of a more approachable community presence.</p></article><article style="opacity:0;transform:translateY(24px)"><span>0<!-- -->3</span><h3>Make the site responsive</h3><p>A church website is often checked quickly on a phone, so the core information remains readable and easy to reach on smaller screens.</p></article><article style="opacity:0;transform:translateY(24px)"><span>0<!-- -->4</span><h3>Create a stable information home</h3><p>The website gives the community a dependable source for information that can be more durable than a single social post.</p></article></div></div></section><section class="case-expansion-section"><div class="case-expansion-inner case-expansion-columns"><div style="opacity:0;transform:translateY(24px)"><p class="case-expansion-label">How the work came together</p><h2>Strategy, experience, and implementation in one loop.</h2></div><div style="opacity:0;transform:translateY(24px)"><p>The project began by sorting the church&#x27;s information into the moments that matter: discovering the church, planning a visit, finding a ministry, and staying aware of upcoming events. Design followed that sequence.</p><p>A community website earns trust through small acts of clarity. When people can answer their practical questions quickly, the digital experience feels more like an open door than an announcement board.</p></div></div></section><footer class="smy-credit"><p>Built by <a href="/" data-discover="true">Smith Digitals</a></p></footer></main><!--/$--><footer class="footer"><div class="footer-statement"><p>Smith Digitals</p><h2>Independent by design.<br/>Built for ambitious work.</h2><a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com ↗</a></div><div class="footer-content"><div class="footer-section"><h4>Capabilities</h4><a href="/services" data-discover="true">Strategy &amp; positioning</a><a href="/services" data-discover="true">Web design &amp; development</a><a href="/web-design/lee-county-va" data-discover="true">Web design in Lee County</a><a href="/services" data-discover="true">Ecommerce &amp; automation</a><a href="/services" data-discover="true">SEO &amp; paid media</a></div><div class="footer-section"><h4>Explore</h4><a href="/" data-discover="true">Home</a><a href="/services" data-discover="true">Capabilities</a><a href="/case-studies" data-discover="true">Case Studies</a><a href="/guides/how-to-rank-on-google-for-free" data-discover="true">Google ranking guide</a><a href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a><a href="/pricing" data-discover="true">Ways to work together</a><a href="/contact" data-discover="true">Start a project</a></div><div class="footer-section"><h4>Client access</h4><a href="https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400" target="_blank" rel="noopener noreferrer">Client Billing Portal</a><a href="/privacy-policy" data-discover="true">Privacy Policy</a><a href="/terms-of-service" data-discover="true">Terms of Service</a></div><div class="footer-section"><h4>Connect</h4><a href="mailto:dylan@smithdigitals.com">Email Dylan</a><a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/smithdigitals2025?igsh=MnZ1a3Y1aWN0bGJj&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div><div class="footer-links"><p>© <!-- -->2026<!-- --> Smith Digitals LLC.</p><p>Founder-led by Dylan Smith · Virginia, working everywhere</p></div></footer></div></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {

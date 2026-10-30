@@ -1,46 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS"></script>
+    <!-- Queue analytics events immediately; load vendor scripts after the page load. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-C6X6PKCSZS');
-    </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      n.queue=[];}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1040000879017097');
       fbq('track', 'PageView');
+
+      function loadTrackingScripts() {
+        [
+          'https://www.googletagmanager.com/gtag/js?id=G-C6X6PKCSZS',
+          'https://connect.facebook.net/en_US/fbevents.js',
+        ].forEach((src) => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+        });
+      }
+
+      window.addEventListener('load', () => {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(loadTrackingScripts, { timeout: 2000 });
+        } else {
+          window.setTimeout(loadTrackingScripts, 0);
+        }
+      }, { once: true });
     </script>
     <!-- End Meta Pixel Code -->
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Smith Digitals is a founder-led studio building high-impact brands, websites, ecommerce, SEO, paid campaigns, and automation for ambitious businesses."
-    />
-    <meta
-      name="keywords"
-      content="digital studio, web design, web development, brand strategy, ecommerce, SEO, paid media, automation, Smith Digitals"
-    />
-    <meta name="author" content="Smith Digitals" />
+    
+    
+    
 
     <!-- Page Title -->
-    <title>Smith Digitals | Founder-Led Studio for Ambitious Brands</title>
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -49,65 +56,32 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://smithdigitals.com/" />
-    <meta property="og:title" content="Smith Digitals | One Studio. Agency-Scale Impact." />
-    <meta
-      property="og:description"
-      content="Strategy, design, technology, and growth—built end to end by one accountable senior partner."
-    />
-    <meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Smith Digitals - Custom Web Design & Development" />
-    <meta property="og:image:type" content="image/jpeg" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://smithdigitals.com/" />
-    <meta name="twitter:title" content="Smith Digitals | One Studio. Agency-Scale Impact." />
-    <meta
-      name="twitter:description"
-      content="A founder-led digital studio for ambitious businesses ready to look, work, and grow bigger."
-    />
-    <meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
+    
+    
+    
+    
+    
 
     <!-- Performance & SEO Enhancements -->
-    <link rel="preload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC5qc3gnCmltcG9ydCAnLi9BcHAuY3NzJwoKY29uc3QgcGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKQpjb25zdCByZWRpcmVjdFBhdGggPSBwYXJhbXMuZ2V0KCdyZWRpcmVjdCcpCmlmIChyZWRpcmVjdFBhdGgpIHsKICB3aW5kb3cuaGlzdG9yeS5yZXBsYWNlU3RhdGUoe30sICcnLCByZWRpcmVjdFBhdGgpCn0KClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSkucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4sCikK" as="script" />
-    <link rel="canonical" href="https://smithdigitals.com/" />
-    <meta name="robots" content="index, follow" />
+    
+    
     <meta name="theme-color" content="#080b0f" />
 
     <!-- Schema.org JSON-LD for Google Rich Results -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Smith Digitals",
-        "url": "https://smithdigitals.com/",
-        "logo": "https://smithdigitals.com/favicon.svg",
-        "description": "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, ecommerce, SEO, paid media, and automation.",
-        "founder": {
-          "@type": "Person",
-          "name": "Dylan Smith"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "VA",
-          "addressCountry": "US"
-        },
-        "areaServed": ["United States", "Southwest Virginia"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "url": "https://smithdigitals.com/contact"
-        }
-      }
-    </script>
-    <script src="https://kit.fontawesome.com/d105c3cb1d.js" crossorigin="anonymous" defer></script>
-    <script type="module" crossorigin src="/assets/index-BD7kqsqm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B8toajqO.css">
-  </head>
+    <script type="module" crossorigin src="/assets/index-CDiL04pe.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CbgwEBD7.css">
+  <title data-rh="">Smith Digitals | Founder-Led Studio for Ambitious Brands</title><meta data-rh="" name="description" content="Smith Digitals is a founder-led studio building high-impact brands, websites, ecommerce, SEO, paid campaigns, and automation for ambitious businesses."/><meta data-rh="" name="keywords" content="digital studio, founder-led agency, web design, web development, brand strategy, ecommerce, SEO, digital marketing, automation, Smith Digitals"/><meta data-rh="" property="og:title" content="Smith Digitals | One Studio. Agency-Scale Impact."/><meta data-rh="" property="og:description" content="Strategy, design, technology, and growth—built end to end by one accountable senior partner."/><meta data-rh="" property="og:image" content="https://smithdigitals.com/og-image.jpg"/><meta data-rh="" property="og:type" content="website"/><meta data-rh="" property="og:url" content="https://smithdigitals.com/"/><meta data-rh="" name="twitter:card" content="summary_large_image"/><meta data-rh="" name="twitter:title" content="Smith Digitals | One Studio. Agency-Scale Impact."/><meta data-rh="" name="twitter:description" content="A founder-led digital studio for ambitious businesses ready to look, work, and grow bigger."/><meta data-rh="" name="twitter:image" content="https://smithdigitals.com/og-image.jpg"/><link data-rh="" rel="canonical" href="https://smithdigitals.com/"/><meta name="robots" content="index, follow"/></head>
   <body>
     <noscript>
       <img
@@ -118,7 +92,7 @@
         alt=""
       />
     </noscript>
-    <div id="root"></div>
+    <div id="root"><link rel="preload" as="image" href="/src/assets/smithlogo-small.webp"/><div class="content"><nav class="navbar"><div class="nav-container"><a class="nav-logo" href="/" data-discover="true"><img src="/src/assets/smithlogo-small.webp" alt="Smith Digitals Logo" class="nav-logo-img" width="512" height="512"/><span class="nav-brand"><span class="nav-logo-text">Smith Digitals</span><span class="nav-logo-meta">Independent digital studio</span></span></a><button type="button" class="hamburger" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div id="primary-navigation" class="nav-links "><p class="nav-menu-label">Explore Smith Digitals</p><a href="/services" data-discover="true">Capabilities</a><a href="/case-studies" data-discover="true">Case Studies</a><div class="nav-guide-menu"><a aria-haspopup="true" href="/guides/how-to-rank-on-google-for-free" data-discover="true">Guides <span class="nav-guide-chevron" aria-hidden="true">⌄</span></a><div class="nav-guide-dropdown" role="menu"><a role="menuitem" href="/guides/how-to-rank-on-google-for-free" data-discover="true">How to rank on Google for free</a><a role="menuitem" href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a role="menuitem" href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a role="menuitem" href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a></div></div><a href="/pricing" data-discover="true">Engagements</a><a class="nav-portal-link" href="/contact" data-discover="true">Start a project ↗</a></div></div></nav><!--$--><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Smith Digitals LLC","url":"https://smithdigitals.com","logo":"https://smithdigitals.com/og-image.jpg","founder":{"@type":"Person","name":"Dylan Smith"},"areaServed":["United States","Southwest Virginia"],"description":"A founder-led digital studio delivering strategy, brand, web development, ecommerce, SEO, paid media, and automation for ambitious businesses."}</script><main class="home-page"><div class="hd-scroll-progress" aria-hidden="true" style="transform:scaleX(0)"></div><section class="hd-hero"><div class="hd-hero-glow" aria-hidden="true"></div><div class="hd-hero-copy" style="opacity:1;transform:none"><div style="opacity:0;transform:translateY(30px)"><p class="hd-eyebrow"><span></span>Independent digital studio · Virginia to anywhere</p><h1>One studio.<br/><em>Agency-scale</em> impact.</h1><p class="hd-hero-intro">I’m Dylan—the strategist, designer, and developer behind Smith Digitals. I build the kind of digital presence people expect from a much larger agency, with one senior partner accountable from first idea to launch.</p><div class="hd-actions"><a class="hd-button hd-button-primary" href="/contact" data-discover="true">Start a project <span aria-hidden="true">↗</span></a><a class="hd-button hd-button-text" href="/services" data-discover="true">Explore capabilities <span aria-hidden="true">→</span></a></div></div></div><div class="hd-scroll-cue" aria-hidden="true"><span>Scroll to explore</span><i></i></div></section><div class="hd-capability-rail" aria-label="Smith Digitals capabilities" style="clip-path:inset(0 100% 0 0)"><div class="hd-capability-track"><div class="hd-capability-group"><span>Strategy<!-- --> <i>✦</i></span><span>Brand<!-- --> <i>✦</i></span><span>Web<!-- --> <i>✦</i></span><span>Ecommerce<!-- --> <i>✦</i></span><span>SEO<!-- --> <i>✦</i></span><span>Paid Media<!-- --> <i>✦</i></span><span>Automation<!-- --> <i>✦</i></span></div><div class="hd-capability-group" aria-hidden="true"><span>Strategy<!-- --> <i>✦</i></span><span>Brand<!-- --> <i>✦</i></span><span>Web<!-- --> <i>✦</i></span><span>Ecommerce<!-- --> <i>✦</i></span><span>SEO<!-- --> <i>✦</i></span><span>Paid Media<!-- --> <i>✦</i></span><span>Automation<!-- --> <i>✦</i></span></div></div></div><section class="hd-manifesto hd-shell"><p class="hd-section-kicker" style="opacity:0;transform:translateX(-28px)">The studio model</p><div class="hd-manifesto-grid"><h2 style="opacity:0;transform:translateY(80px)"><span class="hd-reveal-line">Built intentionally small.</span><span class="hd-reveal-line hd-reveal-accent">Made to play big.</span></h2><div class="hd-manifesto-copy" style="opacity:0;transform:translateY(55px)"><p>Smith Digitals is an independent, founder-led studio. That means no junior handoffs, no bloated meetings, and no layers between your challenge and the person solving it.</p><p>I bring strategy, design, development, and growth into one focused system—giving ambitious businesses the range of an agency and the attention of a true creative partner.</p><a href="/services" data-discover="true">See how I can help <span aria-hidden="true">↗</span></a></div></div></section><section class="hd-proof"><div class="hd-shell hd-proof-grid"><div style="opacity:0;transform:translateY(45px)"><strong>15</strong><span>Projects delivered</span></div><div style="opacity:0;transform:translateY(45px)"><strong>01</strong><span>Senior point of contact</span></div><div style="opacity:0;transform:translateY(45px)"><strong>360°</strong><span>Strategy through execution</span></div><p style="opacity:0;transform:translateX(55px)">Big-agency standards.<br/><em>Zero big-agency drag.</em></p></div></section><section class="hd-capabilities hd-shell" id="capabilities"><div class="hd-section-heading" style="opacity:0;transform:translateY(55px)"><div><p class="hd-section-kicker">Capabilities</p><h2>One partner across the<br/>entire digital experience.</h2></div><p class="hd-section-aside">Every engagement is shaped around the business problem—not a predetermined list of deliverables.</p></div><div class="hd-capability-list"><article style="opacity:0;transform:translateX(-70px)"><span class="hd-capability-number">01</span><h3>Digital flagships</h3><p>High-conviction websites that sharpen your position, earn trust fast, and turn attention into action.</p><div><span>Strategy</span><span>UX/UI</span><span>Development</span></div></article><article style="opacity:0;transform:translateX(70px)"><span class="hd-capability-number">02</span><h3>Growth engines</h3><p>Search, paid media, and conversion systems designed around measurable business outcomes—not vanity metrics.</p><div><span>SEO</span><span>Google + Meta</span><span>Analytics</span></div></article><article style="opacity:0;transform:translateX(-70px)"><span class="hd-capability-number">03</span><h3>Brand systems</h3><p>Clear visual and verbal direction that makes every customer touchpoint feel like it belongs to the same company.</p><div><span>Identity</span><span>Messaging</span><span>Creative</span></div></article><article style="opacity:0;transform:translateX(70px)"><span class="hd-capability-number">04</span><h3>Smart infrastructure</h3><p>Integrations, ecommerce, and automation that make the experience behind the scenes as strong as the one out front.</p><div><span>Ecommerce</span><span>APIs</span><span>Automation</span></div></article></div></section><section class="hd-process" id="approach"><div class="hd-shell"><div class="hd-section-heading hd-section-heading-light" style="opacity:0;transform:translateY(55px)"><div><p class="hd-section-kicker">The approach</p><h2>Agency rigor.<br/>Founder access.</h2></div><p class="hd-section-aside">You work directly with me at every stage. The person shaping the strategy is the same person sweating the final details.</p></div><div class="hd-process-grid"><article style="opacity:0;transform:translateY(75px) rotateX(8deg)"><span>01</span><div><h3>Find the leverage</h3><p>I get close to the business, the audience, and the real constraint before deciding what to make.</p></div></article><article style="opacity:0;transform:translateY(75px) rotateX(8deg)"><span>02</span><div><h3>Set the direction</h3><p>Positioning, experience, content, and technology align around one clear strategic idea.</p></div></article><article style="opacity:0;transform:translateY(75px) rotateX(8deg)"><span>03</span><div><h3>Build the system</h3><p>I design and develop the work end to end, with direct feedback loops and no account-manager relay.</p></div></article><article style="opacity:0;transform:translateY(75px) rotateX(8deg)"><span>04</span><div><h3>Launch and compound</h3><p>The work goes live with measurement in place, then improves through real behavior and real data.</p></div></article></div></div></section><section class="hd-closing"><div class="hd-closing-mark" aria-hidden="true" style="transform:translateY(100px) rotate(-8deg)">S</div><div class="hd-shell" style="opacity:0;transform:translateY(55px)"><p class="hd-section-kicker">Have something ambitious in mind?</p><h2 class="hd-closing-title"><span class="hd-reveal-line">Your next chapter should</span><span class="hd-reveal-line" style="opacity:0;transform:translateX(-80px)">look bigger than your last.</span></h2><div class="hd-closing-bottom"><p>Tell me where the business is headed. I’ll help build the digital presence to meet it there.</p><a class="hd-button hd-button-light" href="/contact" data-discover="true">Start a conversation <span aria-hidden="true">↗</span></a></div></div></section></main><!--/$--><footer class="footer"><div class="footer-statement"><p>Smith Digitals</p><h2>Independent by design.<br/>Built for ambitious work.</h2><a href="mailto:dylan@smithdigitals.com">dylan@smithdigitals.com ↗</a></div><div class="footer-content"><div class="footer-section"><h4>Capabilities</h4><a href="/services" data-discover="true">Strategy &amp; positioning</a><a href="/services" data-discover="true">Web design &amp; development</a><a href="/web-design/lee-county-va" data-discover="true">Web design in Lee County</a><a href="/services" data-discover="true">Ecommerce &amp; automation</a><a href="/services" data-discover="true">SEO &amp; paid media</a></div><div class="footer-section"><h4>Explore</h4><a href="/" data-discover="true">Home</a><a href="/services" data-discover="true">Capabilities</a><a href="/case-studies" data-discover="true">Case Studies</a><a href="/guides/how-to-rank-on-google-for-free" data-discover="true">Google ranking guide</a><a href="/guides/local-seo-vs-regular-seo" data-discover="true">Local SEO vs. regular SEO</a><a href="/guides/lee-county-cumberland-gap-tourism" data-discover="true">Cumberland Gap tourism guide</a><a href="/blog/lee-county-economic-outlook" data-discover="true">Lee County economic outlook</a><a href="/pricing" data-discover="true">Ways to work together</a><a href="/contact" data-discover="true">Start a project</a></div><div class="footer-section"><h4>Client access</h4><a href="https://billing.stripe.com/p/login/3cI9AT0gE5lK695bCB14400" target="_blank" rel="noopener noreferrer">Client Billing Portal</a><a href="/privacy-policy" data-discover="true">Privacy Policy</a><a href="/terms-of-service" data-discover="true">Terms of Service</a></div><div class="footer-section"><h4>Connect</h4><a href="mailto:dylan@smithdigitals.com">Email Dylan</a><a href="https://www.facebook.com/share/14Wd9ExAiEQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/smithdigitals2025?igsh=MnZ1a3Y1aWN0bGJj&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div><div class="footer-links"><p>© <!-- -->2026<!-- --> Smith Digitals LLC.</p><p>Founder-led by Dylan Smith · Virginia, working everywhere</p></div></footer></div></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
