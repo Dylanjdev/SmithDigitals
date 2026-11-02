@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
 import "./Pricing.css";
 
@@ -91,7 +92,7 @@ export default function Pricing() {
         content="Three flexible ways to bring founder-led strategy, design, technology, and growth into your business."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/pricing" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/pricing" />
 
       <main className="pricing-page engagement-page">
         <section className="engagement-hero">

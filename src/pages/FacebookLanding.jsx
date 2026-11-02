@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
-import logo from "../assets/smithlogo.png";
+import logo from "../assets/smithlogo-small.webp";
 import "./FacebookLanding.css";
 
 const campaignFields = [
@@ -22,14 +23,15 @@ const reveal = {
 export default function FacebookLanding() {
   const prefersReducedMotion = useReducedMotion();
   const [status, setStatus] = useState("idle");
-  const [campaignData] = useState(() => {
-    const params = new URLSearchParams(window.location.search);
+  const [campaignData, setCampaignData] = useState({});
 
-    return campaignFields.reduce((values, field) => {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setCampaignData(campaignFields.reduce((values, field) => {
       values[field] = params.get(field) || "";
       return values;
-    }, {});
-  });
+    }, {}));
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -79,13 +81,13 @@ export default function FacebookLanding() {
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://smithdigitals.com/facebook" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/facebook" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/facebook" />
 
       <main className="fb-page">
         <header className="fb-header">
           <div className="fb-shell fb-header-inner">
             <div className="fb-brand" aria-label="Smith Digitals">
-              <img src={logo} alt="" />
+              <img src={logo} alt="" width="512" height="512" />
               <span>
                 <strong>Smith Digitals</strong>
                 <small>Independent digital studio</small>

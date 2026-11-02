@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import jumpImg from "../assets/Jump.png";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./JumpSportingGoods.css";
 
@@ -41,7 +42,7 @@ export default function JumpSportingGoods() {
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Jump Sporting Goods | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the e-commerce platform for Jump Sporting Goods, custom apparel for Southwest Virginia." />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/jump-sporting-goods" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/jump-sporting-goods" />
 
       <div className="jsg-page">
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
 import articleMarkdown from "../content/lee-county-economic-outlook.md?raw";
 import "./GoogleRankingGuide.css";
@@ -236,7 +237,7 @@ export default function LeeCountyEconomicOutlook() {
       <Meta name="twitter:title" content={pageTitle} />
       <Meta name="twitter:description" content={pageDescription} />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href={pageUrl} />
+      <CanonicalLink rel="canonical" href={pageUrl} />
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
       <main className="guide-page economic-outlook-page">

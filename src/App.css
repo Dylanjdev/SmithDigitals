@@ -99,6 +99,19 @@ a:hover {
   color: var(--accent-hover);
 }
 
+.not-found-page {
+  display: grid;
+  min-height: 55vh;
+  align-content: center;
+  justify-items: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.not-found-page p {
+  margin-bottom: 1.5rem;
+}
+
 /* Navbar */
 .navbar {
   width: 100%;

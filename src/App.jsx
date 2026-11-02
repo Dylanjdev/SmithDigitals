@@ -4,7 +4,8 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import PageLoader from "./components/PageLoader";
-import { HeadProvider } from "react-head"; // if using react-head for SEO
+import { HeadProvider } from "react-head";
+import NotFound from "./pages/NotFound";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -17,6 +18,7 @@ const JumpSportingGoods = lazy(() => import("./pages/JumpSportingGoods"));
 const McGuiresLandscaping = lazy(() => import("./pages/McGuiresLandscaping"));
 const PaintingOutsideTheLines = lazy(() => import("./pages/PaintingOutsideTheLines"));
 const StoneMountainYogurt = lazy(() => import("./pages/StoneMountainYogurt"));
+const LoveLeeVa = lazy(() => import("./pages/LoveLeeVa"));
 const UnicornTechs = lazy(() => import("./pages/UnicornTechs"));
 const AdditionalCaseStudy = lazy(() => import("./pages/AdditionalCaseStudy"));
 const GoogleRankingGuide = lazy(() => import("./pages/GoogleRankingGuide"));
@@ -39,7 +41,7 @@ const WebDesignLocation = lazy(() =>
   })),
 );
 
-function AppContent() {
+export function AppContent() {
   const location = useLocation();
   const normalizedPath = location.pathname.replace(/\/+$/, "") || "/";
   const isCampaignPage = ["/facebook", "/thank-you"].includes(normalizedPath);
@@ -62,10 +64,9 @@ function AppContent() {
           <Route path="/case-studies/mcguires-landscaping" element={<McGuiresLandscaping />} />
           <Route path="/case-studies/painting-outside-the-lines" element={<PaintingOutsideTheLines />} />
           <Route path="/case-studies/stone-mountain-yogurt" element={<StoneMountainYogurt />} />
+          <Route path="/case-studies/loveleeva" element={<LoveLeeVa />} />
           <Route path="/case-studies/the-unicorn-techs" element={<UnicornTechs />} />
-          <Route path="/case-studies/m-and-m-wholesale" element={<AdditionalCaseStudy />} />
-          <Route path="/case-studies/freedom-in-christ" element={<AdditionalCaseStudy />} />
-          <Route path="/case-studies/hair-by-rilee" element={<AdditionalCaseStudy />} />
+          <Route path="/case-studies/:slug" element={<AdditionalCaseStudy />} />
           <Route path="/guides/how-to-rank-on-google-for-free" element={<GoogleRankingGuide />} />
           <Route path="/guides/local-seo-vs-regular-seo" element={<LocalVsTraditionalSeoGuide />} />
           <Route path="/guides/lee-county-cumberland-gap-tourism" element={<CumberlandGapTourismGuide />} />
@@ -76,6 +77,7 @@ function AppContent() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/facebook" element={<FacebookLanding />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
 

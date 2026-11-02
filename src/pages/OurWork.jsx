@@ -11,11 +11,22 @@ import jumpImg from "../assets/Jump.png";
 import fitImg from "../assets/fit.png";
 import stoneYogurtImg from "../assets/StoneYogurt.webp";
 import uniImg from "../assets/Uni.png";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import loveLeeVaImg from "../assets/LoveLeeVa.svg";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import "./OurWork.css";
 
 export default function OurWork() {
   const projects = [
+    {
+      id: "loveleeva",
+      title: "LoveLeeVa",
+      description: "Headless commerce and community-discovery platform connecting Lee County products, businesses, events, tourism, and rural-development initiatives in one cohesive experience.",
+      url: "https://loveleeva.com/",
+      image: loveLeeVaImg,
+      tags: ["Headless Commerce", "Community Platform", "Rural Development"],
+      caseStudy: "/case-studies/loveleeva"
+    },
     {
       id: 1,
       title: "Stone Mountain Yogurt",
@@ -135,7 +146,7 @@ export default function OurWork() {
         content="Selected digital platforms, ecommerce experiences, search programs, and brand work by Smith Digitals."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}
       <script type="application/ld+json">
@@ -152,6 +163,13 @@ export default function OurWork() {
             logo: "https://smithdigitals.com/og-image.jpg"
           },
           hasPart: [
+            {
+              "@type": "CreativeWork",
+              name: "LoveLeeVa",
+              url: "https://loveleeva.com/",
+              description:
+                "Headless commerce and community-discovery platform connecting local products, businesses, events, tourism, and rural-development initiatives in Lee County, Virginia."
+            },
             {
               "@type": "CreativeWork",
               name: "The Unicorn Techs",

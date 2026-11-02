@@ -1,5 +1,6 @@
 import "./TermsOfService.css";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 
 export default function TermsOfService() {
   return (
@@ -11,7 +12,7 @@ export default function TermsOfService() {
         content="Read Smith Digitals' terms of service. Understand the terms and conditions for using our web design and SEO services."
       />
       <Meta name="robots" content="noindex, follow" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/terms-of-service" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/terms-of-service" />
 
       <div className="terms-page">
         <h1>Terms of Service</h1>

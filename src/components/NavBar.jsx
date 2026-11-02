@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/smithlogo.png";
+import logo from "../assets/smithlogo-small.webp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,13 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <img src={logo} alt="Smith Digitals Logo" className="nav-logo-img" />
+          <img
+            src={logo}
+            alt="Smith Digitals Logo"
+            className="nav-logo-img"
+            width="512"
+            height="512"
+          />
           <span className="nav-brand">
             <span className="nav-logo-text">Smith Digitals</span>
             <span className="nav-logo-meta">Independent digital studio</span>

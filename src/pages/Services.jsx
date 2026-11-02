@@ -1,6 +1,7 @@
 import { FaLaptopCode, FaSearch, FaGoogle, FaTools, FaPalette, FaBullhorn, FaChartLine } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
 
 export default function Services() {
@@ -74,7 +75,7 @@ export default function Services() {
         content="Explore end-to-end digital capabilities from a founder-led studio built for ambitious work."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/services" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/services" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}
       <script type="application/ld+json">

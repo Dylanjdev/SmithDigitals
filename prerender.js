@@ -1,5 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import React from 'react';
+import { PassThrough } from 'stream';
+import { renderToPipeableStream, renderToStaticMarkup } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+import { HeadProvider } from 'react-head';
+import { createServer } from 'vite';
 import { fileURLToPath } from 'url';
 import {
   leeCountyWebDesignHub,
@@ -53,6 +59,12 @@ const routes = [
     title: 'Stone Mountain Yogurt Case Study | Smith Digitals',
     description: 'See how Smith Digitals rebuilt Stone Mountain Yogurt with SEO improvements and Twilio messaging automation.',
     robots: 'index, follow'
+  },
+  {
+    path: '/case-studies/loveleeva',
+    title: 'LoveLeeVa Case Study | Rural Commerce & Community Platform',
+    description: 'See how Smith Digitals built LoveLeeVa, a headless commerce and community-discovery platform for Lee County, Virginia.',
+    robots: 'index, follow, max-image-preview:large'
   },
   {
     path: '/case-studies/the-unicorn-techs',
@@ -163,57 +175,92 @@ const distPath = path.join(__dirname, 'dist');
 const indexPath = path.join(distPath, 'index.html');
 const indexHtml = fs.readFileSync(indexPath, 'utf-8');
 
-// Generate static HTML for each route
-routes.forEach(route => {
-  // Update title and description (handling multiline tags)
-  let html = indexHtml
-    .replace(
-      /<title>.*?<\/title>/,
-      `<title>${route.title}</title>`
-    )
-    .replace(
-      /<meta\s+name="description"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta name="description" content="${route.description}" />`
-    )
-    .replace(
-      /<link\s+rel="canonical"\s+href="[\s\S]*?"\s*\/>/,
-      `<link rel="canonical" href="https://smithdigitals.com${route.path}/" />`
-    )
-    .replace(
-      /<meta\s+property="og:title"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta property="og:title" content="${route.title}" />`
-    )
-    .replace(
-      /<meta\s+property="og:description"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta property="og:description" content="${route.description}" />`
-    )
-    .replace(
-      /<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta property="og:url" content="https://smithdigitals.com${route.path}/" />`
-    )
-    .replace(
-      /<meta\s+name="twitter:title"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta name="twitter:title" content="${route.title}" />`
-    )
-    .replace(
-      /<meta\s+name="twitter:description"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta name="twitter:description" content="${route.description}" />`
-    )
-    .replace(
-      /<meta\s+name="robots"\s+content="[\s\S]*?"\s*\/>/,
-      `<meta name="robots" content="${route.robots}" />`
-    );
-
-  // Create directory if needed
-  const routePath = path.join(distPath, route.path);
-  if (!fs.existsSync(routePath)) {
-    fs.mkdirSync(routePath, { recursive: true });
-  }
-
-  // Write the HTML file
-  const htmlPath = path.join(routePath, 'index.html');
-  fs.writeFileSync(htmlPath, html);
-  console.log(`✓ Generated ${route.path}/index.html`);
+const vite = await createServer({
+  configFile: path.join(__dirname, 'vite.config.js'),
+  server: { middlewareMode: true },
+  appType: 'custom',
 });
 
-console.log('\n✅ Prerendering complete! All routes have static HTML with proper SEO meta tags.');
+try {
+  const { AppContent } = await vite.ssrLoadModule('/src/App.jsx');
+  const { default: NotFound } = await vite.ssrLoadModule('/src/pages/NotFound.jsx');
+
+  function renderApp(element) {
+    return new Promise((resolve, reject) => {
+      let markup = '';
+      let renderError = null;
+      const output = new PassThrough();
+      output.setEncoding('utf8');
+      output.on('data', chunk => { markup += chunk; });
+      output.on('error', reject);
+      output.on('end', () => {
+        if (renderError) {
+          reject(renderError);
+        } else {
+          resolve(markup);
+        }
+      });
+
+      const stream = renderToPipeableStream(element, {
+        onAllReady() {
+          stream.pipe(output);
+        },
+        onShellError(error) {
+          reject(error);
+        },
+        onError(error) {
+          renderError = error;
+        },
+      });
+    });
+  }
+
+  function prepareHtml(headMarkup, bodyMarkup) {
+    const managedHeadTags = /<title>[\s\S]*?<\/title>|<meta\s+(?:name="(?:description|keywords|author|robots)"|property="(?:og:[^"]+|article:[^"]+)")[^>]*\/?>|<meta\s+name="twitter:[^"]+"[^>]*\/?>|<link\s+rel="canonical"[^>]*\/?>|<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/g;
+    return indexHtml
+      .replace(managedHeadTags, '')
+      .replace('</head>', `${headMarkup}</head>`)
+      .replace('<div id="root"></div>', `<div id="root">${bodyMarkup}</div>`);
+  }
+
+  async function renderRoute(location, robots = 'index, follow') {
+    const headTags = [];
+    const markup = await renderApp(
+      React.createElement(
+        HeadProvider,
+        { headTags },
+        React.createElement(StaticRouter, { location }, React.createElement(AppContent)),
+      ),
+    );
+
+    const robotTag = headTags.find(tag => tag.type === 'meta' && tag.props.name === 'robots');
+    if (robotTag) {
+      const index = headTags.indexOf(robotTag);
+      headTags[index] = React.cloneElement(robotTag, { content: robots });
+    } else {
+      headTags.push(React.createElement('meta', { name: 'robots', content: robots }));
+    }
+
+    return prepareHtml(renderToStaticMarkup(headTags), markup);
+  }
+
+  const homeHtml = await renderRoute('/');
+  fs.writeFileSync(indexPath, homeHtml);
+  console.log('✓ Generated /index.html');
+
+  for (const route of routes) {
+    const html = await renderRoute(`${route.path}/`, route.robots);
+    const routePath = path.join(distPath, route.path.slice(1));
+    fs.mkdirSync(routePath, { recursive: true });
+    fs.writeFileSync(path.join(routePath, 'index.html'), html);
+    console.log(`✓ Generated ${route.path}/index.html`);
+  }
+
+  const notFoundHtml = await renderRoute('/__not-found__', 'noindex, follow');
+  fs.writeFileSync(path.join(distPath, '404.html'), notFoundHtml);
+  console.log('✓ Generated /404.html');
+} finally {
+  await vite.close();
+}
+
+console.log('\n✅ Prerendering complete! Routes now include static page content and metadata.');

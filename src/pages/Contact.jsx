@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import "./Contact.css";
 
 export default function Contact() {
@@ -30,7 +31,7 @@ export default function Contact() {
         content="Start a conversation about strategy, brand, web, ecommerce, growth, or automation."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/contact" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/contact" />
 
       {/* ✅ STRUCTURED DATA (LOCAL BUSINESS) */}
       <script type="application/ld+json">

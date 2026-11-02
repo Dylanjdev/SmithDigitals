@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import fitImg from "../assets/fit.png";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./FitAndFierce.css";
 
@@ -32,7 +33,7 @@ export default function FitAndFierce() {
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Fit & Fierce Studio | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the web presence for Fit & Fierce inclusive dance fitness studio." />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/fit-and-fierce" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/fit-and-fierce" />
 
       <div className="ff-page">
 

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import projectImg from "../assets/project1.png";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./McGuiresLandscaping.css";
 
@@ -40,7 +41,7 @@ export default function McGuiresLandscaping() {
         name="twitter:description"
         content="6 quote form submissions in one week, all converted to customers."
       />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/mcguires-landscaping" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/mcguires-landscaping" />
 
       <div className="ml-page">
         <div className="ml-breadcrumb">

@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link, Navigate, useParams } from "react-router-dom";
 import {
   getLeeCountyWebDesignLocation,
@@ -193,7 +194,7 @@ function SeoHead({ location }) {
       <Meta name="twitter:title" content={title} />
       <Meta name="twitter:description" content={description} />
       <Meta name="twitter:image" content={imageUrl} />
-      <MetaLink rel="canonical" href={canonical} />
+      <CanonicalLink rel="canonical" href={canonical} />
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </>
   );

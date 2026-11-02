@@ -9,8 +9,15 @@ if (redirectPath) {
   window.history.replaceState({}, '', redirectPath)
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root')
+const app = (
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, app)
+} else {
+  ReactDOM.createRoot(rootElement).render(app)
+}

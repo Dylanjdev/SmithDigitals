@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import potlImg from "../assets/PaintingInsideTheStudio.webp";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./PaintingOutsideTheLines.css";
 
@@ -46,7 +47,7 @@ export default function PaintingOutsideTheLines() {
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Painting Outside The Lines Studio | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the website for Painting Outside The Lines Studio in Pennington Gap, VA." />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/painting-outside-the-lines" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/painting-outside-the-lines" />
 
       <div className="potl-page">
 

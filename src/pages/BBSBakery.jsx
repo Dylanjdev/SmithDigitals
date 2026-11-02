@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import bbsLogo from "../assets/bbslogo.jpg";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./BBSBakery.css";
 
@@ -40,7 +41,7 @@ export default function BBSBakery() {
         name="twitter:description"
         content="Square Checkout ordering + local SEO wins for BBS Bakery in just 3 months."
       />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/bbs-bakery" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/bbs-bakery" />
 
       <div className="bbs-page">
         <div className="bbs-breadcrumb">

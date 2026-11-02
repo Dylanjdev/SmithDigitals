@@ -5,7 +5,8 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
@@ -112,7 +113,7 @@ export default function Home() {
         content="A founder-led digital studio for ambitious businesses ready to look, work, and grow bigger."
       />
       <Meta name="twitter:image" content="https://smithdigitals.com/og-image.jpg" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/" />
 
       <script type="application/ld+json">
         {JSON.stringify({

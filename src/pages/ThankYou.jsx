@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link } from "react-router-dom";
-import logo from "../assets/smithlogo.png";
+import logo from "../assets/smithlogo-small.webp";
 import "./ThankYou.css";
 
 export default function ThankYou() {
@@ -36,13 +37,13 @@ export default function ThankYou() {
         content="Your Google and SEO audit request has been received by Smith Digitals."
       />
       <Meta name="robots" content="noindex, nofollow" />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/thank-you/" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/thank-you/" />
 
       <main className="thank-you-page">
         <header className="thank-you-header">
           <div className="thank-you-shell">
             <Link to="/" className="thank-you-brand" aria-label="Smith Digitals home">
-              <img src={logo} alt="" />
+              <img src={logo} alt="" width="512" height="512" />
               <span>
                 <strong>Smith Digitals</strong>
                 <small>Independent digital studio</small>

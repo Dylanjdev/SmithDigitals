@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import stoneYogurtImg from "../assets/StoneYogurt.webp";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./StoneMountainYogurt.css";
 
@@ -40,7 +41,7 @@ export default function StoneMountainYogurt() {
         name="twitter:description"
         content="SEO rebuild + custom Twilio API text messaging for Stone Mountain Yogurt."
       />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/stone-mountain-yogurt" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/stone-mountain-yogurt" />
 
       <div className="smy-page">
         <div className="smy-breadcrumb">

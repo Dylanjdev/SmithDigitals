@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import { Link, useParams } from "react-router-dom";
 import projectImg2 from "../assets/church.png";
 import projectImg3 from "../assets/warehouse-bg.jpg";
@@ -98,7 +99,7 @@ export default function AdditionalCaseStudy() {
       <Meta property="og:type" content="article" />
       <Meta property="og:url" content={pageUrl} />
       <Meta name="twitter:card" content="summary_large_image" />
-      <MetaLink rel="canonical" href={pageUrl} />
+      <CanonicalLink rel="canonical" href={pageUrl} />
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",

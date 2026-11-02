@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting... | Smith Digitals</title>
-    <script>
-      (function () {
-        var path = window.location.pathname || '/';
-        var search = window.location.search || '';
-        var redirect = '/index.html?redirect=' + encodeURIComponent(path + search);
-        window.location.replace(redirect);
-      })();
-    </script>
+    <meta name="robots" content="noindex, follow" />
+    <title>Page Not Found | Smith Digitals</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Page not found</h1>
+      <p>That link may be outdated or the page may have moved.</p>
+      <a href="/">Return to the homepage</a>
+    </main>
+  </body>
 </html>

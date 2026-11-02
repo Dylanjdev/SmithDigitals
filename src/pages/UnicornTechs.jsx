@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import uniImg from "../assets/Uni.png";
-import { Title, Meta, Link as MetaLink } from "react-head";
+import { Title, Meta } from "react-head";
+import CanonicalLink from "../components/CanonicalLink";
 import CaseStudyExpansion from "../components/CaseStudyExpansion";
 import "./UnicornTechs.css";
 
@@ -40,7 +41,7 @@ export default function UnicornTechs() {
         name="twitter:description"
         content="Executive advisory positioning for AI readiness and delivery alignment."
       />
-      <MetaLink rel="canonical" href="https://smithdigitals.com/case-studies/the-unicorn-techs" />
+      <CanonicalLink rel="canonical" href="https://smithdigitals.com/case-studies/the-unicorn-techs" />
 
       <div className="uni-page">
         <div className="uni-breadcrumb">
