@@ -106,7 +106,7 @@ export default function LoveLeeVa() {
       <Title>LoveLeeVa Case Study | Rural Commerce & Community Platform</Title>
       <Meta
         name="description"
-        content="See how Smith Digitals built LoveLeeVa, a headless commerce and community-discovery platform connecting local goods, businesses, events, tourism, and rural growth in Lee County, Virginia."
+        content="See how Smith Digitals built LoveLeeVa, combining headless commerce, local businesses, events, tourism, and rural development in Lee County, Virginia."
       />
       <Meta
         name="keywords"
@@ -119,7 +119,7 @@ export default function LoveLeeVa() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/loveleeva" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/loveleeva/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="LoveLeeVa | Smith Digitals Case Study" />
       <Meta

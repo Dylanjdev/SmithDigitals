@@ -23,7 +23,7 @@ export default function Contact() {
       />
       <Meta property="og:type" content="website" />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
-      <Meta property="og:url" content="https://smithdigitals.com/contact" />
+      <Meta property="og:url" content="https://smithdigitals.com/contact/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Contact Smith Digitals" />
       <Meta

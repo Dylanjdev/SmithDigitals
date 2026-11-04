@@ -7,7 +7,7 @@ import "./GoogleRankingGuide.css";
 const pageUrl = "https://smithdigitals.com/guides/local-seo-vs-regular-seo/";
 const pageTitle = "Local SEO vs. Regular SEO: What Is the Difference? | Smith Digitals";
 const pageDescription =
-  "A practical, in-depth guide to the difference between local SEO and regular SEO, including ranking signals, content strategy, links, measurement, and which approach your business needs.";
+  "Compare local SEO and traditional SEO, including ranking signals, content, links, measurement, and how to choose the right strategy.";
 
 const faqs = [
   {

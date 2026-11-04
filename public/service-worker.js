@@ -1,4 +1,4 @@
-const CACHE_NAME = 'smithdigitals-cache-v2';
+const CACHE_NAME = 'smithdigitals-cache-v3';
 const SHELL_ASSETS = ['/', '/index.html', '/404.html', '/site.webmanifest', '/robots.txt'];
 
 self.addEventListener('install', (event) => {
@@ -30,15 +30,21 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          const responseClone = response.clone();
-
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put('/index.html', responseClone);
-          });
+          if (response.ok) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
 
           return response;
         })
         .catch(async () => {
+          const cachedRoute = await caches.match(event.request);
+          if (cachedRoute) {
+            return cachedRoute;
+          }
+
           const cachedPage = await caches.match('/index.html');
           return cachedPage || caches.match('/');
         })

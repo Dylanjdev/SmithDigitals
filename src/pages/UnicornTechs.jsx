@@ -21,7 +21,7 @@ export default function UnicornTechs() {
       <Title>The Unicorn Techs | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built The Unicorn Techs website around executive fiduciary advisory, AI readiness, trust-gap elimination, and enterprise AI execution positioning."
+        content="See how Smith Digitals positioned The Unicorn Techs around AI readiness, executive advisory, delivery alignment, and enterprise decision support."
       />
       <Meta
         name="keywords"
@@ -34,7 +34,7 @@ export default function UnicornTechs() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/the-unicorn-techs" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/the-unicorn-techs/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="The Unicorn Techs | Smith Digitals Case Study" />
       <Meta

@@ -31,14 +31,14 @@ export default function JumpSportingGoods() {
       <Title>Jump Sporting Goods | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built the e-commerce website for Jump Sporting Goods LLC, a custom apparel company in Dryden, VA serving schools, teams, and organizations across Southwest Virginia."
+        content="See how Smith Digitals built Jump Sporting Goods an ecommerce experience for custom apparel, schools, teams, and organizations across Southwest Virginia."
       />
       <Meta name="keywords" content="Jump Sporting Goods, custom apparel website, e-commerce, Smith Digitals case study, Dryden VA, SWVA schools" />
       <Meta property="og:title" content="Jump Sporting Goods | Case Study | Smith Digitals LLC" />
       <Meta property="og:description" content="How Smith Digitals built the custom e-commerce platform for Jump Sporting Goods in Dryden, VA." />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/jump-sporting-goods" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/jump-sporting-goods/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Jump Sporting Goods | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the e-commerce platform for Jump Sporting Goods, custom apparel for Southwest Virginia." />

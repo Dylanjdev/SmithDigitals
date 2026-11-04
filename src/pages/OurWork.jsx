@@ -12,12 +12,42 @@ import fitImg from "../assets/fit.png";
 import stoneYogurtImg from "../assets/StoneYogurt.webp";
 import uniImg from "../assets/Uni.png";
 import loveLeeVaImg from "../assets/LoveLeeVa.svg";
+import appalachianAsensoImg from "../assets/appalachianacenso.png";
+import iLoveLeeImg from "../assets/ilovelee.webp";
+import powerPastureImg from "../assets/powerpasture.webp";
 import { Title, Meta } from "react-head";
 import CanonicalLink from "../components/CanonicalLink";
 import "./OurWork.css";
 
 export default function OurWork() {
   const projects = [
+    {
+      id: "power-pasture",
+      title: "Power Pasture™",
+      description: "High-tech B2B platform explaining an integrated geothermal, hydro, solar, and wind infrastructure model through interactive schematics and six enterprise conversion funnels.",
+      url: "https://powerpasture.com/",
+      image: powerPastureImg,
+      tags: ["B2B Architecture", "Interactive Schematics", "CRO"],
+      caseStudy: "/case-studies/power-pasture"
+    },
+    {
+      id: "discoverleeva",
+      title: "DiscoverLeeVa",
+      description: "Official I Love Lee destination portal connecting regional attractions, a shared community calendar, visitor resources, and dedicated SEO pages for Lee County businesses.",
+      url: "https://discoverleeva.com/",
+      image: iLoveLeeImg,
+      tags: ["Destination UX", "Local SEO", "Directory Architecture"],
+      caseStudy: "/case-studies/discoverleeva"
+    },
+    {
+      id: "appalachian-asenso",
+      title: "Appalachian Asenso",
+      description: "Conversion-focused redesign for Pennington Gap's indoor glow mini golf, laser tag, birthday parties, and private events—built around mobile bookings and local discovery.",
+      url: "https://appalachianasenso.com/",
+      image: appalachianAsensoImg,
+      tags: ["Web Redesign", "Local SEO", "Conversion Strategy"],
+      caseStudy: "/case-studies/appalachian-asenso"
+    },
     {
       id: "loveleeva",
       title: "LoveLeeVa",
@@ -138,7 +168,7 @@ export default function OurWork() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Smith Digitals | Case Studies" />
       <Meta
@@ -163,6 +193,27 @@ export default function OurWork() {
             logo: "https://smithdigitals.com/og-image.jpg"
           },
           hasPart: [
+            {
+              "@type": "CreativeWork",
+              name: "Power Pasture Renewable Energy Platform",
+              url: "https://powerpasture.com/",
+              description:
+                "A high-tech B2B platform for site-specific renewable energy infrastructure combining geothermal, hydro, solar, and wind generation models."
+            },
+            {
+              "@type": "CreativeWork",
+              name: "DiscoverLeeVa Destination Portal",
+              url: "https://discoverleeva.com/",
+              description:
+                "The official I Love Lee tourism portal, community calendar, visitor resource hub, and local business directory for Lee County, Virginia."
+            },
+            {
+              "@type": "CreativeWork",
+              name: "Appalachian Asenso Web Redesign",
+              url: "https://appalachianasenso.com/",
+              description:
+                "Conversion-focused website redesign for an indoor glow mini golf, laser tag, birthday party, and private event venue in Pennington Gap, Virginia."
+            },
             {
               "@type": "CreativeWork",
               name: "LoveLeeVa",

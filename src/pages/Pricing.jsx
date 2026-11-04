@@ -84,7 +84,7 @@ export default function Pricing() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://smithdigitals.com/pricing" />
+      <Meta property="og:url" content="https://smithdigitals.com/pricing/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Ways to Work Together | Smith Digitals" />
       <Meta

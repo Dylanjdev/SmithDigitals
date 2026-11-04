@@ -2293,12 +2293,28 @@ a:hover {
   position: relative;
 }
 
-.nav-guide-menu > a {
-  gap: 0.35rem;
+.nav-guide-heading {
+  display: flex;
+  align-items: center;
+}
+
+.nav-guide-heading > a {
+  padding-right: 0.3rem;
+}
+
+.nav-guide-toggle {
+  display: inline-grid;
+  width: 1.75rem;
+  min-height: 44px;
+  padding: 0;
+  place-items: center;
+  color: #6f7782;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .nav-guide-chevron {
-  color: #6f7782;
   font-size: 0.9rem;
   line-height: 1;
   transition: transform 0.2s ease;
@@ -2314,9 +2330,10 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translate(-50%, -0.5rem);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   z-index: 1003;
 }
 
@@ -2345,6 +2362,7 @@ a:hover {
 .nav-guide-menu:hover .nav-guide-dropdown,
 .nav-guide-menu:focus-within .nav-guide-dropdown {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
   transform: translate(-50%, 0);
 }
@@ -2353,6 +2371,12 @@ a:hover {
 .nav-guide-menu:focus-within .nav-guide-chevron {
   color: #d9ff43;
   transform: rotate(180deg);
+}
+
+.nav-guide-toggle:focus-visible {
+  color: #d9ff43;
+  outline: 2px solid #d9ff43;
+  outline-offset: 2px;
 }
 
 @media (hover: hover) {
@@ -2556,7 +2580,7 @@ a:hover {
     position: static;
   }
 
-  .nav-guide-menu > a {
+  .nav-guide-heading > a {
     width: 100%;
   }
 
@@ -2655,6 +2679,217 @@ a:hover {
   .nav-links .nav-portal-link:active,
   .contact-btn:active {
     transform: scale(0.985);
+  }
+}
+
+/* Keep the primary navigation usable on phones and narrow tablets. */
+@media (max-width: 960px) {
+  .nav-container {
+    min-height: 72px;
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+
+  .hamburger {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    z-index: 1004;
+  }
+
+  .hamburger:active {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: calc(72px + 0.65rem);
+    right: max(0.75rem, env(safe-area-inset-right));
+    left: auto;
+    display: flex;
+    width: min(36rem, calc(100vw - 1.5rem));
+    max-height: calc(100vh - 72px - 1.4rem);
+    max-height: calc(100dvh - 72px - 1.4rem);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    margin-left: 0;
+    padding: 0.75rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(8, 11, 15, 0.99);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    scrollbar-gutter: stable;
+    scrollbar-color: rgba(217, 255, 67, 0.55) transparent;
+    scrollbar-width: thin;
+    z-index: 1003;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .nav-links::-webkit-scrollbar-thumb {
+    background: rgba(217, 255, 67, 0.55);
+    border-radius: 999px;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-menu-label {
+    display: block;
+    margin: 0;
+    padding: 0.65rem 0.65rem 0.8rem;
+    color: #68717d;
+    font-size: 0.57rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:not(.nav-portal-link) {
+    width: 100%;
+    min-height: 58px;
+    justify-content: space-between;
+    margin-left: 0;
+    padding: 0.9rem 0.65rem;
+    color: #d8dce2;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+
+  .nav-links a:not(.nav-portal-link)::after {
+    content: "↗";
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    color: #6f7782;
+    background: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav-links a.nav-active:not(.nav-portal-link),
+  .nav-links a.nav-active:not(.nav-portal-link)::after {
+    color: #d9ff43;
+  }
+
+  .nav-links .nav-portal-link {
+    min-height: 58px;
+    justify-content: space-between;
+    margin-top: 0.65rem;
+    margin-left: 0;
+    padding-inline: 1rem;
+    font-size: 0.88rem;
+  }
+
+  .nav-guide-menu {
+    position: static;
+  }
+
+  .nav-guide-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    align-items: stretch;
+  }
+
+  .nav-guide-heading > a {
+    min-width: 0;
+  }
+
+  .nav-guide-heading > a::after {
+    display: none !important;
+  }
+
+  .nav-guide-toggle {
+    width: 48px;
+    min-height: 58px;
+    color: #aeb6c1;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .nav-guide-menu:not(.is-open):hover .nav-guide-dropdown,
+  .nav-guide-menu:not(.is-open):focus-within .nav-guide-dropdown,
+  .nav-guide-menu:not(.is-open) .nav-guide-dropdown {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: none;
+  }
+
+  .nav-guide-menu.is-open .nav-guide-dropdown {
+    position: static;
+    display: block;
+    width: auto;
+    margin: -0.35rem 0 0.4rem;
+    padding: 0 0 0 0.8rem;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav-guide-dropdown::before {
+    display: none;
+  }
+
+  .nav-guide-dropdown a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0.75rem 0.65rem;
+    color: #aeb6c1;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  .nav-guide-menu:not(.is-open) .nav-guide-chevron {
+    transform: none;
+  }
+
+  .nav-guide-menu.is-open .nav-guide-chevron {
+    color: #d9ff43;
+    transform: rotate(180deg);
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 72px 0 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: rgba(3, 5, 8, 0.68);
+    border: 0;
+    backdrop-filter: blur(3px);
+    z-index: 1001;
   }
 }
 

@@ -22,14 +22,14 @@ export default function FitAndFierce() {
       <Title>Fit & Fierce Studio | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built the website for Fit & Fierce, an inclusive dance fitness studio in Pennington Gap, VA focused on body-positive, high-energy training for all levels."
+        content="See how Smith Digitals built an inclusive, mobile-first website for Fit & Fierce Studio's body-positive dance fitness community in Pennington Gap."
       />
       <Meta name="keywords" content="Fit and Fierce Studio, dance fitness website, inclusive fitness, Smith Digitals case study, Pennington Gap VA" />
       <Meta property="og:title" content="Fit & Fierce Studio | Case Study | Smith Digitals LLC" />
       <Meta property="og:description" content="How Smith Digitals built the web presence for Fit & Fierce, an inclusive dance fitness studio in Virginia." />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/fit-and-fierce" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/fit-and-fierce/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Fit & Fierce Studio | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the web presence for Fit & Fierce inclusive dance fitness studio." />

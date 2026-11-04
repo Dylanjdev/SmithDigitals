@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/smithlogo-small.webp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isGuidesOpen, setIsGuidesOpen] = useState(false);
+
+  const closeMenu = useCallback(() => {
+    setIsOpen(false);
+    setIsGuidesOpen(false);
+  }, []);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    if (isOpen) setIsGuidesOpen(false);
+    setIsOpen((wasOpen) => !wasOpen);
   };
 
   useEffect(() => {
@@ -14,10 +21,10 @@ export default function Navbar() {
 
     const previousOverflow = document.body.style.overflow;
     const closeOnEscape = (event) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") closeMenu();
     };
     const closeOnDesktop = () => {
-      if (window.innerWidth > 768) setIsOpen(false);
+      if (window.innerWidth > 960) closeMenu();
     };
 
     document.body.style.overflow = "hidden";
@@ -29,7 +36,7 @@ export default function Navbar() {
       window.removeEventListener("keydown", closeOnEscape);
       window.removeEventListener("resize", closeOnDesktop);
     };
-  }, [isOpen]);
+  }, [closeMenu, isOpen]);
 
   return (
     <nav className="navbar">
@@ -66,37 +73,51 @@ export default function Navbar() {
           <NavLink
             to="/services"
             className={({ isActive }) => (isActive ? "nav-active" : undefined)}
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
           >
             Capabilities
           </NavLink>
           <NavLink
             to="/case-studies"
             className={({ isActive }) => (isActive ? "nav-active" : undefined)}
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
           >
             Case Studies
           </NavLink>
-          <div className="nav-guide-menu">
-            <NavLink
-              to="/guides/how-to-rank-on-google-for-free"
-              className={({ isActive }) => (isActive ? "nav-active" : undefined)}
-              onClick={() => setIsOpen(false)}
-              aria-haspopup="true"
-            >
-              Guides <span className="nav-guide-chevron" aria-hidden="true">⌄</span>
-            </NavLink>
-            <div className="nav-guide-dropdown" role="menu">
-              <Link to="/guides/how-to-rank-on-google-for-free" role="menuitem" onClick={() => setIsOpen(false)}>
+          <div className={`nav-guide-menu ${isGuidesOpen ? "is-open" : ""}`}>
+            <div className="nav-guide-heading">
+              <NavLink
+                to="/guides/how-to-rank-on-google-for-free"
+                className={({ isActive }) => (isActive ? "nav-active" : undefined)}
+                onClick={closeMenu}
+              >
+                Guides
+              </NavLink>
+              <button
+                type="button"
+                className="nav-guide-toggle"
+                aria-expanded={isGuidesOpen}
+                aria-controls="guide-navigation"
+                aria-label={isGuidesOpen ? "Hide guide links" : "Show guide links"}
+                onClick={() => setIsGuidesOpen((wasOpen) => !wasOpen)}
+              >
+                <span className="nav-guide-chevron" aria-hidden="true">⌄</span>
+              </button>
+            </div>
+            <div id="guide-navigation" className="nav-guide-dropdown" role="menu">
+              <Link to="/guides/how-to-rank-on-google-for-free" role="menuitem" onClick={closeMenu}>
                 How to rank on Google for free
               </Link>
-              <Link to="/guides/local-seo-vs-regular-seo" role="menuitem" onClick={() => setIsOpen(false)}>
+              <Link to="/guides/local-seo-vs-regular-seo" role="menuitem" onClick={closeMenu}>
                 Local SEO vs. regular SEO
               </Link>
-              <Link to="/guides/lee-county-cumberland-gap-tourism" role="menuitem" onClick={() => setIsOpen(false)}>
+              <Link to="/guides/what-is-responsive-web-design" role="menuitem" onClick={closeMenu}>
+                Responsive web design guide
+              </Link>
+              <Link to="/guides/lee-county-cumberland-gap-tourism" role="menuitem" onClick={closeMenu}>
                 Cumberland Gap tourism guide
               </Link>
-              <Link to="/blog/lee-county-economic-outlook" role="menuitem" onClick={() => setIsOpen(false)}>
+              <Link to="/blog/lee-county-economic-outlook" role="menuitem" onClick={closeMenu}>
                 Lee County economic outlook
               </Link>
             </div>
@@ -104,20 +125,20 @@ export default function Navbar() {
           <NavLink
             to="/pricing"
             className={({ isActive }) => (isActive ? "nav-active" : undefined)}
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
           >
             Engagements
           </NavLink>
           <NavLink
             to="/contact"
             className="nav-portal-link"
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
           >
             Start a project ↗
           </NavLink>
         </div>
 
-        {isOpen && <button type="button" className="nav-backdrop" onClick={() => setIsOpen(false)} aria-label="Close navigation menu" />}
+        {isOpen && <button type="button" className="nav-backdrop" onClick={closeMenu} aria-label="Close navigation menu" />}
       </div>
     </nav>
   );

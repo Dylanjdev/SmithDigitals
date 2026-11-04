@@ -80,7 +80,7 @@ export default function FacebookLanding() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://smithdigitals.com/facebook" />
+      <Meta property="og:url" content="https://smithdigitals.com/facebook/" />
       <CanonicalLink rel="canonical" href="https://smithdigitals.com/facebook" />
 
       <main className="fb-page">

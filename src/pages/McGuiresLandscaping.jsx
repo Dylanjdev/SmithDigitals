@@ -21,7 +21,7 @@ export default function McGuiresLandscaping() {
       <Title>McGuire's Lawn & Landscaping | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built a lead-gen website for McGuire's Lawn & Landscaping that generated 6 free quote form submissions in one week, all becoming customers."
+        content="See how Smith Digitals built McGuire's landscaping lead-generation website and quote funnel, producing six new customers in one week."
       />
       <Meta
         name="keywords"
@@ -34,7 +34,7 @@ export default function McGuiresLandscaping() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/mcguires-landscaping" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/mcguires-landscaping/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="McGuire's Landscaping | Smith Digitals Case Study" />
       <Meta

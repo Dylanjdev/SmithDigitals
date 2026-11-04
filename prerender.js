@@ -25,6 +25,24 @@ const routes = [
     robots: 'index, follow'
   },
   {
+    path: '/case-studies/appalachian-asenso',
+    title: 'Appalachian Asenso Case Study | Smith Digitals LLC',
+    description: 'See how Smith Digitals redesigned Appalachian Asenso to grow bookings, party inquiries, mobile speed, and local visibility in Pennington Gap.',
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
+    path: '/case-studies/discoverleeva',
+    title: 'DiscoverLeeVa Case Study | Lee County Tourism Platform',
+    description: 'See how Smith Digitals built DiscoverLeeVa, the official I Love Lee tourism portal, community calendar, visitor guide, and business directory.',
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
+    path: '/case-studies/power-pasture',
+    title: 'Power Pasture™ Case Study | Renewable Energy Platform',
+    description: "See how Smith Digitals built Power Pasture's B2B platform with interactive energy schematics, six industry funnels, and a 0.6-second load time.",
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
     path: '/case-studies/bbs-bakery',
     title: 'BBS Bakery Case Study | Smith Digitals',
     description: 'See how Smith Digitals built BBS Bakery an online ordering experience with Square Checkout and a local SEO strategy.',
@@ -121,6 +139,12 @@ const routes = [
     robots: 'index, follow, max-image-preview:large'
   },
   {
+    path: '/guides/what-is-responsive-web-design',
+    title: 'What Is Responsive Web Design? A 2026 Guide | Smith Digitals',
+    description: 'Learn how responsive web design works, why it matters, and how fluid grids, flexible images, media queries, and container queries shape modern websites.',
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
     path: '/guides/lee-county-cumberland-gap-tourism',
     title: 'Cumberland Gap Tourism Guide for Lee County, VA | Smith Digitals',
     description: 'How Lee County, VA businesses can attract Cumberland Gap visitors using Google Maps, local SEO, regional content, and local tourism partnerships.',
@@ -174,6 +198,27 @@ const routes = [
 const distPath = path.join(__dirname, 'dist');
 const indexPath = path.join(distPath, 'index.html');
 const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+const manifestPath = path.join(distPath, '.vite', 'manifest.json');
+const assetManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+
+function resolveBuiltAssetUrl(sourceUrl) {
+  const sourcePath = sourceUrl.replace(/^\//, '');
+  const manifestEntry = assetManifest[sourcePath]
+    || Object.values(assetManifest).find((entry) => entry.src === sourcePath);
+
+  if (!manifestEntry?.file) {
+    throw new Error(`Unable to resolve production asset for ${sourceUrl}`);
+  }
+
+  return `/${manifestEntry.file}`;
+}
+
+function rewriteBuiltAssetUrls(html) {
+  return html.replace(
+    /\b(src|href)="(\/src\/assets\/[^"]+)"/g,
+    (_match, attribute, sourceUrl) => `${attribute}="${resolveBuiltAssetUrl(sourceUrl)}"`,
+  );
+}
 
 const vite = await createServer({
   configFile: path.join(__dirname, 'vite.config.js'),
@@ -184,6 +229,93 @@ const vite = await createServer({
 try {
   const { AppContent } = await vite.ssrLoadModule('/src/App.jsx');
   const { default: NotFound } = await vite.ssrLoadModule('/src/pages/NotFound.jsx');
+  const [
+    { default: Home },
+    { default: Services },
+    { default: Contact },
+    { default: OurWork },
+    { default: BBSBakery },
+    { default: FitAndFierce },
+    { default: JumpSportingGoods },
+    { default: McGuiresLandscaping },
+    { default: PaintingOutsideTheLines },
+    { default: StoneMountainYogurt },
+    { default: LoveLeeVa },
+    { default: AppalachianAsenso },
+    { default: DiscoverLeeVa },
+    { default: PowerPasture },
+    { default: UnicornTechs },
+    { default: AdditionalCaseStudy },
+    { default: GoogleRankingGuide },
+    { default: LocalVsTraditionalSeoGuide },
+    { default: ResponsiveWebDesignGuide },
+    { default: CumberlandGapTourismGuide },
+    { default: LeeCountyEconomicOutlook },
+    { default: Pricing },
+    { default: PrivacyPolicy },
+    { default: TermsOfService },
+    { default: FacebookLanding },
+    { default: ThankYou },
+    leeCountyModule,
+  ] = await Promise.all([
+    vite.ssrLoadModule('/src/pages/Home.jsx'),
+    vite.ssrLoadModule('/src/pages/Services.jsx'),
+    vite.ssrLoadModule('/src/pages/Contact.jsx'),
+    vite.ssrLoadModule('/src/pages/OurWork.jsx'),
+    vite.ssrLoadModule('/src/pages/BBSBakery.jsx'),
+    vite.ssrLoadModule('/src/pages/FitAndFierce.jsx'),
+    vite.ssrLoadModule('/src/pages/JumpSportingGoods.jsx'),
+    vite.ssrLoadModule('/src/pages/McGuiresLandscaping.jsx'),
+    vite.ssrLoadModule('/src/pages/PaintingOutsideTheLines.jsx'),
+    vite.ssrLoadModule('/src/pages/StoneMountainYogurt.jsx'),
+    vite.ssrLoadModule('/src/pages/LoveLeeVa.jsx'),
+    vite.ssrLoadModule('/src/pages/AppalachianAsenso.jsx'),
+    vite.ssrLoadModule('/src/pages/DiscoverLeeVa.jsx'),
+    vite.ssrLoadModule('/src/pages/PowerPasture.jsx'),
+    vite.ssrLoadModule('/src/pages/UnicornTechs.jsx'),
+    vite.ssrLoadModule('/src/pages/AdditionalCaseStudy.jsx'),
+    vite.ssrLoadModule('/src/pages/GoogleRankingGuide.jsx'),
+    vite.ssrLoadModule('/src/pages/LocalVsTraditionalSeoGuide.jsx'),
+    vite.ssrLoadModule('/src/pages/ResponsiveWebDesignGuide.jsx'),
+    vite.ssrLoadModule('/src/pages/CumberlandGapTourismGuide.jsx'),
+    vite.ssrLoadModule('/src/pages/LeeCountyEconomicOutlook.jsx'),
+    vite.ssrLoadModule('/src/pages/Pricing.jsx'),
+    vite.ssrLoadModule('/src/pages/PrivacyPolicy.jsx'),
+    vite.ssrLoadModule('/src/pages/TermsOfService.jsx'),
+    vite.ssrLoadModule('/src/pages/FacebookLanding.jsx'),
+    vite.ssrLoadModule('/src/pages/ThankYou.jsx'),
+    vite.ssrLoadModule('/src/pages/LeeCountyWebDesign.jsx'),
+  ]);
+  const prerenderPages = {
+    Home,
+    Services,
+    Contact,
+    OurWork,
+    BBSBakery,
+    FitAndFierce,
+    JumpSportingGoods,
+    McGuiresLandscaping,
+    PaintingOutsideTheLines,
+    StoneMountainYogurt,
+    LoveLeeVa,
+    AppalachianAsenso,
+    DiscoverLeeVa,
+    PowerPasture,
+    UnicornTechs,
+    AdditionalCaseStudy,
+    GoogleRankingGuide,
+    LocalVsTraditionalSeoGuide,
+    ResponsiveWebDesignGuide,
+    CumberlandGapTourismGuide,
+    LeeCountyEconomicOutlook,
+    Pricing,
+    PrivacyPolicy,
+    TermsOfService,
+    FacebookLanding,
+    ThankYou,
+    LeeCountyWebDesignHub: leeCountyModule.LeeCountyWebDesignHub,
+    WebDesignLocation: leeCountyModule.WebDesignLocation,
+  };
 
   function renderApp(element) {
     return new Promise((resolve, reject) => {
@@ -217,21 +349,29 @@ try {
 
   function prepareHtml(headMarkup, bodyMarkup) {
     const managedHeadTags = /<title>[\s\S]*?<\/title>|<meta\s+(?:name="(?:description|keywords|author|robots)"|property="(?:og:[^"]+|article:[^"]+)")[^>]*\/?>|<meta\s+name="twitter:[^"]+"[^>]*\/?>|<link\s+rel="canonical"[^>]*\/?>|<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/g;
-    return indexHtml
+    const html = indexHtml
       .replace(managedHeadTags, '')
       .replace('</head>', `${headMarkup}</head>`)
       .replace('<div id="root"></div>', `<div id="root">${bodyMarkup}</div>`);
+
+    return rewriteBuiltAssetUrls(html);
   }
 
   async function renderRoute(location, robots = 'index, follow') {
-    const headTags = [];
-    const markup = await renderApp(
+    const renderLocation = async (headTags) => renderApp(
       React.createElement(
         HeadProvider,
         { headTags },
-        React.createElement(StaticRouter, { location }, React.createElement(AppContent)),
+        React.createElement(
+          StaticRouter,
+          { location },
+          React.createElement(AppContent, { pages: prerenderPages, prerender: true }),
+        ),
       ),
     );
+
+    const headTags = [];
+    const markup = await renderLocation(headTags);
 
     const robotTag = headTags.find(tag => tag.type === 'meta' && tag.props.name === 'robots');
     if (robotTag) {
@@ -258,6 +398,29 @@ try {
 
   const notFoundHtml = await renderRoute('/__not-found__', 'noindex, follow');
   fs.writeFileSync(path.join(distPath, '404.html'), notFoundHtml);
+
+  const generatedHtmlFiles = [];
+  const collectHtmlFiles = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        collectHtmlFiles(entryPath);
+      } else if (entry.name.endsWith('.html')) {
+        generatedHtmlFiles.push(entryPath);
+      }
+    }
+  };
+
+  collectHtmlFiles(distPath);
+  for (const htmlFile of generatedHtmlFiles) {
+    const html = fs.readFileSync(htmlFile, 'utf-8');
+    if (html.includes('/src/assets/')) {
+      throw new Error(`Unresolved source asset URL in ${htmlFile}`);
+    }
+    if (html.includes('<div hidden id="S:') || html.includes('<template id="B:')) {
+      throw new Error(`Unresolved streaming Suspense boundary in ${htmlFile}`);
+    }
+  }
   console.log('✓ Generated /404.html');
 } finally {
   await vite.close();

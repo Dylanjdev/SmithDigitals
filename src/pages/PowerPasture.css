@@ -1,0 +1,398 @@
+.pp-page {
+  --pp-green: #45f06f;
+  --pp-green-deep: #158d43;
+  --pp-ink: #050908;
+}
+
+.pp-breadcrumb a:hover {
+  color: var(--pp-green);
+}
+
+.pp-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(69, 240, 111, 0.12), transparent 30%),
+    linear-gradient(135deg, #050908, #09110d 62%, #061008);
+  border-color: rgba(69, 240, 111, 0.22);
+}
+
+.pp-grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(69, 240, 111, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69, 240, 111, 0.16) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to right, transparent 28%, #000);
+}
+
+.pp-hero-inner {
+  max-width: 940px;
+}
+
+.pp-logo-block {
+  width: min(260px, 72vw);
+  margin-bottom: 1.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(69, 240, 111, 0.22);
+  border-radius: var(--radius);
+}
+
+.pp-logo-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pp-kicker,
+.pp-label {
+  color: var(--pp-green);
+}
+
+.pp-title {
+  max-width: 900px;
+  font-size: clamp(2rem, 5.2vw, 3.65rem);
+  letter-spacing: -0.045em;
+}
+
+.pp-lead {
+  max-width: 760px;
+}
+
+.pp-btn {
+  color: #031007;
+  background: var(--pp-green);
+}
+
+.pp-btn:hover {
+  color: #fff;
+  background: var(--pp-green-deep);
+}
+
+.pp-system-mark {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.pp-system-mark span {
+  padding: 0.4rem 0.55rem;
+  color: rgba(69, 240, 111, 0.55);
+  border: 1px solid rgba(69, 240, 111, 0.18);
+  font-family: monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.pp-project-details {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: var(--spacing-lg);
+  overflow: hidden;
+  background: rgba(69, 240, 111, 0.15);
+  border: 1px solid rgba(69, 240, 111, 0.18);
+  border-radius: var(--radius);
+}
+
+.pp-project-details article {
+  min-width: 0;
+  padding: 1.25rem;
+  background: #09100d;
+}
+
+.pp-project-details p {
+  margin: 0 0 0.5rem;
+  color: var(--pp-green);
+  font-family: monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp-project-details h2 {
+  margin: 0;
+  color: var(--light-text);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.pp-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pp-metric-card {
+  background: linear-gradient(145deg, #0b1310, #080e0b);
+  border-color: rgba(69, 240, 111, 0.16);
+}
+
+.pp-metric-card h3 {
+  color: var(--pp-green);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  text-transform: uppercase;
+}
+
+.pp-section-inner {
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(12, 20, 16, 0.96), rgba(9, 14, 12, 0.96));
+  border-color: rgba(69, 240, 111, 0.14);
+}
+
+.pp-section-inner > p:not(.smy-label) {
+  max-width: 860px;
+}
+
+.pp-inline-link {
+  color: var(--pp-green);
+  font-weight: 700;
+  text-underline-offset: 0.22em;
+}
+
+.pp-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 2rem;
+  overflow: hidden;
+  background: rgba(69, 240, 111, 0.16);
+  border: 1px solid rgba(69, 240, 111, 0.16);
+  border-radius: var(--radius);
+}
+
+.pp-challenge-grid > article {
+  min-width: 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: #080e0b;
+}
+
+.pp-card-label {
+  margin: 0 0 1rem;
+  color: var(--pp-green) !important;
+  font-family: monospace;
+  font-size: 0.7rem !important;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pp-challenge-grid h3 {
+  margin: 0 0 1.75rem;
+  color: var(--light-text);
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  line-height: 1.25;
+}
+
+.pp-challenge-item + .pp-challenge-item {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(69, 240, 111, 0.14);
+}
+
+.pp-challenge-item h4 {
+  margin: 0 0 0.35rem;
+  color: var(--light-text);
+  font-size: 0.94rem;
+}
+
+.pp-challenge-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.pp-energy-section .pp-section-inner {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(69, 240, 111, 0.08), transparent 26%),
+    #070d0a;
+}
+
+.pp-source-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.pp-source-grid article {
+  min-width: 0;
+  min-height: 270px;
+  padding: 1.25rem;
+  background: rgba(5, 9, 8, 0.75);
+  border: 1px solid rgba(69, 240, 111, 0.18);
+  border-radius: var(--radius);
+}
+
+.pp-source-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--pp-green);
+  font-family: monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.pp-source-topline i {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--pp-green);
+  border-radius: 50%;
+  box-shadow: 0 0 14px var(--pp-green);
+}
+
+.pp-source-grid h3 {
+  margin: 3rem 0 0.35rem;
+  color: var(--light-text);
+  font-size: 1.35rem;
+}
+
+.pp-source-grid strong {
+  color: var(--pp-green);
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pp-source-grid p {
+  margin: 1.25rem 0 0;
+  font-size: 0.88rem;
+}
+
+.pp-schematic-note {
+  margin: 1.5rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--pp-green);
+  font-family: monospace;
+  font-size: 0.78rem !important;
+}
+
+.pp-vertical-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: rgba(69, 240, 111, 0.16);
+  border: 1px solid rgba(69, 240, 111, 0.16);
+  border-radius: var(--radius);
+}
+
+.pp-vertical-grid article {
+  min-width: 0;
+  min-height: 150px;
+  padding: 1.5rem;
+  background: #080e0b;
+}
+
+.pp-vertical-grid span,
+.pp-technical-grid span {
+  color: var(--pp-green);
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.pp-vertical-grid h3 {
+  margin: 2.6rem 0 0;
+  color: var(--light-text);
+  font-size: 1.05rem;
+}
+
+.pp-technical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 2rem;
+  overflow: hidden;
+  background: rgba(69, 240, 111, 0.16);
+  border: 1px solid rgba(69, 240, 111, 0.16);
+  border-radius: var(--radius);
+}
+
+.pp-technical-grid article {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #080e0b;
+}
+
+.pp-technical-grid h3 {
+  margin: 1.3rem 0 0.45rem;
+  color: var(--light-text);
+  font-size: 1.05rem;
+}
+
+.pp-technical-grid p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.pp-closing {
+  margin-top: var(--spacing-xl);
+  padding: clamp(3.2rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+  text-align: center;
+  background:
+    linear-gradient(rgba(3, 12, 6, 0.86), rgba(3, 12, 6, 0.9)),
+    repeating-linear-gradient(90deg, rgba(69, 240, 111, 0.1) 0 1px, transparent 1px 48px);
+  border: 1px solid rgba(69, 240, 111, 0.2);
+  border-radius: var(--radius);
+}
+
+.pp-closing p {
+  margin: 0 0 0.75rem;
+  color: var(--pp-green);
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp-closing h2 {
+  margin: 0 0 1.5rem;
+  color: var(--light-text);
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.pp-closing a {
+  color: var(--pp-green);
+  font-weight: 900;
+  text-underline-offset: 0.3em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1060px) {
+  .pp-project-details,
+  .pp-metrics,
+  .pp-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .pp-project-details,
+  .pp-metrics,
+  .pp-challenge-grid,
+  .pp-source-grid,
+  .pp-vertical-grid,
+  .pp-technical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-system-mark {
+    display: none;
+  }
+
+  .pp-source-grid article {
+    min-height: 220px;
+  }
+}

@@ -98,7 +98,7 @@ function SeoHead({ location }) {
   const description = isHub
     ? leeCountyWebDesignHub.description
     : `Custom web design for ${name}, Virginia businesses. Smith Digitals builds fast, credible websites with local SEO foundations and clear paths to new leads.`;
-  const canonical = `${siteUrl}${path}`;
+  const canonical = `${siteUrl}${path.endsWith("/") ? path : `${path}/`}`;
   const placeName = isHub ? "Lee County, Virginia" : `${name}, Virginia`;
 
   const breadcrumbs = [

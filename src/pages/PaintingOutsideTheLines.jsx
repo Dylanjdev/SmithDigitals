@@ -36,14 +36,14 @@ export default function PaintingOutsideTheLines() {
       <Title>Painting Outside The Lines Studio | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built the website for Painting Outside The Lines Studio in Pennington Gap, VA — a creative art studio offering guided painting classes, paint parties, and social art experiences."
+        content="See how Smith Digitals built a vibrant website for Painting Outside The Lines Studio's classes, paint parties, and creative experiences in Pennington Gap."
       />
       <Meta name="keywords" content="Painting Outside The Lines Studio, art studio website, painting classes, Pennington Gap VA, Smith Digitals case study" />
       <Meta property="og:title" content="Painting Outside The Lines Studio | Case Study | Smith Digitals LLC" />
       <Meta property="og:description" content="How Smith Digitals built the website for Painting Outside The Lines Studio, a guided art studio in Pennington Gap, Virginia." />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/painting-outside-the-lines" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/painting-outside-the-lines/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Painting Outside The Lines Studio | Smith Digitals Case Study" />
       <Meta name="twitter:description" content="How Smith Digitals built the website for Painting Outside The Lines Studio in Pennington Gap, VA." />

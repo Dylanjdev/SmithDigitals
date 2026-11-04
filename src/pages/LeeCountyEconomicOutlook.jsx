@@ -9,7 +9,7 @@ import "./LeeCountyEconomicOutlook.css";
 const pageUrl = "https://smithdigitals.com/blog/lee-county-economic-outlook/";
 const pageTitle = "Lee County, Virginia Economic Outlook | Smith Digitals";
 const pageDescription =
-  "Can Lee County, Virginia turn its economy around? A data-led look at population, migration, tourism, local business, infrastructure, and the path to sustainable growth.";
+  "A data-led look at Lee County, Virginia's population, migration, tourism, business climate, infrastructure, and path toward sustainable growth.";
 
 const stats = [
   {

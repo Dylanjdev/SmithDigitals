@@ -21,7 +21,7 @@ export default function StoneMountainYogurt() {
       <Title>Stone Mountain Yogurt | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals rebuilt Stone Mountain Yogurt's outdated website into an SEO-optimized storefront and developed a customized Twilio API for automated customer text messaging."
+        content="See how Smith Digitals rebuilt Stone Mountain Yogurt's website with an SEO-focused storefront and custom Twilio customer messaging automation."
       />
       <Meta
         name="keywords"
@@ -34,7 +34,7 @@ export default function StoneMountainYogurt() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/stone-mountain-yogurt" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/stone-mountain-yogurt/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Stone Mountain Yogurt | Smith Digitals Case Study" />
       <Meta

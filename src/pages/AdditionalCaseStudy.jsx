@@ -16,6 +16,7 @@ const caseStudies = {
     image: projectImg3,
     kicker: "Ecommerce + Inventory Operations",
     lead: "M&M Wholesale Store needed more than a catalog. The platform had to support a changing inventory, secure access, and a smoother wholesale workflow for the people running the business.",
+    metaDescription: "See how Smith Digitals built M&M Wholesale Store's ecommerce platform, real-time inventory system, secure authentication, and custom admin dashboard.",
     metrics: [
       ["Platform", "Full-stack ecommerce"],
       ["Operations", "Custom admin dashboard"],
@@ -38,6 +39,7 @@ const caseStudies = {
     image: projectImg2,
     kicker: "Community Website + Information Design",
     lead: "Freedom In Christ Church needed a clear digital home where the local community could quickly find service times, ministries, events, and a sense of what to expect when visiting.",
+    metaDescription: "See how Smith Digitals built a responsive community website for Freedom In Christ Church, organizing service times, ministries, and events.",
     metrics: [
       ["Audience", "Local community"],
       ["Focus", "Services and ministries"],
@@ -60,6 +62,7 @@ const caseStudies = {
     image: rileeImg,
     kicker: "Local SEO + Service Positioning",
     lead: "Hair By Rilee needed a focused landing page that could introduce the stylist, communicate the service, and make the business easier to discover in Lee County, Virginia.",
+    metaDescription: "See how Smith Digitals built Hair By Rilee a responsive local SEO page with structured data, geo-targeting, and social integration.",
     metrics: [
       ["Market", "Lee County, VA"],
       ["Focus", "Local search visibility"],
@@ -85,9 +88,9 @@ const fadeUp = {
 export default function AdditionalCaseStudy() {
   const { slug } = useParams();
   const project = caseStudies[slug] || caseStudies["m-and-m-wholesale"];
-  const pageUrl = `https://smithdigitals.com/case-studies/${project.slug}`;
+  const pageUrl = `https://smithdigitals.com/case-studies/${project.slug}/`;
   const pageTitle = `${project.title} | Case Study | Smith Digitals LLC`;
-  const pageDescription = `Case study: ${project.title}. ${project.lead}`;
+  const pageDescription = project.metaDescription;
 
   return (
     <>

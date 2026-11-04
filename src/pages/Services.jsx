@@ -67,7 +67,7 @@ export default function Services() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://smithdigitals.com/services" />
+      <Meta property="og:url" content="https://smithdigitals.com/services/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="Smith Digitals | Digital Marketing & Web Design Services" />
       <Meta

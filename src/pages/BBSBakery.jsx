@@ -21,7 +21,7 @@ export default function BBSBakery() {
       <Title>BBS Bakery | Case Study | Smith Digitals LLC</Title>
       <Meta
         name="description"
-        content="Case study: Smith Digitals built BBS Bakery's website with online ordering via Square Checkout API and local SEO that ranked above Blackbird Bakery in Bristol, VA within 3 months."
+        content="See how Smith Digitals built BBS Bakery's Square-powered ordering website and local SEO strategy, earning stronger visibility in Bristol, Virginia."
       />
       <Meta
         name="keywords"
@@ -34,7 +34,7 @@ export default function BBSBakery() {
       />
       <Meta property="og:image" content="https://smithdigitals.com/og-image.jpg" />
       <Meta property="og:type" content="article" />
-      <Meta property="og:url" content="https://smithdigitals.com/case-studies/bbs-bakery" />
+      <Meta property="og:url" content="https://smithdigitals.com/case-studies/bbs-bakery/" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="twitter:title" content="BBS Bakery | Smith Digitals Case Study" />
       <Meta
