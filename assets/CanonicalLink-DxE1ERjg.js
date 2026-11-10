@@ -1,1 +1,0 @@
-import{t as e,F as i}from"./index-CaFwevx9.js";function o({href:a,...t}){const n=new URL(a);return n.pathname!=="/"&&!n.pathname.endsWith("/")&&(n.pathname+="/"),e.jsx(i,{...t,href:n.href})}export{o as C};
