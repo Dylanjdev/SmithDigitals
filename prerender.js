@@ -145,6 +145,12 @@ const routes = [
     robots: 'index, follow, max-image-preview:large'
   },
   {
+    path: '/guides/how-to-structure-your-website-for-seo-growth',
+    title: 'How to Structure Your Website for SEO Growth | Smith Digitals',
+    description: 'Learn how to plan an SEO-friendly website hierarchy with topic clusters, clean URLs, internal links, breadcrumbs, and a practical three-level structure.',
+    robots: 'index, follow, max-image-preview:large'
+  },
+  {
     path: '/guides/lee-county-cumberland-gap-tourism',
     title: 'Cumberland Gap Tourism Guide for Lee County, VA | Smith Digitals',
     description: 'How Lee County, VA businesses can attract Cumberland Gap visitors using Google Maps, local SEO, regional content, and local tourism partnerships.',
@@ -249,6 +255,7 @@ try {
     { default: GoogleRankingGuide },
     { default: LocalVsTraditionalSeoGuide },
     { default: ResponsiveWebDesignGuide },
+    { default: WebsiteStructureSeoGuide },
     { default: CumberlandGapTourismGuide },
     { default: LeeCountyEconomicOutlook },
     { default: Pricing },
@@ -277,6 +284,7 @@ try {
     vite.ssrLoadModule('/src/pages/GoogleRankingGuide.jsx'),
     vite.ssrLoadModule('/src/pages/LocalVsTraditionalSeoGuide.jsx'),
     vite.ssrLoadModule('/src/pages/ResponsiveWebDesignGuide.jsx'),
+    vite.ssrLoadModule('/src/pages/WebsiteStructureSeoGuide.jsx'),
     vite.ssrLoadModule('/src/pages/CumberlandGapTourismGuide.jsx'),
     vite.ssrLoadModule('/src/pages/LeeCountyEconomicOutlook.jsx'),
     vite.ssrLoadModule('/src/pages/Pricing.jsx'),
@@ -306,6 +314,7 @@ try {
     GoogleRankingGuide,
     LocalVsTraditionalSeoGuide,
     ResponsiveWebDesignGuide,
+    WebsiteStructureSeoGuide,
     CumberlandGapTourismGuide,
     LeeCountyEconomicOutlook,
     Pricing,

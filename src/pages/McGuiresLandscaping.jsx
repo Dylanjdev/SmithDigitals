@@ -72,10 +72,10 @@ export default function McGuiresLandscaping() {
               <a
                 href="https://mcguireslawnandlandscaping.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="ml-btn ml-btn-primary"
               >
-                Visit Website →
+                Visit McGuire&apos;s Lawn &amp; Landscaping →
               </a>
             </motion.div>
           </motion.div>

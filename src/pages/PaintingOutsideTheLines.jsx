@@ -94,10 +94,10 @@ export default function PaintingOutsideTheLines() {
               <a
                 href="https://paintingoutsidethelinesstudios.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="potl-btn potl-btn-primary"
               >
-                Visit Studio →
+                Visit Painting Outside The Lines Studio →
               </a>
             </motion.div>
           </motion.div>
@@ -297,10 +297,10 @@ export default function PaintingOutsideTheLines() {
               <a
                 href="https://paintingoutsidethelinesstudios.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="potl-btn potl-btn-primary"
               >
-                View Classes →
+                View Painting Outside The Lines classes →
               </a>
               <a
                 href="https://www.facebook.com/p/Painting-Outside-the-Lines-Studio-61557459762829/"
@@ -320,7 +320,7 @@ export default function PaintingOutsideTheLines() {
           <a
             href="https://paintingoutsidethelinesstudios.com/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="potl-credit-logo-link"
           >
             <img src={potlImg} alt="Painting Outside The Lines Studio" className="potl-credit-logo" />

@@ -123,7 +123,7 @@ export default function AdditionalCaseStudy() {
             <motion.p className="smy-kicker" variants={fadeUp}>{project.kicker}</motion.p>
             <motion.h1 className="smy-title" variants={fadeUp}>{project.title}: a digital system built around the work.</motion.h1>
             <motion.p className="smy-lead" variants={fadeUp}>{project.lead}</motion.p>
-            <motion.div className="smy-ctas" variants={fadeUp}><a href={project.url} target="_blank" rel="noopener noreferrer" className="smy-btn smy-btn-primary">Visit Website →</a></motion.div>
+            <motion.div className="smy-ctas" variants={fadeUp}><a href={project.url} target="_blank" rel="noopener" className="smy-btn smy-btn-primary">Visit {project.title} website →</a></motion.div>
           </motion.div>
         </section>
 

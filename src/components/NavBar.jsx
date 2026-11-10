@@ -114,6 +114,9 @@ export default function Navbar() {
               <Link to="/guides/what-is-responsive-web-design" role="menuitem" onClick={closeMenu}>
                 Responsive web design guide
               </Link>
+              <Link to="/guides/how-to-structure-your-website-for-seo-growth" role="menuitem" onClick={closeMenu}>
+                Website structure for SEO
+              </Link>
               <Link to="/guides/lee-county-cumberland-gap-tourism" role="menuitem" onClick={closeMenu}>
                 Cumberland Gap tourism guide
               </Link>

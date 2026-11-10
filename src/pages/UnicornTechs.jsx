@@ -73,10 +73,10 @@ export default function UnicornTechs() {
               <a
                 href="https://theunicorntechs.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="uni-btn uni-btn-primary"
               >
-                Visit Website →
+                Visit The Unicorn Techs →
               </a>
             </motion.div>
           </motion.div>

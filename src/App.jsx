@@ -27,6 +27,7 @@ const AdditionalCaseStudy = lazy(() => import("./pages/AdditionalCaseStudy"));
 const GoogleRankingGuide = lazy(() => import("./pages/GoogleRankingGuide"));
 const LocalVsTraditionalSeoGuide = lazy(() => import("./pages/LocalVsTraditionalSeoGuide"));
 const ResponsiveWebDesignGuide = lazy(() => import("./pages/ResponsiveWebDesignGuide"));
+const WebsiteStructureSeoGuide = lazy(() => import("./pages/WebsiteStructureSeoGuide"));
 const CumberlandGapTourismGuide = lazy(() => import("./pages/CumberlandGapTourismGuide"));
 const LeeCountyEconomicOutlook = lazy(() => import("./pages/LeeCountyEconomicOutlook"));
 const Pricing = lazy(() => import("./pages/Pricing"));
@@ -65,6 +66,7 @@ const defaultPageComponents = {
   GoogleRankingGuide,
   LocalVsTraditionalSeoGuide,
   ResponsiveWebDesignGuide,
+  WebsiteStructureSeoGuide,
   CumberlandGapTourismGuide,
   LeeCountyEconomicOutlook,
   Pricing,
@@ -97,6 +99,7 @@ export function AppContent({ pages = defaultPageComponents, prerender = false })
     GoogleRankingGuide: GoogleRankingGuidePage,
     LocalVsTraditionalSeoGuide: LocalVsTraditionalSeoGuidePage,
     ResponsiveWebDesignGuide: ResponsiveWebDesignGuidePage,
+    WebsiteStructureSeoGuide: WebsiteStructureSeoGuidePage,
     CumberlandGapTourismGuide: CumberlandGapTourismGuidePage,
     LeeCountyEconomicOutlook: LeeCountyEconomicOutlookPage,
     Pricing: PricingPage,
@@ -140,6 +143,7 @@ export function AppContent({ pages = defaultPageComponents, prerender = false })
           <Route path="/guides/how-to-rank-on-google-for-free" element={<GoogleRankingGuidePage />} />
           <Route path="/guides/local-seo-vs-regular-seo" element={<LocalVsTraditionalSeoGuidePage />} />
           <Route path="/guides/what-is-responsive-web-design" element={<ResponsiveWebDesignGuidePage />} />
+          <Route path="/guides/how-to-structure-your-website-for-seo-growth" element={<WebsiteStructureSeoGuidePage />} />
           <Route path="/guides/lee-county-cumberland-gap-tourism" element={<CumberlandGapTourismGuidePage />} />
           <Route path="/blog/lee-county-economic-outlook" element={<LeeCountyEconomicOutlookPage />} />
           <Route path="/pricing" element={<PricingPage />} />

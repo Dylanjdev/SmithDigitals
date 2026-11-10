@@ -88,10 +88,10 @@ export default function JumpSportingGoods() {
               <a
                 href="https://www.jumpsportinggoods.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="jsg-btn jsg-btn-primary"
               >
-                Visit Store →
+                Visit Jump Sporting Goods →
               </a>
             </motion.div>
           </motion.div>
@@ -275,10 +275,10 @@ export default function JumpSportingGoods() {
               <a
                 href="https://www.jumpsportinggoods.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="jsg-btn jsg-btn-primary"
               >
-                Browse the Store →
+                Browse the Jump Sporting Goods store →
               </a>
               <a
                 href="https://www.facebook.com/jumpsportinggoods"
@@ -298,7 +298,7 @@ export default function JumpSportingGoods() {
           <a
             href="https://www.jumpsportinggoods.com/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="jsg-credit-logo-link"
           >
             <img src={jumpImg} alt="Jump Sporting Goods" className="jsg-credit-logo" />

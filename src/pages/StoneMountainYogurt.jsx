@@ -73,10 +73,10 @@ export default function StoneMountainYogurt() {
               <a
                 href="https://stone-mountain-yogurt.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="smy-btn smy-btn-primary"
               >
-                Visit Website →
+                Visit Stone Mountain Yogurt →
               </a>
             </motion.div>
           </motion.div>

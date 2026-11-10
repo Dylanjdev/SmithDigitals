@@ -64,8 +64,8 @@ export default function FitAndFierce() {
               <a href="https://www.facebook.com/profile.php?id=61574160265586" target="_blank" rel="noopener noreferrer" className="ff-btn ff-btn-secondary">
                 View Classes on Facebook
               </a>
-              <a href="https://fitandfierce.studio/" target="_blank" rel="noopener noreferrer" className="ff-btn ff-btn-primary">
-                Visit Studio →
+              <a href="https://fitandfierce.studio/" target="_blank" rel="noopener" className="ff-btn ff-btn-primary">
+                Visit Fit &amp; Fierce Studio →
               </a>
             </motion.div>
           </motion.div>
@@ -224,7 +224,7 @@ export default function FitAndFierce() {
         <CaseStudyExpansion client="fit-and-fierce" />
         {/* ── SITE FOOTER / CREDIT ── */}
         <footer className="ff-credit">
-          <a href="https://fitandfierce.studio/" target="_blank" rel="noopener noreferrer" className="ff-credit-logo-link">
+          <a href="https://fitandfierce.studio/" target="_blank" rel="noopener" className="ff-credit-logo-link">
             <img src={fitImg} alt="Fit & Fierce Studio" className="ff-credit-logo" />
             <span className="ff-credit-name">Fit &amp; Fierce • Inclusive Dance Fitness Studio</span>
           </a>

@@ -166,10 +166,10 @@ export default function AppalachianAsenso() {
               <a
                 href="https://appalachianasenso.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="smy-btn smy-btn-primary"
               >
-                Visit Website →
+                Visit Appalachian Asenso →
               </a>
             </motion.div>
           </motion.div>

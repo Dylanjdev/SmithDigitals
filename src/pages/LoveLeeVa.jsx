@@ -157,10 +157,10 @@ export default function LoveLeeVa() {
               <a
                 href="https://loveleeva.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="llv-button llv-button-primary"
               >
-                Visit the platform <span aria-hidden="true">↗</span>
+                Visit LoveLeeVa <span aria-hidden="true">↗</span>
               </a>
               <a href="#solution" className="llv-text-link">
                 Explore the build <span aria-hidden="true">↓</span>
@@ -526,7 +526,7 @@ export default function LoveLeeVa() {
               <a
                 href="https://loveleeva.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="llv-button llv-button-light"
               >
                 Explore LoveLeeVa <span aria-hidden="true">↗</span>

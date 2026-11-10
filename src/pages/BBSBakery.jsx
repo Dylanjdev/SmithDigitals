@@ -70,12 +70,12 @@ export default function BBSBakery() {
             </motion.p>
             <motion.div className="bbs-ctas" variants={fadeUp}>
               <a
-                href="https://www.bbs-bakery.com/"
+                href="https://bbs-bakery.com/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="bbs-btn bbs-btn-primary"
               >
-                Visit Website →
+                Visit BB&apos;s Bakery &amp; Cafe →
               </a>
             </motion.div>
           </motion.div>

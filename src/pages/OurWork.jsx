@@ -106,7 +106,7 @@ export default function OurWork() {
       id: 6,
       title: "BBS Bakery",
       description: "Bakery website featuring online ordering through Square Checkout API, responsive design, and SEO strategy that helped rank above Blackbird Bakery in Bristol, VA within 3 months.",
-      url: "https://www.bbs-bakery.com/",
+      url: "https://bbs-bakery.com/",
       image: bbsLogo,
       tags: ["Bakery", "Square Checkout", "Local SEO"],
       caseStudy: "/case-studies/bbs-bakery"
@@ -245,14 +245,14 @@ export default function OurWork() {
             {
               "@type": "CreativeWork",
               name: "BBS Bakery Website",
-              url: "https://www.bbs-bakery.com/",
+              url: "https://bbs-bakery.com/",
               description:
                 "Bakery website with online ordering through Square Checkout API and local SEO gains, ranking above Blackbird Bakery in Bristol, VA within 3 months."
             },
             {
               "@type": "CreativeWork",
               name: "M&M Wholesale Store",
-              url: "https://mmwholesale-46f85.web.app/",
+              url: "https://mm-wholesales.com/",
               description:
                 "Full-stack e-commerce platform with custom admin dashboard for inventory management and wholesale operations."
             },
@@ -329,11 +329,11 @@ export default function OurWork() {
               <a
                 href={project.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="project-btn"
                 style={project.caseStudy ? { background: "transparent", border: "1px solid var(--accent)", color: "var(--accent)", boxShadow: "none" } : {}}
               >
-                Visit Website →
+                Visit {project.title} website →
               </a>
             </motion.div>
           ))}

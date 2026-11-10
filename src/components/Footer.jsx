@@ -26,6 +26,7 @@ export default function Footer() {
           <Link to="/guides/how-to-rank-on-google-for-free">Google ranking guide</Link>
           <Link to="/guides/local-seo-vs-regular-seo">Local SEO vs. regular SEO</Link>
           <Link to="/guides/what-is-responsive-web-design">Responsive web design guide</Link>
+          <Link to="/guides/how-to-structure-your-website-for-seo-growth">Website structure for SEO</Link>
           <Link to="/guides/lee-county-cumberland-gap-tourism">Cumberland Gap tourism guide</Link>
           <Link to="/blog/lee-county-economic-outlook">Lee County economic outlook</Link>
           <Link to="/pricing">Ways to work together</Link>

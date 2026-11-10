@@ -4,6 +4,78 @@ import path from "node:path";
 const distDirectory = path.resolve("dist");
 const sitemapPath = path.join(distDirectory, "sitemap.xml");
 const errors = [];
+const caseStudyBacklinks = [
+  {
+    page: "case-studies/power-pasture/index.html",
+    url: "https://powerpasture.com/",
+    anchorPattern: /Power Pasture/i,
+  },
+  {
+    page: "case-studies/discoverleeva/index.html",
+    url: "https://discoverleeva.com/",
+    anchorPattern: /DiscoverLeeVa/i,
+  },
+  {
+    page: "case-studies/appalachian-asenso/index.html",
+    url: "https://appalachianasenso.com/",
+    anchorPattern: /Appalachian Asenso/i,
+  },
+  {
+    page: "case-studies/loveleeva/index.html",
+    url: "https://loveleeva.com/",
+    anchorPattern: /LoveLeeVa/i,
+  },
+  {
+    page: "case-studies/stone-mountain-yogurt/index.html",
+    url: "https://stone-mountain-yogurt.com/",
+    anchorPattern: /Stone Mountain Yogurt/i,
+  },
+  {
+    page: "case-studies/the-unicorn-techs/index.html",
+    url: "https://theunicorntechs.com/",
+    anchorPattern: /The Unicorn Techs/i,
+  },
+  {
+    page: "case-studies/fit-and-fierce/index.html",
+    url: "https://fitandfierce.studio/",
+    anchorPattern: /Fit\s*&\s*Fierce/i,
+  },
+  {
+    page: "case-studies/jump-sporting-goods/index.html",
+    url: "https://www.jumpsportinggoods.com/",
+    anchorPattern: /Jump Sporting Goods/i,
+  },
+  {
+    page: "case-studies/painting-outside-the-lines/index.html",
+    url: "https://paintingoutsidethelinesstudios.com/",
+    anchorPattern: /Painting Outside The Lines/i,
+  },
+  {
+    page: "case-studies/bbs-bakery/index.html",
+    url: "https://bbs-bakery.com/",
+    anchorPattern: /BB'?s Bakery|BBS Bakery/i,
+  },
+  {
+    page: "case-studies/m-and-m-wholesale/index.html",
+    url: "https://mm-wholesales.com/",
+    anchorPattern: /M&M Wholesale/i,
+  },
+  {
+    page: "case-studies/freedom-in-christ/index.html",
+    url: "https://dylanjdev.github.io/Freedom-In-Christ/",
+    anchorPattern: /Freedom In Christ/i,
+  },
+  {
+    page: "case-studies/mcguires-landscaping/index.html",
+    url: "https://mcguireslawnandlandscaping.com/",
+    anchorPattern: /McGuire'?s Lawn & Landscaping/i,
+  },
+  {
+    page: "case-studies/hair-by-rilee/index.html",
+    url: "https://www.hairbyrilee.com/",
+    anchorPattern: /Hair By Rilee/i,
+  },
+];
 
 function collectHtmlFiles(directory, files = []) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -35,6 +107,61 @@ function routeFileForUrl(url) {
   return pathname
     ? path.join(distDirectory, pathname, "index.html")
     : path.join(distDirectory, "index.html");
+}
+
+function normalizeExternalUrl(value) {
+  try {
+    const url = new URL(decodeHtml(value));
+    url.hash = "";
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
+function collectAnchors(html) {
+  return [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].map((match) => {
+    const attributes = match[1];
+    const href = attributes.match(/\bhref="([^"]+)"/i)?.[1] || "";
+    const rel = attributes.match(/\brel="([^"]+)"/i)?.[1] || "";
+    const target = attributes.match(/\btarget="([^"]+)"/i)?.[1] || "";
+    const text = decodeHtml(match[2].replace(/<[^>]+>/g, " "))
+      .replace(/\s+/g, " ")
+      .trim();
+
+    return { href, rel, target, text };
+  });
+}
+
+function validateClientBacklink(html, relativeFile, backlink) {
+  const expectedUrl = normalizeExternalUrl(backlink.url);
+  const matchingLinks = collectAnchors(html).filter(
+    (link) => normalizeExternalUrl(link.href) === expectedUrl,
+  );
+
+  if (!matchingLinks.length) {
+    errors.push(`${relativeFile}: missing direct client backlink to ${backlink.url}`);
+    return;
+  }
+
+  if (!matchingLinks.some((link) => backlink.anchorPattern.test(link.text))) {
+    errors.push(`${relativeFile}: client backlink needs descriptive brand anchor text`);
+  }
+
+  for (const link of matchingLinks) {
+    const relTokens = link.rel.toLowerCase().split(/\s+/).filter(Boolean);
+    const equityBlockingTokens = ["nofollow", "sponsored", "ugc"].filter((token) =>
+      relTokens.includes(token),
+    );
+    if (equityBlockingTokens.length) {
+      errors.push(
+        `${relativeFile}: client backlink must not use ${equityBlockingTokens.join(", ")}`,
+      );
+    }
+    if (link.target === "_blank" && !relTokens.includes("noopener")) {
+      errors.push(`${relativeFile}: new-tab client backlink must use noopener`);
+    }
+  }
 }
 
 const htmlFiles = collectHtmlFiles(distDirectory);
@@ -126,6 +253,35 @@ if (!fs.existsSync(sitemapPath)) {
     if (!fs.existsSync(routeFileForUrl(url))) {
       errors.push(`sitemap URL has no generated page: ${url}`);
     }
+  }
+}
+
+const caseStudyIndexFile = path.join(distDirectory, "case-studies", "index.html");
+if (!fs.existsSync(caseStudyIndexFile)) {
+  errors.push("case-studies/index.html: missing case-study index");
+} else {
+  const caseStudyIndexHtml = fs.readFileSync(caseStudyIndexFile, "utf8");
+  for (const backlink of caseStudyBacklinks) {
+    validateClientBacklink(caseStudyIndexHtml, "case-studies/index.html", backlink);
+  }
+}
+
+for (const backlink of caseStudyBacklinks) {
+  const backlinkPage = path.join(distDirectory, backlink.page);
+  if (!fs.existsSync(backlinkPage)) {
+    errors.push(`${backlink.page}: missing case-study page`);
+    continue;
+  }
+
+  const html = fs.readFileSync(backlinkPage, "utf8");
+  validateClientBacklink(html, backlink.page, backlink);
+
+  const robots = matchAll(
+    html,
+    /<meta[^>]+name="robots"[^>]+content="([^"]+)"/gi,
+  )[0]?.toLowerCase();
+  if (!robots || robots.includes("noindex") || robots.includes("nofollow")) {
+    errors.push(`${backlink.page}: client backlink page must be indexable and follow links`);
   }
 }
 
