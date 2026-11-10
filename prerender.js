@@ -111,7 +111,7 @@ const routes = [
   {
     path: '/services',
     title: 'Web Design Services in Southwest Virginia | Smith Digitals',
-    description: 'Explore Smith Digitals services in Southwest Virginia — custom web design, SEO optimization, Google Business setup, and branding for local businesses.',
+    description: 'Explore Smith Digitals capabilities across strategy, brand identity, web design, ecommerce, SEO, ongoing content, paid media, automation, and optimization.',
     robots: 'index, follow'
   },
   {

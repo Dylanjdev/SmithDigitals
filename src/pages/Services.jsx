@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaSearch, FaGoogle, FaTools, FaPalette, FaBullhorn, FaChartLine } from "react-icons/fa";
+import { FaLaptopCode, FaSearch, FaGoogle, FaTools, FaPalette, FaBullhorn, FaChartLine, FaFileAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Title, Meta } from "react-head";
 import CanonicalLink from "../components/CanonicalLink";
@@ -31,6 +31,11 @@ export default function Services() {
       desc: "Technical foundations, content strategy, structured data, and local search work designed to earn compounding visibility.",
       icon: <FaSearch size={40} />
     },
+    {
+      title: "Ongoing SEO Content",
+      desc: "A consistent publishing program shaped by keyword and customer research—from useful articles and service pages to content refreshes and internal linking that build topical authority and qualified organic traffic.",
+      icon: <FaFileAlt size={40} />
+    },
     { 
       title: "Google Business Setup", 
       desc: "A complete local search presence—from profile structure and categories to content, tracking, and reputation signals.",
@@ -54,11 +59,11 @@ export default function Services() {
       <Title>Capabilities | Strategy, Brand, Web & Growth | Smith Digitals</Title>
       <Meta
         name="description"
-        content="Explore Smith Digitals capabilities across strategy, brand identity, web design and development, ecommerce, SEO, paid media, automation, and ongoing optimization."
+        content="Explore Smith Digitals capabilities across strategy, brand identity, web design, ecommerce, SEO, ongoing content, paid media, automation, and optimization."
       />
       <Meta
         name="keywords"
-        content="digital marketing services, web design, Google Ads, Meta Ads, social media marketing, SEO optimization, branding, Southwest Virginia, Smith Digitals"
+        content="digital marketing services, web design, ongoing SEO content, SEO content strategy, Google Ads, Meta Ads, social media marketing, SEO optimization, branding, Southwest Virginia, Smith Digitals"
       />
       <Meta property="og:title" content="Smith Digitals | Digital Marketing & Web Design Services" />
       <Meta
@@ -82,7 +87,7 @@ export default function Services() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          serviceType: "Web Design, Digital Marketing, SEO, Google Ads, Meta Ads, Social Media Marketing",
+          serviceType: "Web Design, Digital Marketing, SEO, Ongoing SEO Content, Google Ads, Meta Ads, Social Media Marketing",
           provider: {
             "@type": "Organization",
             name: "Smith Digitals",
@@ -95,7 +100,7 @@ export default function Services() {
             ]
           },
           description:
-            "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, SEO, paid media, ecommerce, and automation."
+            "Smith Digitals is a founder-led digital studio delivering strategy, brand, web development, SEO, ongoing search content, paid media, ecommerce, and automation."
         })}
       </script>
 
